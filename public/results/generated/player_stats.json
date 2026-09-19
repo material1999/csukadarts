@@ -657,8 +657,7 @@
         "winRate": 50.0,
         "legsWon": 14,
         "legsLost": 15,
-        "legWinRate": 48.28,
-        "averageScoreDifference": -0.08
+        "legWinRate": 48.28
       },
       "balazs_papai": {
         "matches": 6,
@@ -667,8 +666,7 @@
         "winRate": 100.0,
         "legsWon": 12,
         "legsLost": 5,
-        "legWinRate": 70.59,
-        "averageScoreDifference": 1.17
+        "legWinRate": 70.59
       },
       "balint_bakos": {
         "matches": 25,
@@ -677,8 +675,7 @@
         "winRate": 60.0,
         "legsWon": 38,
         "legsLost": 27,
-        "legWinRate": 58.46,
-        "averageScoreDifference": 0.44
+        "legWinRate": 58.46
       },
       "berci_pusztai": {
         "matches": 30,
@@ -687,8 +684,7 @@
         "winRate": 30.0,
         "legsWon": 27,
         "legsLost": 53,
-        "legWinRate": 33.75,
-        "averageScoreDifference": -0.87
+        "legWinRate": 33.75
       },
       "dani_boldizsar": {
         "matches": 5,
@@ -697,8 +693,7 @@
         "winRate": 20.0,
         "legsWon": 4,
         "legsLost": 9,
-        "legWinRate": 30.77,
-        "averageScoreDifference": -1.0
+        "legWinRate": 30.77
       },
       "dani_gyulai_nagy": {
         "matches": 28,
@@ -707,8 +702,7 @@
         "winRate": 42.86,
         "legsWon": 37,
         "legsLost": 42,
-        "legWinRate": 46.84,
-        "averageScoreDifference": -0.18
+        "legWinRate": 46.84
       },
       "dani_pusztai": {
         "matches": 20,
@@ -717,8 +711,7 @@
         "winRate": 75.0,
         "legsWon": 34,
         "legsLost": 16,
-        "legWinRate": 68.0,
-        "averageScoreDifference": 0.9
+        "legWinRate": 68.0
       },
       "feri_gyulai_nagy": {
         "matches": 7,
@@ -727,8 +720,7 @@
         "winRate": 42.86,
         "legsWon": 8,
         "legsLost": 9,
-        "legWinRate": 47.06,
-        "averageScoreDifference": -0.14
+        "legWinRate": 47.06
       },
       "geri_vass": {
         "matches": 3,
@@ -737,8 +729,7 @@
         "winRate": 100.0,
         "legsWon": 6,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "laci_ferenczi": {
         "matches": 30,
@@ -747,8 +738,7 @@
         "winRate": 30.0,
         "legsWon": 29,
         "legsLost": 53,
-        "legWinRate": 35.37,
-        "averageScoreDifference": -0.8
+        "legWinRate": 35.37
       },
       "mark_sipos": {
         "matches": 11,
@@ -757,8 +747,7 @@
         "winRate": 90.91,
         "legsWon": 20,
         "legsLost": 3,
-        "legWinRate": 86.96,
-        "averageScoreDifference": 1.55
+        "legWinRate": 86.96
       },
       "mate_vass": {
         "matches": 28,
@@ -767,8 +756,7 @@
         "winRate": 35.71,
         "legsWon": 32,
         "legsLost": 42,
-        "legWinRate": 43.24,
-        "averageScoreDifference": -0.36
+        "legWinRate": 43.24
       },
       "tomi_csank": {
         "matches": 24,
@@ -777,8 +765,7 @@
         "winRate": 37.5,
         "legsWon": 22,
         "legsLost": 35,
-        "legWinRate": 38.6,
-        "averageScoreDifference": -0.54
+        "legWinRate": 38.6
       },
       "tomi_szollosy": {
         "matches": 1,
@@ -787,8 +774,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 1,
-        "legWinRate": 66.67,
-        "averageScoreDifference": 1.0
+        "legWinRate": 66.67
       },
       "zsombor_gulacsi": {
         "matches": 2,
@@ -797,8 +783,7 @@
         "winRate": 100.0,
         "legsWon": 4,
         "legsLost": 1,
-        "legWinRate": 80.0,
-        "averageScoreDifference": 1.5
+        "legWinRate": 80.0
       }
     },
     "rivals": {
@@ -3579,8 +3564,7 @@
         "winRate": 50.0,
         "legsWon": 15,
         "legsLost": 14,
-        "legWinRate": 51.72,
-        "averageScoreDifference": 0.08
+        "legWinRate": 51.72
       },
       "balazs_papai": {
         "matches": 4,
@@ -3589,8 +3573,7 @@
         "winRate": 75.0,
         "legsWon": 7,
         "legsLost": 4,
-        "legWinRate": 63.64,
-        "averageScoreDifference": 0.75
+        "legWinRate": 63.64
       },
       "balint_bakos": {
         "matches": 12,
@@ -3599,8 +3582,7 @@
         "winRate": 16.67,
         "legsWon": 7,
         "legsLost": 22,
-        "legWinRate": 24.14,
-        "averageScoreDifference": -1.25
+        "legWinRate": 24.14
       },
       "berci_pusztai": {
         "matches": 12,
@@ -3609,8 +3591,7 @@
         "winRate": 8.33,
         "legsWon": 7,
         "legsLost": 23,
-        "legWinRate": 23.33,
-        "averageScoreDifference": -1.33
+        "legWinRate": 23.33
       },
       "dani_boldizsar": {
         "matches": 1,
@@ -3619,8 +3600,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "dani_gyulai_nagy": {
         "matches": 12,
@@ -3629,8 +3609,7 @@
         "winRate": 41.67,
         "legsWon": 12,
         "legsLost": 18,
-        "legWinRate": 40.0,
-        "averageScoreDifference": -0.5
+        "legWinRate": 40.0
       },
       "dani_pusztai": {
         "matches": 10,
@@ -3639,8 +3618,7 @@
         "winRate": 30.0,
         "legsWon": 10,
         "legsLost": 15,
-        "legWinRate": 40.0,
-        "averageScoreDifference": -0.5
+        "legWinRate": 40.0
       },
       "feri_gyulai_nagy": {
         "matches": 5,
@@ -3649,8 +3627,7 @@
         "winRate": 80.0,
         "legsWon": 8,
         "legsLost": 4,
-        "legWinRate": 66.67,
-        "averageScoreDifference": 0.8
+        "legWinRate": 66.67
       },
       "geri_vass": {
         "matches": 3,
@@ -3659,8 +3636,7 @@
         "winRate": 33.33,
         "legsWon": 3,
         "legsLost": 4,
-        "legWinRate": 42.86,
-        "averageScoreDifference": -0.33
+        "legWinRate": 42.86
       },
       "laci_ferenczi": {
         "matches": 12,
@@ -3669,8 +3645,7 @@
         "winRate": 16.67,
         "legsWon": 7,
         "legsLost": 21,
-        "legWinRate": 25.0,
-        "averageScoreDifference": -1.17
+        "legWinRate": 25.0
       },
       "mark_sipos": {
         "matches": 6,
@@ -3679,8 +3654,7 @@
         "winRate": 50.0,
         "legsWon": 7,
         "legsLost": 7,
-        "legWinRate": 50.0,
-        "averageScoreDifference": 0.0
+        "legWinRate": 50.0
       },
       "mate_vass": {
         "matches": 12,
@@ -3689,8 +3663,7 @@
         "winRate": 16.67,
         "legsWon": 7,
         "legsLost": 21,
-        "legWinRate": 25.0,
-        "averageScoreDifference": -1.17
+        "legWinRate": 25.0
       },
       "tomi_csank": {
         "matches": 11,
@@ -3699,8 +3672,7 @@
         "winRate": 18.18,
         "legsWon": 8,
         "legsLost": 19,
-        "legWinRate": 29.63,
-        "averageScoreDifference": -1.0
+        "legWinRate": 29.63
       }
     },
     "rivals": {
@@ -5134,8 +5106,7 @@
         "winRate": 0.0,
         "legsWon": 5,
         "legsLost": 12,
-        "legWinRate": 29.41,
-        "averageScoreDifference": -1.17
+        "legWinRate": 29.41
       },
       "armin_szucs": {
         "matches": 4,
@@ -5144,8 +5115,7 @@
         "winRate": 25.0,
         "legsWon": 4,
         "legsLost": 7,
-        "legWinRate": 36.36,
-        "averageScoreDifference": -0.75
+        "legWinRate": 36.36
       },
       "balint_bakos": {
         "matches": 5,
@@ -5154,8 +5124,7 @@
         "winRate": 20.0,
         "legsWon": 5,
         "legsLost": 8,
-        "legWinRate": 38.46,
-        "averageScoreDifference": -0.6
+        "legWinRate": 38.46
       },
       "berci_pusztai": {
         "matches": 6,
@@ -5164,8 +5133,7 @@
         "winRate": 16.67,
         "legsWon": 2,
         "legsLost": 11,
-        "legWinRate": 15.38,
-        "averageScoreDifference": -1.5
+        "legWinRate": 15.38
       },
       "dani_boldizsar": {
         "matches": 1,
@@ -5174,8 +5142,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "dani_gyulai_nagy": {
         "matches": 6,
@@ -5184,8 +5151,7 @@
         "winRate": 0.0,
         "legsWon": 4,
         "legsLost": 12,
-        "legWinRate": 25.0,
-        "averageScoreDifference": -1.33
+        "legWinRate": 25.0
       },
       "dani_pusztai": {
         "matches": 5,
@@ -5194,8 +5160,7 @@
         "winRate": 20.0,
         "legsWon": 4,
         "legsLost": 9,
-        "legWinRate": 30.77,
-        "averageScoreDifference": -1.0
+        "legWinRate": 30.77
       },
       "feri_gyulai_nagy": {
         "matches": 3,
@@ -5204,8 +5169,7 @@
         "winRate": 33.33,
         "legsWon": 2,
         "legsLost": 5,
-        "legWinRate": 28.57,
-        "averageScoreDifference": -1.0
+        "legWinRate": 28.57
       },
       "geri_vass": {
         "matches": 2,
@@ -5214,8 +5178,7 @@
         "winRate": 100.0,
         "legsWon": 4,
         "legsLost": 1,
-        "legWinRate": 80.0,
-        "averageScoreDifference": 1.5
+        "legWinRate": 80.0
       },
       "laci_ferenczi": {
         "matches": 6,
@@ -5224,8 +5187,7 @@
         "winRate": 16.67,
         "legsWon": 3,
         "legsLost": 10,
-        "legWinRate": 23.08,
-        "averageScoreDifference": -1.17
+        "legWinRate": 23.08
       },
       "mark_sipos": {
         "matches": 4,
@@ -5234,8 +5196,7 @@
         "winRate": 50.0,
         "legsWon": 6,
         "legsLost": 5,
-        "legWinRate": 54.55,
-        "averageScoreDifference": 0.25
+        "legWinRate": 54.55
       },
       "mate_vass": {
         "matches": 6,
@@ -5244,8 +5205,7 @@
         "winRate": 0.0,
         "legsWon": 1,
         "legsLost": 12,
-        "legWinRate": 7.69,
-        "averageScoreDifference": -1.83
+        "legWinRate": 7.69
       },
       "tomi_csank": {
         "matches": 6,
@@ -5254,8 +5214,7 @@
         "winRate": 0.0,
         "legsWon": 3,
         "legsLost": 12,
-        "legWinRate": 20.0,
-        "averageScoreDifference": -1.5
+        "legWinRate": 20.0
       },
       "zsombor_gulacsi": {
         "matches": 1,
@@ -5264,8 +5223,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       }
     },
     "rivals": {
@@ -6583,8 +6541,7 @@
         "winRate": 40.0,
         "legsWon": 27,
         "legsLost": 38,
-        "legWinRate": 41.54,
-        "averageScoreDifference": -0.44
+        "legWinRate": 41.54
       },
       "armin_szucs": {
         "matches": 12,
@@ -6593,8 +6550,7 @@
         "winRate": 83.33,
         "legsWon": 22,
         "legsLost": 7,
-        "legWinRate": 75.86,
-        "averageScoreDifference": 1.25
+        "legWinRate": 75.86
       },
       "balazs_papai": {
         "matches": 5,
@@ -6603,8 +6559,7 @@
         "winRate": 80.0,
         "legsWon": 8,
         "legsLost": 5,
-        "legWinRate": 61.54,
-        "averageScoreDifference": 0.6
+        "legWinRate": 61.54
       },
       "berci_pusztai": {
         "matches": 25,
@@ -6613,8 +6568,7 @@
         "winRate": 16.0,
         "legsWon": 17,
         "legsLost": 43,
-        "legWinRate": 28.33,
-        "averageScoreDifference": -1.04
+        "legWinRate": 28.33
       },
       "dani_boldizsar": {
         "matches": 5,
@@ -6623,8 +6577,7 @@
         "winRate": 60.0,
         "legsWon": 7,
         "legsLost": 8,
-        "legWinRate": 46.67,
-        "averageScoreDifference": -0.2
+        "legWinRate": 46.67
       },
       "dani_gyulai_nagy": {
         "matches": 28,
@@ -6633,8 +6586,7 @@
         "winRate": 21.43,
         "legsWon": 25,
         "legsLost": 50,
-        "legWinRate": 33.33,
-        "averageScoreDifference": -0.89
+        "legWinRate": 33.33
       },
       "dani_pusztai": {
         "matches": 19,
@@ -6643,8 +6595,7 @@
         "winRate": 78.95,
         "legsWon": 33,
         "legsLost": 14,
-        "legWinRate": 70.21,
-        "averageScoreDifference": 1.0
+        "legWinRate": 70.21
       },
       "feri_gyulai_nagy": {
         "matches": 6,
@@ -6653,8 +6604,7 @@
         "winRate": 33.33,
         "legsWon": 6,
         "legsLost": 9,
-        "legWinRate": 40.0,
-        "averageScoreDifference": -0.5
+        "legWinRate": 40.0
       },
       "geri_vass": {
         "matches": 3,
@@ -6663,8 +6613,7 @@
         "winRate": 66.67,
         "legsWon": 5,
         "legsLost": 3,
-        "legWinRate": 62.5,
-        "averageScoreDifference": 0.67
+        "legWinRate": 62.5
       },
       "laci_ferenczi": {
         "matches": 26,
@@ -6673,8 +6622,7 @@
         "winRate": 26.92,
         "legsWon": 23,
         "legsLost": 41,
-        "legWinRate": 35.94,
-        "averageScoreDifference": -0.69
+        "legWinRate": 35.94
       },
       "mark_sipos": {
         "matches": 10,
@@ -6683,8 +6631,7 @@
         "winRate": 90.0,
         "legsWon": 18,
         "legsLost": 3,
-        "legWinRate": 85.71,
-        "averageScoreDifference": 1.5
+        "legWinRate": 85.71
       },
       "mate_vass": {
         "matches": 26,
@@ -6693,8 +6640,7 @@
         "winRate": 34.62,
         "legsWon": 25,
         "legsLost": 40,
-        "legWinRate": 38.46,
-        "averageScoreDifference": -0.58
+        "legWinRate": 38.46
       },
       "tomi_csank": {
         "matches": 24,
@@ -6703,8 +6649,7 @@
         "winRate": 54.17,
         "legsWon": 33,
         "legsLost": 30,
-        "legWinRate": 52.38,
-        "averageScoreDifference": 0.12
+        "legWinRate": 52.38
       },
       "tomi_szollosy": {
         "matches": 1,
@@ -6713,8 +6658,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "zsombor_gulacsi": {
         "matches": 1,
@@ -6723,8 +6667,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       }
     },
     "rivals": {
@@ -9573,8 +9516,7 @@
         "winRate": 70.0,
         "legsWon": 53,
         "legsLost": 27,
-        "legWinRate": 66.25,
-        "averageScoreDifference": 0.87
+        "legWinRate": 66.25
       },
       "armin_szucs": {
         "matches": 12,
@@ -9583,8 +9525,7 @@
         "winRate": 91.67,
         "legsWon": 23,
         "legsLost": 7,
-        "legWinRate": 76.67,
-        "averageScoreDifference": 1.33
+        "legWinRate": 76.67
       },
       "balazs_papai": {
         "matches": 6,
@@ -9593,8 +9534,7 @@
         "winRate": 83.33,
         "legsWon": 11,
         "legsLost": 2,
-        "legWinRate": 84.62,
-        "averageScoreDifference": 1.5
+        "legWinRate": 84.62
       },
       "balint_bakos": {
         "matches": 25,
@@ -9603,8 +9543,7 @@
         "winRate": 84.0,
         "legsWon": 43,
         "legsLost": 17,
-        "legWinRate": 71.67,
-        "averageScoreDifference": 1.04
+        "legWinRate": 71.67
       },
       "dani_boldizsar": {
         "matches": 5,
@@ -9613,8 +9552,7 @@
         "winRate": 60.0,
         "legsWon": 6,
         "legsLost": 5,
-        "legWinRate": 54.55,
-        "averageScoreDifference": 0.2
+        "legWinRate": 54.55
       },
       "dani_gyulai_nagy": {
         "matches": 33,
@@ -9623,8 +9561,7 @@
         "winRate": 66.67,
         "legsWon": 60,
         "legsLost": 35,
-        "legWinRate": 63.16,
-        "averageScoreDifference": 0.76
+        "legWinRate": 63.16
       },
       "dani_pusztai": {
         "matches": 20,
@@ -9633,8 +9570,7 @@
         "winRate": 75.0,
         "legsWon": 33,
         "legsLost": 13,
-        "legWinRate": 71.74,
-        "averageScoreDifference": 1.0
+        "legWinRate": 71.74
       },
       "feri_gyulai_nagy": {
         "matches": 8,
@@ -9643,8 +9579,7 @@
         "winRate": 50.0,
         "legsWon": 12,
         "legsLost": 11,
-        "legWinRate": 52.17,
-        "averageScoreDifference": 0.12
+        "legWinRate": 52.17
       },
       "geri_vass": {
         "matches": 3,
@@ -9653,8 +9588,7 @@
         "winRate": 100.0,
         "legsWon": 6,
         "legsLost": 2,
-        "legWinRate": 75.0,
-        "averageScoreDifference": 1.33
+        "legWinRate": 75.0
       },
       "laci_ferenczi": {
         "matches": 36,
@@ -9663,8 +9597,7 @@
         "winRate": 44.44,
         "legsWon": 61,
         "legsLost": 66,
-        "legWinRate": 48.03,
-        "averageScoreDifference": -0.14
+        "legWinRate": 48.03
       },
       "mark_sipos": {
         "matches": 11,
@@ -9673,8 +9606,7 @@
         "winRate": 72.73,
         "legsWon": 18,
         "legsLost": 9,
-        "legWinRate": 66.67,
-        "averageScoreDifference": 0.82
+        "legWinRate": 66.67
       },
       "mate_vass": {
         "matches": 39,
@@ -9683,8 +9615,7 @@
         "winRate": 53.85,
         "legsWon": 65,
         "legsLost": 58,
-        "legWinRate": 52.85,
-        "averageScoreDifference": 0.18
+        "legWinRate": 52.85
       },
       "tomi_csank": {
         "matches": 25,
@@ -9693,8 +9624,7 @@
         "winRate": 64.0,
         "legsWon": 39,
         "legsLost": 24,
-        "legWinRate": 61.9,
-        "averageScoreDifference": 0.6
+        "legWinRate": 61.9
       },
       "tomi_szollosy": {
         "matches": 1,
@@ -9703,8 +9633,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "zsombor_gulacsi": {
         "matches": 2,
@@ -9713,8 +9642,7 @@
         "winRate": 100.0,
         "legsWon": 4,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       }
     },
     "rivals": {
@@ -12580,8 +12508,7 @@
         "winRate": 80.0,
         "legsWon": 9,
         "legsLost": 4,
-        "legWinRate": 69.23,
-        "averageScoreDifference": 1.0
+        "legWinRate": 69.23
       },
       "armin_szucs": {
         "matches": 1,
@@ -12590,8 +12517,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "balazs_papai": {
         "matches": 1,
@@ -12600,8 +12526,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "balint_bakos": {
         "matches": 5,
@@ -12610,8 +12535,7 @@
         "winRate": 40.0,
         "legsWon": 8,
         "legsLost": 7,
-        "legWinRate": 53.33,
-        "averageScoreDifference": 0.2
+        "legWinRate": 53.33
       },
       "berci_pusztai": {
         "matches": 5,
@@ -12620,8 +12544,7 @@
         "winRate": 40.0,
         "legsWon": 5,
         "legsLost": 6,
-        "legWinRate": 45.45,
-        "averageScoreDifference": -0.2
+        "legWinRate": 45.45
       },
       "dani_gyulai_nagy": {
         "matches": 5,
@@ -12630,8 +12553,7 @@
         "winRate": 100.0,
         "legsWon": 10,
         "legsLost": 2,
-        "legWinRate": 83.33,
-        "averageScoreDifference": 1.6
+        "legWinRate": 83.33
       },
       "dani_pusztai": {
         "matches": 5,
@@ -12640,8 +12562,7 @@
         "winRate": 60.0,
         "legsWon": 7,
         "legsLost": 5,
-        "legWinRate": 58.33,
-        "averageScoreDifference": 0.4
+        "legWinRate": 58.33
       },
       "feri_gyulai_nagy": {
         "matches": 2,
@@ -12650,8 +12571,7 @@
         "winRate": 100.0,
         "legsWon": 4,
         "legsLost": 2,
-        "legWinRate": 66.67,
-        "averageScoreDifference": 1.0
+        "legWinRate": 66.67
       },
       "laci_ferenczi": {
         "matches": 7,
@@ -12660,8 +12580,7 @@
         "winRate": 42.86,
         "legsWon": 9,
         "legsLost": 12,
-        "legWinRate": 42.86,
-        "averageScoreDifference": -0.43
+        "legWinRate": 42.86
       },
       "mark_sipos": {
         "matches": 3,
@@ -12670,8 +12589,7 @@
         "winRate": 100.0,
         "legsWon": 6,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "mate_vass": {
         "matches": 6,
@@ -12680,8 +12598,7 @@
         "winRate": 16.67,
         "legsWon": 8,
         "legsLost": 12,
-        "legWinRate": 40.0,
-        "averageScoreDifference": -0.67
+        "legWinRate": 40.0
       },
       "tomi_csank": {
         "matches": 6,
@@ -12690,8 +12607,7 @@
         "winRate": 33.33,
         "legsWon": 8,
         "legsLost": 10,
-        "legWinRate": 44.44,
-        "averageScoreDifference": -0.33
+        "legWinRate": 44.44
       },
       "tomi_szollosy": {
         "matches": 1,
@@ -12700,8 +12616,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "zsombor_gulacsi": {
         "matches": 1,
@@ -12710,8 +12625,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 1,
-        "legWinRate": 66.67,
-        "averageScoreDifference": 1.0
+        "legWinRate": 66.67
       }
     },
     "rivals": {
@@ -13944,8 +13858,7 @@
         "winRate": 57.14,
         "legsWon": 42,
         "legsLost": 37,
-        "legWinRate": 53.16,
-        "averageScoreDifference": 0.18
+        "legWinRate": 53.16
       },
       "armin_szucs": {
         "matches": 12,
@@ -13954,8 +13867,7 @@
         "winRate": 58.33,
         "legsWon": 18,
         "legsLost": 12,
-        "legWinRate": 60.0,
-        "averageScoreDifference": 0.5
+        "legWinRate": 60.0
       },
       "balazs_papai": {
         "matches": 6,
@@ -13964,8 +13876,7 @@
         "winRate": 100.0,
         "legsWon": 12,
         "legsLost": 4,
-        "legWinRate": 75.0,
-        "averageScoreDifference": 1.33
+        "legWinRate": 75.0
       },
       "balint_bakos": {
         "matches": 28,
@@ -13974,8 +13885,7 @@
         "winRate": 78.57,
         "legsWon": 50,
         "legsLost": 25,
-        "legWinRate": 66.67,
-        "averageScoreDifference": 0.89
+        "legWinRate": 66.67
       },
       "berci_pusztai": {
         "matches": 33,
@@ -13984,8 +13894,7 @@
         "winRate": 33.33,
         "legsWon": 35,
         "legsLost": 60,
-        "legWinRate": 36.84,
-        "averageScoreDifference": -0.76
+        "legWinRate": 36.84
       },
       "dani_boldizsar": {
         "matches": 5,
@@ -13994,8 +13903,7 @@
         "winRate": 0.0,
         "legsWon": 2,
         "legsLost": 10,
-        "legWinRate": 16.67,
-        "averageScoreDifference": -1.6
+        "legWinRate": 16.67
       },
       "dani_pusztai": {
         "matches": 20,
@@ -14004,8 +13912,7 @@
         "winRate": 55.0,
         "legsWon": 27,
         "legsLost": 21,
-        "legWinRate": 56.25,
-        "averageScoreDifference": 0.3
+        "legWinRate": 56.25
       },
       "feri_gyulai_nagy": {
         "matches": 7,
@@ -14014,8 +13921,7 @@
         "winRate": 28.57,
         "legsWon": 7,
         "legsLost": 12,
-        "legWinRate": 36.84,
-        "averageScoreDifference": -0.71
+        "legWinRate": 36.84
       },
       "geri_vass": {
         "matches": 3,
@@ -14024,8 +13930,7 @@
         "winRate": 66.67,
         "legsWon": 5,
         "legsLost": 4,
-        "legWinRate": 55.56,
-        "averageScoreDifference": 0.33
+        "legWinRate": 55.56
       },
       "laci_ferenczi": {
         "matches": 30,
@@ -14034,8 +13939,7 @@
         "winRate": 33.33,
         "legsWon": 29,
         "legsLost": 49,
-        "legWinRate": 37.18,
-        "averageScoreDifference": -0.67
+        "legWinRate": 37.18
       },
       "mark_sipos": {
         "matches": 11,
@@ -14044,8 +13948,7 @@
         "winRate": 90.91,
         "legsWon": 20,
         "legsLost": 6,
-        "legWinRate": 76.92,
-        "averageScoreDifference": 1.27
+        "legWinRate": 76.92
       },
       "mate_vass": {
         "matches": 29,
@@ -14054,8 +13957,7 @@
         "winRate": 24.14,
         "legsWon": 28,
         "legsLost": 50,
-        "legWinRate": 35.9,
-        "averageScoreDifference": -0.76
+        "legWinRate": 35.9
       },
       "tomi_csank": {
         "matches": 24,
@@ -14064,8 +13966,7 @@
         "winRate": 70.83,
         "legsWon": 38,
         "legsLost": 20,
-        "legWinRate": 65.52,
-        "averageScoreDifference": 0.75
+        "legWinRate": 65.52
       },
       "tomi_szollosy": {
         "matches": 1,
@@ -14074,8 +13975,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 1,
-        "legWinRate": 66.67,
-        "averageScoreDifference": 1.0
+        "legWinRate": 66.67
       },
       "zsombor_gulacsi": {
         "matches": 2,
@@ -14084,8 +13984,7 @@
         "winRate": 100.0,
         "legsWon": 4,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       }
     },
     "rivals": {
@@ -17054,8 +16953,7 @@
         "winRate": 25.0,
         "legsWon": 16,
         "legsLost": 34,
-        "legWinRate": 32.0,
-        "averageScoreDifference": -0.9
+        "legWinRate": 32.0
       },
       "armin_szucs": {
         "matches": 10,
@@ -17064,8 +16962,7 @@
         "winRate": 70.0,
         "legsWon": 15,
         "legsLost": 10,
-        "legWinRate": 60.0,
-        "averageScoreDifference": 0.5
+        "legWinRate": 60.0
       },
       "balazs_papai": {
         "matches": 5,
@@ -17074,8 +16971,7 @@
         "winRate": 80.0,
         "legsWon": 9,
         "legsLost": 4,
-        "legWinRate": 69.23,
-        "averageScoreDifference": 1.0
+        "legWinRate": 69.23
       },
       "balint_bakos": {
         "matches": 19,
@@ -17084,8 +16980,7 @@
         "winRate": 21.05,
         "legsWon": 14,
         "legsLost": 33,
-        "legWinRate": 29.79,
-        "averageScoreDifference": -1.0
+        "legWinRate": 29.79
       },
       "berci_pusztai": {
         "matches": 20,
@@ -17094,8 +16989,7 @@
         "winRate": 25.0,
         "legsWon": 13,
         "legsLost": 33,
-        "legWinRate": 28.26,
-        "averageScoreDifference": -1.0
+        "legWinRate": 28.26
       },
       "dani_boldizsar": {
         "matches": 5,
@@ -17104,8 +16998,7 @@
         "winRate": 40.0,
         "legsWon": 5,
         "legsLost": 7,
-        "legWinRate": 41.67,
-        "averageScoreDifference": -0.4
+        "legWinRate": 41.67
       },
       "dani_gyulai_nagy": {
         "matches": 20,
@@ -17114,8 +17007,7 @@
         "winRate": 45.0,
         "legsWon": 21,
         "legsLost": 27,
-        "legWinRate": 43.75,
-        "averageScoreDifference": -0.3
+        "legWinRate": 43.75
       },
       "feri_gyulai_nagy": {
         "matches": 5,
@@ -17124,8 +17016,7 @@
         "winRate": 20.0,
         "legsWon": 4,
         "legsLost": 9,
-        "legWinRate": 30.77,
-        "averageScoreDifference": -1.0
+        "legWinRate": 30.77
       },
       "geri_vass": {
         "matches": 3,
@@ -17134,8 +17025,7 @@
         "winRate": 66.67,
         "legsWon": 4,
         "legsLost": 2,
-        "legWinRate": 66.67,
-        "averageScoreDifference": 0.67
+        "legWinRate": 66.67
       },
       "laci_ferenczi": {
         "matches": 21,
@@ -17144,8 +17034,7 @@
         "winRate": 28.57,
         "legsWon": 16,
         "legsLost": 34,
-        "legWinRate": 32.0,
-        "averageScoreDifference": -0.86
+        "legWinRate": 32.0
       },
       "mark_sipos": {
         "matches": 11,
@@ -17154,8 +17043,7 @@
         "winRate": 90.91,
         "legsWon": 20,
         "legsLost": 7,
-        "legWinRate": 74.07,
-        "averageScoreDifference": 1.18
+        "legWinRate": 74.07
       },
       "mate_vass": {
         "matches": 20,
@@ -17164,8 +17052,7 @@
         "winRate": 35.0,
         "legsWon": 19,
         "legsLost": 30,
-        "legWinRate": 38.78,
-        "averageScoreDifference": -0.55
+        "legWinRate": 38.78
       },
       "tomi_csank": {
         "matches": 18,
@@ -17174,8 +17061,7 @@
         "winRate": 33.33,
         "legsWon": 18,
         "legsLost": 28,
-        "legWinRate": 39.13,
-        "averageScoreDifference": -0.56
+        "legWinRate": 39.13
       },
       "tomi_szollosy": {
         "matches": 1,
@@ -17184,8 +17070,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "zsombor_gulacsi": {
         "matches": 1,
@@ -17194,8 +17079,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 1,
-        "legWinRate": 66.67,
-        "averageScoreDifference": 1.0
+        "legWinRate": 66.67
       }
     },
     "rivals": {
@@ -19343,8 +19227,7 @@
         "winRate": 57.14,
         "legsWon": 9,
         "legsLost": 8,
-        "legWinRate": 52.94,
-        "averageScoreDifference": 0.14
+        "legWinRate": 52.94
       },
       "armin_szucs": {
         "matches": 5,
@@ -19353,8 +19236,7 @@
         "winRate": 20.0,
         "legsWon": 4,
         "legsLost": 8,
-        "legWinRate": 33.33,
-        "averageScoreDifference": -0.8
+        "legWinRate": 33.33
       },
       "balazs_papai": {
         "matches": 3,
@@ -19363,8 +19245,7 @@
         "winRate": 66.67,
         "legsWon": 5,
         "legsLost": 2,
-        "legWinRate": 71.43,
-        "averageScoreDifference": 1.0
+        "legWinRate": 71.43
       },
       "balint_bakos": {
         "matches": 6,
@@ -19373,8 +19254,7 @@
         "winRate": 66.67,
         "legsWon": 9,
         "legsLost": 6,
-        "legWinRate": 60.0,
-        "averageScoreDifference": 0.5
+        "legWinRate": 60.0
       },
       "berci_pusztai": {
         "matches": 8,
@@ -19383,8 +19263,7 @@
         "winRate": 50.0,
         "legsWon": 11,
         "legsLost": 12,
-        "legWinRate": 47.83,
-        "averageScoreDifference": -0.12
+        "legWinRate": 47.83
       },
       "dani_boldizsar": {
         "matches": 2,
@@ -19393,8 +19272,7 @@
         "winRate": 0.0,
         "legsWon": 2,
         "legsLost": 4,
-        "legWinRate": 33.33,
-        "averageScoreDifference": -1.0
+        "legWinRate": 33.33
       },
       "dani_gyulai_nagy": {
         "matches": 7,
@@ -19403,8 +19281,7 @@
         "winRate": 71.43,
         "legsWon": 12,
         "legsLost": 7,
-        "legWinRate": 63.16,
-        "averageScoreDifference": 0.71
+        "legWinRate": 63.16
       },
       "dani_pusztai": {
         "matches": 5,
@@ -19413,8 +19290,7 @@
         "winRate": 80.0,
         "legsWon": 9,
         "legsLost": 4,
-        "legWinRate": 69.23,
-        "averageScoreDifference": 1.0
+        "legWinRate": 69.23
       },
       "laci_ferenczi": {
         "matches": 8,
@@ -19423,8 +19299,7 @@
         "winRate": 25.0,
         "legsWon": 7,
         "legsLost": 15,
-        "legWinRate": 31.82,
-        "averageScoreDifference": -1.0
+        "legWinRate": 31.82
       },
       "mark_sipos": {
         "matches": 2,
@@ -19433,8 +19308,7 @@
         "winRate": 50.0,
         "legsWon": 3,
         "legsLost": 2,
-        "legWinRate": 60.0,
-        "averageScoreDifference": 0.5
+        "legWinRate": 60.0
       },
       "mate_vass": {
         "matches": 8,
@@ -19443,8 +19317,7 @@
         "winRate": 37.5,
         "legsWon": 9,
         "legsLost": 14,
-        "legWinRate": 39.13,
-        "averageScoreDifference": -0.62
+        "legWinRate": 39.13
       },
       "tomi_csank": {
         "matches": 7,
@@ -19453,8 +19326,7 @@
         "winRate": 28.57,
         "legsWon": 6,
         "legsLost": 11,
-        "legWinRate": 35.29,
-        "averageScoreDifference": -0.71
+        "legWinRate": 35.29
       },
       "zsombor_gulacsi": {
         "matches": 1,
@@ -19463,8 +19335,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       }
     },
     "rivals": {
@@ -20373,8 +20244,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 6,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "armin_szucs": {
         "matches": 3,
@@ -20383,8 +20253,7 @@
         "winRate": 66.67,
         "legsWon": 4,
         "legsLost": 3,
-        "legWinRate": 57.14,
-        "averageScoreDifference": 0.33
+        "legWinRate": 57.14
       },
       "balazs_papai": {
         "matches": 2,
@@ -20393,8 +20262,7 @@
         "winRate": 0.0,
         "legsWon": 1,
         "legsLost": 4,
-        "legWinRate": 20.0,
-        "averageScoreDifference": -1.5
+        "legWinRate": 20.0
       },
       "balint_bakos": {
         "matches": 3,
@@ -20403,8 +20271,7 @@
         "winRate": 33.33,
         "legsWon": 3,
         "legsLost": 5,
-        "legWinRate": 37.5,
-        "averageScoreDifference": -0.67
+        "legWinRate": 37.5
       },
       "berci_pusztai": {
         "matches": 3,
@@ -20413,8 +20280,7 @@
         "winRate": 0.0,
         "legsWon": 2,
         "legsLost": 6,
-        "legWinRate": 25.0,
-        "averageScoreDifference": -1.33
+        "legWinRate": 25.0
       },
       "dani_gyulai_nagy": {
         "matches": 3,
@@ -20423,8 +20289,7 @@
         "winRate": 33.33,
         "legsWon": 4,
         "legsLost": 5,
-        "legWinRate": 44.44,
-        "averageScoreDifference": -0.33
+        "legWinRate": 44.44
       },
       "dani_pusztai": {
         "matches": 3,
@@ -20433,8 +20298,7 @@
         "winRate": 33.33,
         "legsWon": 2,
         "legsLost": 4,
-        "legWinRate": 33.33,
-        "averageScoreDifference": -0.67
+        "legWinRate": 33.33
       },
       "laci_ferenczi": {
         "matches": 3,
@@ -20443,8 +20307,7 @@
         "winRate": 0.0,
         "legsWon": 1,
         "legsLost": 6,
-        "legWinRate": 14.29,
-        "averageScoreDifference": -1.67
+        "legWinRate": 14.29
       },
       "mark_sipos": {
         "matches": 3,
@@ -20453,8 +20316,7 @@
         "winRate": 33.33,
         "legsWon": 3,
         "legsLost": 4,
-        "legWinRate": 42.86,
-        "averageScoreDifference": -0.33
+        "legWinRate": 42.86
       },
       "mate_vass": {
         "matches": 3,
@@ -20463,8 +20325,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 6,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "tomi_csank": {
         "matches": 3,
@@ -20473,8 +20334,7 @@
         "winRate": 33.33,
         "legsWon": 3,
         "legsLost": 5,
-        "legWinRate": 37.5,
-        "averageScoreDifference": -0.67
+        "legWinRate": 37.5
       }
     },
     "rivals": {
@@ -21506,8 +21366,7 @@
         "winRate": 70.0,
         "legsWon": 53,
         "legsLost": 29,
-        "legWinRate": 64.63,
-        "averageScoreDifference": 0.8
+        "legWinRate": 64.63
       },
       "armin_szucs": {
         "matches": 12,
@@ -21516,8 +21375,7 @@
         "winRate": 83.33,
         "legsWon": 21,
         "legsLost": 7,
-        "legWinRate": 75.0,
-        "averageScoreDifference": 1.17
+        "legWinRate": 75.0
       },
       "balazs_papai": {
         "matches": 6,
@@ -21526,8 +21384,7 @@
         "winRate": 83.33,
         "legsWon": 10,
         "legsLost": 3,
-        "legWinRate": 76.92,
-        "averageScoreDifference": 1.17
+        "legWinRate": 76.92
       },
       "balint_bakos": {
         "matches": 26,
@@ -21536,8 +21393,7 @@
         "winRate": 73.08,
         "legsWon": 41,
         "legsLost": 23,
-        "legWinRate": 64.06,
-        "averageScoreDifference": 0.69
+        "legWinRate": 64.06
       },
       "berci_pusztai": {
         "matches": 36,
@@ -21546,8 +21402,7 @@
         "winRate": 55.56,
         "legsWon": 66,
         "legsLost": 61,
-        "legWinRate": 51.97,
-        "averageScoreDifference": 0.14
+        "legWinRate": 51.97
       },
       "dani_boldizsar": {
         "matches": 7,
@@ -21556,8 +21411,7 @@
         "winRate": 57.14,
         "legsWon": 12,
         "legsLost": 9,
-        "legWinRate": 57.14,
-        "averageScoreDifference": 0.43
+        "legWinRate": 57.14
       },
       "dani_gyulai_nagy": {
         "matches": 30,
@@ -21566,8 +21420,7 @@
         "winRate": 66.67,
         "legsWon": 49,
         "legsLost": 29,
-        "legWinRate": 62.82,
-        "averageScoreDifference": 0.67
+        "legWinRate": 62.82
       },
       "dani_pusztai": {
         "matches": 21,
@@ -21576,8 +21429,7 @@
         "winRate": 71.43,
         "legsWon": 34,
         "legsLost": 16,
-        "legWinRate": 68.0,
-        "averageScoreDifference": 0.86
+        "legWinRate": 68.0
       },
       "feri_gyulai_nagy": {
         "matches": 8,
@@ -21586,8 +21438,7 @@
         "winRate": 75.0,
         "legsWon": 15,
         "legsLost": 7,
-        "legWinRate": 68.18,
-        "averageScoreDifference": 1.0
+        "legWinRate": 68.18
       },
       "geri_vass": {
         "matches": 3,
@@ -21596,8 +21447,7 @@
         "winRate": 100.0,
         "legsWon": 6,
         "legsLost": 1,
-        "legWinRate": 85.71,
-        "averageScoreDifference": 1.67
+        "legWinRate": 85.71
       },
       "mark_sipos": {
         "matches": 11,
@@ -21606,8 +21456,7 @@
         "winRate": 100.0,
         "legsWon": 22,
         "legsLost": 2,
-        "legWinRate": 91.67,
-        "averageScoreDifference": 1.82
+        "legWinRate": 91.67
       },
       "mate_vass": {
         "matches": 35,
@@ -21616,8 +21465,7 @@
         "winRate": 65.71,
         "legsWon": 59,
         "legsLost": 48,
-        "legWinRate": 55.14,
-        "averageScoreDifference": 0.31
+        "legWinRate": 55.14
       },
       "tomi_csank": {
         "matches": 29,
@@ -21626,8 +21474,7 @@
         "winRate": 65.52,
         "legsWon": 50,
         "legsLost": 34,
-        "legWinRate": 59.52,
-        "averageScoreDifference": 0.55
+        "legWinRate": 59.52
       },
       "tomi_szollosy": {
         "matches": 1,
@@ -21636,8 +21483,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "zsombor_gulacsi": {
         "matches": 2,
@@ -21646,8 +21492,7 @@
         "winRate": 100.0,
         "legsWon": 4,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       }
     },
     "rivals": {
@@ -24655,8 +24500,7 @@
         "winRate": 9.09,
         "legsWon": 3,
         "legsLost": 20,
-        "legWinRate": 13.04,
-        "averageScoreDifference": -1.55
+        "legWinRate": 13.04
       },
       "armin_szucs": {
         "matches": 6,
@@ -24665,8 +24509,7 @@
         "winRate": 50.0,
         "legsWon": 7,
         "legsLost": 7,
-        "legWinRate": 50.0,
-        "averageScoreDifference": 0.0
+        "legWinRate": 50.0
       },
       "balazs_papai": {
         "matches": 4,
@@ -24675,8 +24518,7 @@
         "winRate": 50.0,
         "legsWon": 5,
         "legsLost": 6,
-        "legWinRate": 45.45,
-        "averageScoreDifference": -0.25
+        "legWinRate": 45.45
       },
       "balint_bakos": {
         "matches": 10,
@@ -24685,8 +24527,7 @@
         "winRate": 10.0,
         "legsWon": 3,
         "legsLost": 18,
-        "legWinRate": 14.29,
-        "averageScoreDifference": -1.5
+        "legWinRate": 14.29
       },
       "berci_pusztai": {
         "matches": 11,
@@ -24695,8 +24536,7 @@
         "winRate": 27.27,
         "legsWon": 9,
         "legsLost": 18,
-        "legWinRate": 33.33,
-        "averageScoreDifference": -0.82
+        "legWinRate": 33.33
       },
       "dani_boldizsar": {
         "matches": 3,
@@ -24705,8 +24545,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 6,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "dani_gyulai_nagy": {
         "matches": 11,
@@ -24715,8 +24554,7 @@
         "winRate": 9.09,
         "legsWon": 6,
         "legsLost": 20,
-        "legWinRate": 23.08,
-        "averageScoreDifference": -1.27
+        "legWinRate": 23.08
       },
       "dani_pusztai": {
         "matches": 11,
@@ -24725,8 +24563,7 @@
         "winRate": 9.09,
         "legsWon": 7,
         "legsLost": 20,
-        "legWinRate": 25.93,
-        "averageScoreDifference": -1.18
+        "legWinRate": 25.93
       },
       "feri_gyulai_nagy": {
         "matches": 2,
@@ -24735,8 +24572,7 @@
         "winRate": 50.0,
         "legsWon": 2,
         "legsLost": 3,
-        "legWinRate": 40.0,
-        "averageScoreDifference": -0.5
+        "legWinRate": 40.0
       },
       "geri_vass": {
         "matches": 3,
@@ -24745,8 +24581,7 @@
         "winRate": 66.67,
         "legsWon": 4,
         "legsLost": 3,
-        "legWinRate": 57.14,
-        "averageScoreDifference": 0.33
+        "legWinRate": 57.14
       },
       "laci_ferenczi": {
         "matches": 11,
@@ -24755,8 +24590,7 @@
         "winRate": 0.0,
         "legsWon": 2,
         "legsLost": 22,
-        "legWinRate": 8.33,
-        "averageScoreDifference": -1.82
+        "legWinRate": 8.33
       },
       "mate_vass": {
         "matches": 11,
@@ -24765,8 +24599,7 @@
         "winRate": 9.09,
         "legsWon": 3,
         "legsLost": 21,
-        "legWinRate": 12.5,
-        "averageScoreDifference": -1.64
+        "legWinRate": 12.5
       },
       "tomi_csank": {
         "matches": 11,
@@ -24775,8 +24608,7 @@
         "winRate": 27.27,
         "legsWon": 8,
         "legsLost": 17,
-        "legWinRate": 32.0,
-        "averageScoreDifference": -0.82
+        "legWinRate": 32.0
       },
       "tomi_szollosy": {
         "matches": 1,
@@ -24785,8 +24617,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "zsombor_gulacsi": {
         "matches": 1,
@@ -24795,8 +24626,7 @@
         "winRate": 0.0,
         "legsWon": 1,
         "legsLost": 2,
-        "legWinRate": 33.33,
-        "averageScoreDifference": -1.0
+        "legWinRate": 33.33
       }
     },
     "rivals": {
@@ -26596,8 +26426,7 @@
         "winRate": 64.29,
         "legsWon": 42,
         "legsLost": 32,
-        "legWinRate": 56.76,
-        "averageScoreDifference": 0.36
+        "legWinRate": 56.76
       },
       "armin_szucs": {
         "matches": 12,
@@ -26606,8 +26435,7 @@
         "winRate": 83.33,
         "legsWon": 21,
         "legsLost": 7,
-        "legWinRate": 75.0,
-        "averageScoreDifference": 1.17
+        "legWinRate": 75.0
       },
       "balazs_papai": {
         "matches": 6,
@@ -26616,8 +26444,7 @@
         "winRate": 100.0,
         "legsWon": 12,
         "legsLost": 1,
-        "legWinRate": 92.31,
-        "averageScoreDifference": 1.83
+        "legWinRate": 92.31
       },
       "balint_bakos": {
         "matches": 26,
@@ -26626,8 +26453,7 @@
         "winRate": 65.38,
         "legsWon": 40,
         "legsLost": 25,
-        "legWinRate": 61.54,
-        "averageScoreDifference": 0.58
+        "legWinRate": 61.54
       },
       "berci_pusztai": {
         "matches": 39,
@@ -26636,8 +26462,7 @@
         "winRate": 46.15,
         "legsWon": 58,
         "legsLost": 65,
-        "legWinRate": 47.15,
-        "averageScoreDifference": -0.18
+        "legWinRate": 47.15
       },
       "dani_boldizsar": {
         "matches": 6,
@@ -26646,8 +26471,7 @@
         "winRate": 83.33,
         "legsWon": 12,
         "legsLost": 8,
-        "legWinRate": 60.0,
-        "averageScoreDifference": 0.67
+        "legWinRate": 60.0
       },
       "dani_gyulai_nagy": {
         "matches": 29,
@@ -26656,8 +26480,7 @@
         "winRate": 75.86,
         "legsWon": 50,
         "legsLost": 28,
-        "legWinRate": 64.1,
-        "averageScoreDifference": 0.76
+        "legWinRate": 64.1
       },
       "dani_pusztai": {
         "matches": 20,
@@ -26666,8 +26489,7 @@
         "winRate": 65.0,
         "legsWon": 30,
         "legsLost": 19,
-        "legWinRate": 61.22,
-        "averageScoreDifference": 0.55
+        "legWinRate": 61.22
       },
       "feri_gyulai_nagy": {
         "matches": 8,
@@ -26676,8 +26498,7 @@
         "winRate": 62.5,
         "legsWon": 14,
         "legsLost": 9,
-        "legWinRate": 60.87,
-        "averageScoreDifference": 0.62
+        "legWinRate": 60.87
       },
       "geri_vass": {
         "matches": 3,
@@ -26686,8 +26507,7 @@
         "winRate": 100.0,
         "legsWon": 6,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "laci_ferenczi": {
         "matches": 35,
@@ -26696,8 +26516,7 @@
         "winRate": 34.29,
         "legsWon": 48,
         "legsLost": 59,
-        "legWinRate": 44.86,
-        "averageScoreDifference": -0.31
+        "legWinRate": 44.86
       },
       "mark_sipos": {
         "matches": 11,
@@ -26706,8 +26525,7 @@
         "winRate": 90.91,
         "legsWon": 21,
         "legsLost": 3,
-        "legWinRate": 87.5,
-        "averageScoreDifference": 1.64
+        "legWinRate": 87.5
       },
       "tomi_csank": {
         "matches": 26,
@@ -26716,8 +26534,7 @@
         "winRate": 73.08,
         "legsWon": 45,
         "legsLost": 20,
-        "legWinRate": 69.23,
-        "averageScoreDifference": 0.96
+        "legWinRate": 69.23
       },
       "tomi_szollosy": {
         "matches": 1,
@@ -26726,8 +26543,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "zsombor_gulacsi": {
         "matches": 2,
@@ -26736,8 +26552,7 @@
         "winRate": 100.0,
         "legsWon": 4,
         "legsLost": 1,
-        "legWinRate": 80.0,
-        "averageScoreDifference": 1.5
+        "legWinRate": 80.0
       }
     },
     "rivals": {
@@ -29938,8 +29753,7 @@
         "winRate": 62.5,
         "legsWon": 35,
         "legsLost": 22,
-        "legWinRate": 61.4,
-        "averageScoreDifference": 0.54
+        "legWinRate": 61.4
       },
       "armin_szucs": {
         "matches": 11,
@@ -29948,8 +29762,7 @@
         "winRate": 81.82,
         "legsWon": 19,
         "legsLost": 8,
-        "legWinRate": 70.37,
-        "averageScoreDifference": 1.0
+        "legWinRate": 70.37
       },
       "balazs_papai": {
         "matches": 6,
@@ -29958,8 +29771,7 @@
         "winRate": 100.0,
         "legsWon": 12,
         "legsLost": 3,
-        "legWinRate": 80.0,
-        "averageScoreDifference": 1.5
+        "legWinRate": 80.0
       },
       "balint_bakos": {
         "matches": 24,
@@ -29968,8 +29780,7 @@
         "winRate": 45.83,
         "legsWon": 30,
         "legsLost": 33,
-        "legWinRate": 47.62,
-        "averageScoreDifference": -0.12
+        "legWinRate": 47.62
       },
       "berci_pusztai": {
         "matches": 25,
@@ -29978,8 +29789,7 @@
         "winRate": 36.0,
         "legsWon": 24,
         "legsLost": 39,
-        "legWinRate": 38.1,
-        "averageScoreDifference": -0.6
+        "legWinRate": 38.1
       },
       "dani_boldizsar": {
         "matches": 6,
@@ -29988,8 +29798,7 @@
         "winRate": 66.67,
         "legsWon": 10,
         "legsLost": 8,
-        "legWinRate": 55.56,
-        "averageScoreDifference": 0.33
+        "legWinRate": 55.56
       },
       "dani_gyulai_nagy": {
         "matches": 24,
@@ -29998,8 +29807,7 @@
         "winRate": 29.17,
         "legsWon": 20,
         "legsLost": 38,
-        "legWinRate": 34.48,
-        "averageScoreDifference": -0.75
+        "legWinRate": 34.48
       },
       "dani_pusztai": {
         "matches": 18,
@@ -30008,8 +29816,7 @@
         "winRate": 66.67,
         "legsWon": 28,
         "legsLost": 18,
-        "legWinRate": 60.87,
-        "averageScoreDifference": 0.56
+        "legWinRate": 60.87
       },
       "feri_gyulai_nagy": {
         "matches": 7,
@@ -30018,8 +29825,7 @@
         "winRate": 71.43,
         "legsWon": 11,
         "legsLost": 6,
-        "legWinRate": 64.71,
-        "averageScoreDifference": 0.71
+        "legWinRate": 64.71
       },
       "geri_vass": {
         "matches": 3,
@@ -30028,8 +29834,7 @@
         "winRate": 66.67,
         "legsWon": 5,
         "legsLost": 3,
-        "legWinRate": 62.5,
-        "averageScoreDifference": 0.67
+        "legWinRate": 62.5
       },
       "laci_ferenczi": {
         "matches": 29,
@@ -30038,8 +29843,7 @@
         "winRate": 34.48,
         "legsWon": 34,
         "legsLost": 50,
-        "legWinRate": 40.48,
-        "averageScoreDifference": -0.55
+        "legWinRate": 40.48
       },
       "mark_sipos": {
         "matches": 11,
@@ -30048,8 +29852,7 @@
         "winRate": 72.73,
         "legsWon": 17,
         "legsLost": 8,
-        "legWinRate": 68.0,
-        "averageScoreDifference": 0.82
+        "legWinRate": 68.0
       },
       "mate_vass": {
         "matches": 26,
@@ -30058,8 +29861,7 @@
         "winRate": 26.92,
         "legsWon": 20,
         "legsLost": 45,
-        "legWinRate": 30.77,
-        "averageScoreDifference": -0.96
+        "legWinRate": 30.77
       },
       "tomi_szollosy": {
         "matches": 1,
@@ -30068,8 +29870,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "zsombor_gulacsi": {
         "matches": 2,
@@ -30078,8 +29879,7 @@
         "winRate": 50.0,
         "legsWon": 3,
         "legsLost": 2,
-        "legWinRate": 60.0,
-        "averageScoreDifference": 0.5
+        "legWinRate": 60.0
       }
     },
     "rivals": {
@@ -32406,8 +32206,7 @@
         "winRate": 0.0,
         "legsWon": 1,
         "legsLost": 2,
-        "legWinRate": 33.33,
-        "averageScoreDifference": -1.0
+        "legWinRate": 33.33
       },
       "balint_bakos": {
         "matches": 1,
@@ -32416,8 +32215,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "berci_pusztai": {
         "matches": 1,
@@ -32426,8 +32224,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "dani_boldizsar": {
         "matches": 1,
@@ -32436,8 +32233,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "dani_gyulai_nagy": {
         "matches": 1,
@@ -32446,8 +32242,7 @@
         "winRate": 0.0,
         "legsWon": 1,
         "legsLost": 2,
-        "legWinRate": 33.33,
-        "averageScoreDifference": -1.0
+        "legWinRate": 33.33
       },
       "dani_pusztai": {
         "matches": 1,
@@ -32456,8 +32251,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "laci_ferenczi": {
         "matches": 1,
@@ -32466,8 +32260,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "mark_sipos": {
         "matches": 1,
@@ -32476,8 +32269,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 0,
-        "legWinRate": 100.0,
-        "averageScoreDifference": 2.0
+        "legWinRate": 100.0
       },
       "mate_vass": {
         "matches": 1,
@@ -32486,8 +32278,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "tomi_csank": {
         "matches": 1,
@@ -32496,8 +32287,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       }
     },
     "rivals": {
@@ -32797,8 +32587,7 @@
         "winRate": 0.0,
         "legsWon": 1,
         "legsLost": 4,
-        "legWinRate": 20.0,
-        "averageScoreDifference": -1.5
+        "legWinRate": 20.0
       },
       "balazs_papai": {
         "matches": 1,
@@ -32807,8 +32596,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "balint_bakos": {
         "matches": 1,
@@ -32817,8 +32605,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "berci_pusztai": {
         "matches": 2,
@@ -32827,8 +32614,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 4,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "dani_boldizsar": {
         "matches": 1,
@@ -32837,8 +32623,7 @@
         "winRate": 0.0,
         "legsWon": 1,
         "legsLost": 2,
-        "legWinRate": 33.33,
-        "averageScoreDifference": -1.0
+        "legWinRate": 33.33
       },
       "dani_gyulai_nagy": {
         "matches": 2,
@@ -32847,8 +32632,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 4,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "dani_pusztai": {
         "matches": 1,
@@ -32857,8 +32641,7 @@
         "winRate": 0.0,
         "legsWon": 1,
         "legsLost": 2,
-        "legWinRate": 33.33,
-        "averageScoreDifference": -1.0
+        "legWinRate": 33.33
       },
       "feri_gyulai_nagy": {
         "matches": 1,
@@ -32867,8 +32650,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 2,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "laci_ferenczi": {
         "matches": 2,
@@ -32877,8 +32659,7 @@
         "winRate": 0.0,
         "legsWon": 0,
         "legsLost": 4,
-        "legWinRate": 0.0,
-        "averageScoreDifference": -2.0
+        "legWinRate": 0.0
       },
       "mark_sipos": {
         "matches": 1,
@@ -32887,8 +32668,7 @@
         "winRate": 100.0,
         "legsWon": 2,
         "legsLost": 1,
-        "legWinRate": 66.67,
-        "averageScoreDifference": 1.0
+        "legWinRate": 66.67
       },
       "mate_vass": {
         "matches": 2,
@@ -32897,8 +32677,7 @@
         "winRate": 0.0,
         "legsWon": 1,
         "legsLost": 4,
-        "legWinRate": 20.0,
-        "averageScoreDifference": -1.5
+        "legWinRate": 20.0
       },
       "tomi_csank": {
         "matches": 2,
@@ -32907,8 +32686,7 @@
         "winRate": 50.0,
         "legsWon": 2,
         "legsLost": 3,
-        "legWinRate": 40.0,
-        "averageScoreDifference": -0.5
+        "legWinRate": 40.0
       }
     },
     "rivals": {

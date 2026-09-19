@@ -190,6 +190,8 @@ if (player.darts_used) {
               <span>{player.nationality}</span>
               <span>·</span>
               <span>{player.hometown}</span>
+              <span>·</span>
+              <span>{player.date_of_birth}</span>
             </div>
 
             {
@@ -648,15 +650,25 @@ if (player.darts_used) {
                   </div>
 
                   <div>
-                    <span>Matches</span>
-                    <strong>{round.matches}</strong>
+                    <span>Standing</span>
+                    <strong>
+                      {round.standing ?? "—"}
+                    </strong>
                   </div>
 
                   <div>
-                    <span>Record</span>
+                    <span>Points</span>
                     <strong>
-                      {round.wins}W · {round.losses}L
+                      {round.points ?? "—"}
                     </strong>
+                  </div>
+
+                  <div>
+                    <span>Matches</span>
+                    <strong>{round.matches}</strong>
+                    <small>
+                      {round.wins}W · {round.losses}L
+                    </small>
                   </div>
 
                   <div>
@@ -669,12 +681,15 @@ if (player.darts_used) {
                   <div>
                     <span>Legs</span>
                     <strong>
-                      {round.legsWon}W · {round.legsLost}L
+                      {round.legsWon + round.legsLost}
                     </strong>
+                    <small>
+                      {round.legsWon}W · {round.legsLost}L
+                    </small>
                   </div>
 
                   <div>
-                    <span>Leg Rate</span>
+                    <span>Leg Win Rate</span>
                     <strong>
                       {formatPercent(round.legWinRate)}
                     </strong>
@@ -793,15 +808,6 @@ if (player.darts_used) {
                       {formatPercent(h2h.legWinRate)}
                     </strong>
                     <span>leg win rate</span>
-                  </div>
-
-                  <!-- Average score difference -->
-                  <div class="h2h-stat">
-                    <strong>
-                      {h2h.averageScoreDifference > 0 ? "+" : ""}
-                      {formatValue(h2h.averageScoreDifference)}
-                    </strong>
-                    <span>avg. diff</span>
                   </div>
 
                   <span class="h2h-arrow">→</span>
@@ -1291,7 +1297,7 @@ if (player.darts_used) {
 
 .round-card {
   display: grid;
-  grid-template-columns: 1.5fr repeat(5, 1fr);
+  grid-template-columns: 1.5fr repeat(6, 1fr);
   align-items: center;
   gap: 20px;
 
@@ -1330,6 +1336,11 @@ if (player.darts_used) {
 
 .round-card strong {
   font-size: 15px;
+}
+
+.round-card small {
+  color: var(--muted);
+  font-size: 10px;
 }
 
 

@@ -704,12 +704,6 @@ for player_id in sorted(player_ids):
             opponent_matches["opponent_score"].sum()
         )
 
-        differences = (
-            opponent_matches["player_score"]
-            -
-            opponent_matches["opponent_score"]
-        )
-
         head_to_head[opponent_id] = {
 
             "matches": len(
@@ -733,10 +727,6 @@ for player_id in sorted(player_ids):
                 opponent_legs_won,
                 opponent_legs_won
                 + opponent_legs_lost
-            ),
-
-            "averageScoreDifference": average(
-                differences.tolist()
             ),
         }
 
