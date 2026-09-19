@@ -613,7 +613,7 @@ if (player.darts_used) {
         </div>
 
         {
-          stats.rounds.all.length > 3 && (
+          stats.rounds.all.length >= 5 && (
             <button
               class="expandable-button"
               data-expandable-button
@@ -628,7 +628,7 @@ if (player.darts_used) {
       <div
         class:list={[
           "expandable-section",
-          stats.rounds.all.length > 5 && "has-more",
+          stats.rounds.all.length >= 5 && "has-more",
         ]}
         data-expandable
       >
@@ -720,7 +720,7 @@ if (player.darts_used) {
         </div>
 
         {
-          Object.keys(stats.headToHead).length > 5 && (
+          Object.keys(stats.headToHead).length >= 5 && (
             <button
               class="expandable-button"
               data-expandable-button
@@ -735,7 +735,7 @@ if (player.darts_used) {
       <div
         class:list={[
           "expandable-section",
-          stats.rounds.all.length > 5 && "has-more",
+          stats.rounds.all.length >= 5 && "has-more",
         ]}
         data-expandable
       >
@@ -840,7 +840,7 @@ if (player.darts_used) {
         </div>
 
         {
-          stats.matches.length > 5 && (
+          stats.matches.length >= 5 && (
             <button
               class="expandable-button"
               data-expandable-button
@@ -855,7 +855,7 @@ if (player.darts_used) {
       <div
         class:list={[
           "expandable-section",
-          stats.rounds.all.length > 5 && "has-more",
+          stats.rounds.all.length >= 5 && "has-more",
         ]}
         data-expandable
       >
