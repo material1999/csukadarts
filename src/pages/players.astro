@@ -1,0 +1,434 @@
+---
+import Layout from "../layouts/Layout.astro";
+import fs from "node:fs";
+import path from "node:path";
+
+const playerBioPath = path.join(
+  process.cwd(),
+  "public",
+  "players",
+  "player_bio.csv"
+);
+
+const playerData = fs.readFileSync(playerBioPath, "utf-8");
+
+const lines = playerData
+  .trim()
+  .split("\n")
+  .filter((line) => line.trim() !== "");
+
+const headers = lines[0].split(";");
+
+const players = lines
+  .slice(1)
+  .map((line) => {
+    const values = line.split(";");
+
+    return Object.fromEntries(
+      headers.map((header, index) => [
+        header,
+        values[index]?.trim() || "",
+      ])
+    );
+  })
+  .sort((a, b) => {
+    const partsA = a.player.trim().split(/\s+/);
+    const partsB = b.player.trim().split(/\s+/);
+
+    const familyNameA = partsA.slice(1).join(" ");
+    const familyNameB = partsB.slice(1).join(" ");
+
+    const familyCompare = familyNameA.localeCompare(
+        familyNameB,
+        "hu"
+    );
+
+    if (familyCompare !== 0) {
+        return familyCompare;
+    }
+
+    return partsA[0].localeCompare(partsB[0], "hu");
+});
+---
+
+<Layout title="Players | Csuka Utca Invitational Masters">
+  <div class="page">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">CSUKA UTCA INVITATIONAL MASTERS</p>
+
+        <h1>Players</h1>
+
+        <p class="subtitle">
+          Meet the players of the Csuka Utca Invitational Masters.
+        </p>
+      </div>
+    </section>
+
+    <section class="content container">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">THE PLAYERS</p>
+          <h2>Player Directory</h2>
+        </div>
+
+        <span class="player-count">
+          {players.length} players
+        </span>
+      </div>
+
+      <div class="players-grid">
+        {
+          players.map((player) => (
+            <a
+              class="player-card"
+              href={`/players/${player.player_id}`}
+            >
+              <div class="player-avatar">
+                <img
+                    src={`/players/avatar/${player.player_id}.jpg`}
+                    alt={player.player}
+                    loading="lazy"
+                    onerror={`this.onerror=null; this.src='/players/avatar/default.jpg';`}
+                />
+              </div>
+
+              <div class="player-info">
+                <p class="player-nickname">
+                  {player.nickname || "PLAYER"}
+                </p>
+
+                <h3>{player.player}</h3>
+
+                <div class="player-meta">
+                  <span class="darts">
+                    {
+                        player.darts_used
+                        ? (() => {
+                            const [weight, ...name] = player.darts_used.split(" ");
+
+                            return (
+                                <>
+                                <span class="darts-weight">{weight}</span>
+                                <br />
+                                <span>{name.join(" ")}</span>
+                                </>
+                            );
+                            })()
+                        : "Darts not listed"
+                    }
+                    </span>
+
+                  <span class="stat">
+                    <strong>{player.career_180s || "0"}</strong>
+                    180s
+                  </span>
+                </div>
+              </div>
+
+              <span class="player-arrow">→</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .page {
+    min-height: calc(100vh - 76px);
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .hero {
+    background: var(--dark);
+    color: white;
+    padding: 80px 0 90px;
+  }
+
+  .hero .container {
+    width: 100%;
+  }
+
+  .hero .eyebrow {
+    color: #999;
+  }
+
+  .eyebrow {
+    margin: 0 0 10px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+
+    color: var(--muted);
+  }
+
+  h1 {
+    margin: 0;
+
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+
+  .subtitle {
+    max-width: 500px;
+    margin: 24px 0 0;
+
+    color: #aaa;
+    font-size: 16px;
+  }
+
+  .content {
+    padding-top: 56px;
+    padding-bottom: 80px;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    margin: 0;
+
+    font-size: 32px;
+    letter-spacing: -0.03em;
+  }
+
+  .player-count {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .players-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .player-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    color: var(--text);
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .player-card:hover {
+    transform: translateY(-3px);
+    border-color: #ccc;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .player-avatar {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+
+    background: #e9e9e9;
+    overflow: hidden;
+  }
+
+  .player-avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+  }
+
+  .player-card:hover .player-avatar img {
+    transform: scale(1.03);
+  }
+
+  .player-info {
+    padding: 20px 20px 22px;
+  }
+
+  .player-nickname {
+    margin: 0 0 6px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .player-info h3 {
+    margin: 0;
+
+    font-size: 21px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .player-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .player-meta > span:first-child {
+    max-width: 70%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .stat {
+    flex-shrink: 0;
+
+    text-align: right;
+  }
+
+  .stat strong {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .player-arrow {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(17, 17, 17, 0.8);
+    color: white;
+
+    font-size: 16px;
+
+    opacity: 0;
+    transform: translateX(-4px);
+
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .player-card:hover .player-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 1100px) {
+    .players-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .hero {
+      padding: 56px 0 64px;
+    }
+
+    .content {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    .players-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .section-header {
+      align-items: start;
+      gap: 12px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    .players-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .player-card {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      min-height: 130px;
+    }
+
+    .player-avatar {
+      aspect-ratio: auto;
+      height: 100%;
+      min-height: 130px;
+    }
+
+    .player-info {
+      padding: 18px;
+    }
+
+    .player-info h3 {
+      font-size: 19px;
+    }
+
+    .player-arrow {
+      opacity: 1;
+      transform: none;
+      top: 12px;
+      right: 12px;
+    }
+  }
+</style>
