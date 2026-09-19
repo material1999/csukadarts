@@ -626,7 +626,10 @@ if (player.darts_used) {
       </div>
 
       <div
-        class="expandable-section"
+        class:list={[
+          "expandable-section",
+          stats.rounds.all.length > 5 && "has-more",
+        ]}
         data-expandable
       >
 
@@ -730,7 +733,10 @@ if (player.darts_used) {
       </div>
 
       <div
-        class="expandable-section"
+        class:list={[
+          "expandable-section",
+          stats.rounds.all.length > 5 && "has-more",
+        ]}
         data-expandable
       >
 
@@ -847,7 +853,10 @@ if (player.darts_used) {
       </div>
 
       <div
-        class="expandable-section"
+        class:list={[
+          "expandable-section",
+          stats.rounds.all.length > 5 && "has-more",
+        ]}
         data-expandable
       >
 
@@ -1543,8 +1552,8 @@ if (player.darts_used) {
   position: relative;
 }
 
-/* Round history: show 3 initially */
-.expandable-section:not(.expanded) .round-list > :nth-child(n + 4) {
+/* Round history: show 5 initially */
+.expandable-section:not(.expanded) .round-list > :nth-child(n + 6) {
   display: none;
 }
 
@@ -1563,19 +1572,14 @@ if (player.darts_used) {
 .expandable-section:not(.expanded)::after {
   content: "··· MORE ···";
   position: absolute;
-
   left: 0;
   right: 0;
   bottom: 0;
-
   height: 80px;
-
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
   padding-bottom: 0px;
-
   background: linear-gradient(
     to bottom,
     transparent 0%,
@@ -1583,13 +1587,15 @@ if (player.darts_used) {
     rgba(245, 245, 245, 0.95) 75%,
     var(--background) 100%
   );
-
   color: #999;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.16em;
-
   pointer-events: none;
+}
+
+.expandable-section:not(.has-more):not(.expanded)::after {
+  display: none;
 }
 
 
