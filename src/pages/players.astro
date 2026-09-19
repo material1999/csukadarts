@@ -72,9 +72,18 @@ const players = lines
           <h2>Player Directory</h2>
         </div>
 
-        <span class="player-count">
+        <span class="player-count" id="player-count">
           {players.length} players
         </span>
+      </div>
+
+      <div class="player-search">
+        <input
+          type="search"
+          id="player-search"
+          placeholder="Search players..."
+          autocomplete="off"
+        />
       </div>
 
       <div class="players-grid">
@@ -133,9 +142,74 @@ const players = lines
       </div>
     </section>
   </div>
+
+<script>
+  const searchInput = document.querySelector("#player-search");
+  const playerCards = document.querySelectorAll(".player-card");
+  const playerCount = document.querySelector("#player-count");
+
+  searchInput?.addEventListener("input", () => {
+    const query = searchInput.value.trim().toLowerCase();
+
+    let visibleCount = 0;
+
+    playerCards.forEach((card) => {
+      const name =
+        card.querySelector("h3")?.textContent?.toLowerCase() || "";
+
+      const nickname =
+        card.querySelector(".player-nickname")?.textContent?.toLowerCase() || "";
+
+      const matches =
+        name.includes(query) ||
+        nickname.includes(query);
+
+      card.style.display = matches ? "" : "none";
+
+      if (matches) {
+        visibleCount++;
+      }
+    });
+
+    if (playerCount) {
+      playerCount.textContent =
+        `${visibleCount} ${visibleCount === 1 ? "player" : "players"}`;
+    }
+  });
+</script>
+
 </Layout>
 
 <style>
+
+  .player-search {
+    margin-bottom: 24px;
+  }
+
+  .player-search input {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .player-search input::placeholder {
+    color: var(--muted);
+  }
+
+  .player-search input:focus {
+    border-color: #999;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+  }
+
   .page {
     min-height: calc(100vh - 76px);
   }
