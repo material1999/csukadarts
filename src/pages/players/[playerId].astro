@@ -291,30 +291,19 @@ if (player.darts_used) {
         <div class="stat-card">
           <span class="stat-label">180s</span>
 
-          <div class="stat-values">
+          <strong>
+            {player.career_180s || 0}
+          </strong>
 
-            <div>
-              <strong>
-                {player.career_180s || 0}
-              </strong>
+          <span class="stat-detail">
+            career total · {stats.bonuses["180s"] || 0} at tournament
+          </span>
 
-              <span>Total</span>
-            </div>
-
-            <div>
-              <strong>
-                {stats.bonuses["180s"] || 0}
-              </strong>
-
-              <span>Tournament</span>
-            </div>
-
-          </div>
         </div>
 
 
         <div class="stat-card">
-          <span class="stat-label">CHECKOUT</span>
+          <span class="stat-label">HIGHEST CHECKOUT</span>
 
           <strong>
             {formatValue(stats.bonuses.highestCheckout)}
@@ -419,6 +408,75 @@ if (player.darts_used) {
 
       </div>
 
+      <!-- ====================================================
+           Rivals / Whitewashes / Shutouts
+           ==================================================== -->
+
+      <!-- Rivals & Special Stats -->
+      <div class="section-heading section-gap">
+        <p class="eyebrow">PROFILE</p>
+        <h2>Rivals & Records</h2>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-label">Dominating</span>
+
+          {
+            stats.rivals?.dominating ? (
+
+                <strong>
+                  {getPlayerName(stats.rivals.dominating.playerId)}
+                </strong>
+                <span>
+                  {stats.rivals.dominating.matchesWon}{" "}
+                  {stats.rivals.dominating.matchesWon === 1 ? "win" : "wins"}
+                </span>
+            ) : (
+              <>
+                <strong>—</strong>
+                <span>No wins recorded</span>
+              </>
+            )
+          }
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Archrival</span>
+
+          {
+            stats.rivals?.archenemy ? (
+
+                <strong>
+                  {getPlayerName(stats.rivals.archenemy.playerId)}
+                </strong>
+                <span>
+                  {stats.rivals.archenemy.matchesLost}{" "}
+                  {stats.rivals.archenemy.matchesLost === 1 ? "loss" : "losses"}
+                </span>
+
+            ) : (
+              <>
+                <strong>—</strong>
+                <span>No losses recorded</span>
+              </>
+            )
+          }
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Shutouts</span>
+          <strong>{stats.shutouts?.count ?? 0}</strong>
+          <span>{formatPercent(stats.shutouts?.percentage ?? 0)}</span>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Whitewashes</span>
+          <strong>{stats.whitewashes?.count ?? 0}</strong>
+          <span>{formatPercent(stats.whitewashes?.percentage ?? 0)}</span>
+        </div>
+      </div>
+
 
       <!-- ====================================================
            SEASONS
@@ -445,6 +503,20 @@ if (player.darts_used) {
                     {data.roundsPlayed} round
                     {data.roundsPlayed !== 1 ? "s" : ""}
                   </span>
+                </div>
+
+                <div class="season-stat">
+                  <span>Standing</span>
+                  <strong>
+                    {data.standing ?? "—"}
+                  </strong>
+                </div>
+
+                <div class="season-stat">
+                  <span>Points</span>
+                  <strong>
+                    {data.points ?? "—"}
+                  </strong>
                 </div>
 
                 <div class="season-stat">
@@ -491,6 +563,39 @@ if (player.darts_used) {
             ))
         }
 
+      </div>
+
+
+      <!-- ====================================================
+           BONUSES
+           ==================================================== -->
+
+
+      <div class="section-heading section-gap">
+        <p class="eyebrow">BONUSES</p>
+        <h2>Tournament Bonuses</h2>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-label">Bonus Points</span>
+          <strong>{stats.bonuses?.total ?? 0}</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Tournament 180s</span>
+          <strong>{stats.bonuses?.["180s"] ?? 0}</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Number of Highest Checkouts</span>
+          <strong>{(stats.bonuses?.events ?? 0) - (stats.bonuses?.["180s"] ?? 0)}</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Highest Checkout</span>
+          <strong>{stats.bonuses?.highestCheckout ?? "—"}</strong>
+        </div>
       </div>
 
 
@@ -624,10 +729,7 @@ if (player.darts_used) {
               )
               .map(([opponentId, h2h]: [string, any]) => (
 
-                <a
-                  class="h2h-card"
-                  href={`/players/${opponentId}`}
-                >
+                <div class="h2h-card">
 
                   <div class="h2h-player">
 
@@ -655,11 +757,13 @@ if (player.darts_used) {
 
                   </div>
 
+                  <!-- Matches -->
                   <div class="h2h-stat">
                     <strong>{h2h.matches}</strong>
                     <span>matches</span>
                   </div>
 
+                  <!-- Match record -->
                   <div class="h2h-stat">
                     <strong>
                       {h2h.wins}–{h2h.losses}
@@ -667,6 +771,7 @@ if (player.darts_used) {
                     <span>record</span>
                   </div>
 
+                  <!-- Match win rate -->
                   <div class="h2h-stat">
                     <strong>
                       {formatPercent(h2h.winRate)}
@@ -674,9 +779,34 @@ if (player.darts_used) {
                     <span>win rate</span>
                   </div>
 
+                  <!-- Leg record -->
+                  <div class="h2h-stat">
+                    <strong>
+                      {h2h.legsWon}–{h2h.legsLost}
+                    </strong>
+                    <span>legs</span>
+                  </div>
+
+                  <!-- Leg win rate -->
+                  <div class="h2h-stat">
+                    <strong>
+                      {formatPercent(h2h.legWinRate)}
+                    </strong>
+                    <span>leg win rate</span>
+                  </div>
+
+                  <!-- Average score difference -->
+                  <div class="h2h-stat">
+                    <strong>
+                      {h2h.averageScoreDifference > 0 ? "+" : ""}
+                      {formatValue(h2h.averageScoreDifference)}
+                    </strong>
+                    <span>avg. diff</span>
+                  </div>
+
                   <span class="h2h-arrow">→</span>
 
-                </a>
+                </div>
 
               ))
           }
@@ -727,10 +857,7 @@ if (player.darts_used) {
               )
               .map((match: any) => (
 
-                <a
-                  class="match-card"
-                  href={`/players/${match.opponentId}`}
-                >
+                <div class="match-card">
 
                   <div class="match-date">
                     <span>{match.date}</span>
@@ -767,7 +894,7 @@ if (player.darts_used) {
                     {match.result}
                   </div>
 
-                </a>
+                </div>
 
               ))
           }
@@ -783,6 +910,7 @@ if (player.darts_used) {
 
 
 <style>
+
 /* ============================================================
    GENERAL
    ============================================================ */
@@ -1101,7 +1229,10 @@ if (player.darts_used) {
 
 .season-card {
   display: grid;
-  grid-template-columns: 1.5fr repeat(4, 1fr);
+
+  /* ONE LINE */
+  grid-template-columns: minmax(120px, 1.5fr) repeat(6, 1fr);
+
   align-items: center;
   gap: 20px;
 
@@ -1214,9 +1345,20 @@ if (player.darts_used) {
 
 .h2h-card {
   display: grid;
-  grid-template-columns: 1fr 100px 100px 100px 30px;
+
+  /* ONE LINE — player + 6 stats + arrow */
+  grid-template-columns:
+    minmax(180px, 1fr)
+    75px
+    75px
+    85px
+    75px
+    85px
+    85px
+    25px;
+
   align-items: center;
-  gap: 20px;
+  gap: 14px;
 
   padding: 12px 18px;
 
@@ -1226,21 +1368,13 @@ if (player.darts_used) {
 
   color: var(--text);
   text-decoration: none;
-
-  transition:
-    border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.h2h-card:hover {
-  border-color: #bbb;
-  transform: translateX(2px);
 }
 
 .h2h-player {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 .h2h-avatar {
@@ -1264,6 +1398,8 @@ if (player.darts_used) {
   display: flex;
   flex-direction: column;
   gap: 2px;
+
+  min-width: 0;
 }
 
 .h2h-player strong {
@@ -1279,6 +1415,7 @@ if (player.darts_used) {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  min-width: 0;
 }
 
 .h2h-stat strong {
@@ -1294,6 +1431,7 @@ if (player.darts_used) {
 .h2h-arrow {
   color: var(--muted);
   font-size: 18px;
+  text-align: right;
 }
 
 
@@ -1318,18 +1456,6 @@ if (player.darts_used) {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
-  color: var(--text);
-  text-decoration: none;
-
-  transition:
-    border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.match-card:hover {
-  border-color: #bbb;
-  transform: translateX(2px);
 }
 
 .match-date {
@@ -1424,7 +1550,7 @@ if (player.darts_used) {
 
 /* Fade at the bottom when collapsed */
 .expandable-section:not(.expanded)::after {
-  content: "MORE BELOW  ···";
+  content: "··· MORE ···";
   position: absolute;
 
   left: 0;
@@ -1504,8 +1630,14 @@ if (player.darts_used) {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Keep seasons on ONE LINE */
   .season-card {
-    grid-template-columns: 1.2fr repeat(4, 1fr);
+    grid-template-columns:
+      minmax(100px, 1.2fr)
+      repeat(6, 1fr);
+
+    gap: 12px;
+    padding: 18px;
   }
 
   .round-card {
@@ -1514,6 +1646,21 @@ if (player.darts_used) {
 
   .round-card > div:nth-child(n + 5) {
     display: none;
+  }
+
+  /* Keep H2H on ONE LINE */
+  .h2h-card {
+    grid-template-columns:
+      minmax(160px, 1fr)
+      65px
+      65px
+      70px
+      65px
+      75px
+      75px
+      20px;
+
+    gap: 8px;
   }
 }
 
@@ -1551,20 +1698,71 @@ if (player.darts_used) {
     gap: 20px;
   }
 
+  /*
+   * Seasons stay horizontal.
+   * Smaller columns instead of changing to 2 rows.
+   */
   .season-card {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      minmax(85px, 1fr)
+      repeat(6, minmax(45px, 1fr));
+
+    gap: 8px;
+    padding: 16px;
   }
 
+  /*
+   * Round history can still become 2 columns.
+   */
   .round-card {
     grid-template-columns: 1fr 1fr;
   }
 
+  /*
+   * H2H stays completely horizontal.
+   */
   .h2h-card {
-    grid-template-columns: 1fr 80px 80px 30px;
+    grid-template-columns:
+      minmax(130px, 1fr)
+      55px
+      55px
+      60px
+      55px
+      65px
+      65px
+      18px;
+
+    gap: 6px;
+    padding: 10px 12px;
   }
 
-  .h2h-card .h2h-stat:nth-child(4) {
-    display: none;
+  .h2h-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .h2h-player {
+    gap: 8px;
+  }
+
+  .h2h-player strong {
+    font-size: 12px;
+  }
+
+  .h2h-player span {
+    font-size: 9px;
+  }
+
+  .h2h-stat strong {
+    font-size: 12px;
+  }
+
+  .h2h-stat span {
+    font-size: 8px;
+  }
+
+  .h2h-arrow {
+    font-size: 15px;
   }
 
   .match-card {
@@ -1636,15 +1834,32 @@ if (player.darts_used) {
     font-size: 10px;
   }
 
-  .season-card {
-    grid-template-columns: 1fr 1fr;
-    padding: 18px;
+  /*
+   * Seasons remain ONE LINE.
+   * Horizontal scrolling is allowed if the screen is too narrow.
+   */
+  .season-list {
+    overflow-x: auto;
   }
 
+  .season-card {
+    min-width: 620px;
+
+    grid-template-columns:
+      90px
+      repeat(6, 75px);
+
+    gap: 8px;
+    padding: 16px;
+  }
+
+  /*
+   * Remove the old multi-row season styling.
+   */
   .season-title {
-    grid-column: 1 / -1;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
+    grid-column: auto;
+    padding-bottom: 0;
+    border-bottom: none;
   }
 
   .round-card {
@@ -1658,14 +1873,34 @@ if (player.darts_used) {
     border-bottom: 1px solid var(--border);
   }
 
-  .h2h-card {
-    grid-template-columns: 1fr auto 30px;
+  /*
+   * H2H remains ONE LINE.
+   * The card itself can scroll horizontally rather than
+   * breaking into multiple rows.
+   */
+  .h2h-list {
+    overflow-x: auto;
   }
 
-  .h2h-card .h2h-stat:nth-child(3),
-  .h2h-card .h2h-stat:nth-child(4) {
-    display: none;
+  .h2h-card {
+    min-width: 650px;
+
+    grid-template-columns:
+      140px
+      55px
+      55px
+      60px
+      55px
+      65px
+      65px
+      18px;
+
+    gap: 6px;
   }
+
+  /*
+   * Do NOT hide H2H stats on mobile.
+   */
 
   .match-card {
     padding: 16px;
@@ -1675,6 +1910,7 @@ if (player.darts_used) {
     padding: 18px;
   }
 }
+
 </style>
 
 
