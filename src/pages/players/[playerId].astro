@@ -1,0 +1,1700 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import fs from "node:fs";
+import path from "node:path";
+
+export function getStaticPaths() {
+  const playerBioPath = path.join(
+    process.cwd(),
+    "public",
+    "players",
+    "player_bio.csv"
+  );
+
+  const playerBioData = fs.readFileSync(playerBioPath, "utf-8");
+
+  const bioLines = playerBioData
+    .trim()
+    .split("\n")
+    .filter((line) => line.trim() !== "");
+
+  const bioHeaders = bioLines[0].split(";");
+
+  const players = bioLines.slice(1).map((line) => {
+    const values = line.split(";");
+
+    return Object.fromEntries(
+      bioHeaders.map((header, index) => [
+        header,
+        values[index]?.trim() || "",
+      ])
+    );
+  });
+
+  return players.map((player) => ({
+    params: {
+      playerId: player.player_id,
+    },
+    props: {
+      player,
+    },
+  }));
+}
+
+
+// ============================================================
+// Current player
+// ============================================================
+
+const { player } = Astro.props;
+
+
+// ============================================================
+// Load all players
+// ============================================================
+
+const playerBioPath = path.join(
+  process.cwd(),
+  "public",
+  "players",
+  "player_bio.csv"
+);
+
+const playerBioData = fs.readFileSync(playerBioPath, "utf-8");
+
+const bioLines = playerBioData
+  .trim()
+  .split("\n")
+  .filter((line) => line.trim() !== "");
+
+const bioHeaders = bioLines[0].split(";");
+
+const players = bioLines.slice(1).map((line) => {
+  const values = line.split(";");
+
+  return Object.fromEntries(
+    bioHeaders.map((header, index) => [
+      header,
+      values[index]?.trim() || "",
+    ])
+  );
+});
+
+
+// ============================================================
+// Load statistics
+// ============================================================
+
+const statsPath = path.join(
+  process.cwd(),
+  "public",
+  "results",
+  "generated",
+  "player_stats.json"
+);
+
+const statsData = JSON.parse(
+  fs.readFileSync(statsPath, "utf-8")
+);
+
+const stats = statsData[player.player_id];
+
+if (!stats) {
+  throw new Error(
+    `No statistics found for player: ${player.player_id}`
+  );
+}
+
+
+// ============================================================
+// Helpers
+// ============================================================
+
+const formatPercent = (value: number | null | undefined) => {
+  if (value === null || value === undefined) {
+    return "—";
+  }
+
+  return `${value.toFixed(2)}%`;
+};
+
+const formatValue = (value: number | null | undefined) => {
+  if (value === null || value === undefined) {
+    return "—";
+  }
+
+  return value;
+};
+
+const getPlayerName = (id: string) => {
+  const found = players.find((p) => p.player_id === id);
+
+  return found?.player || id;
+};
+
+const getPlayerNickname = (id: string) => {
+  const found = players.find((p) => p.player_id === id);
+
+  return found?.nickname || "";
+};
+
+
+// ============================================================
+// Darts
+// ============================================================
+
+let dartsWeight = "";
+let dartsName = "";
+
+if (player.darts_used) {
+  const [weight, ...name] = player.darts_used.split(" ");
+
+  dartsWeight = weight;
+  dartsName = name.join(" ");
+}
+---
+
+<Layout title={`${player.player} | Csuka Utca Invitational Masters`}>
+  <div class="player-page">
+
+    <!-- ======================================================
+         PROFILE HEADER
+         ====================================================== -->
+
+    <section class="profile-hero">
+      <div class="container">
+
+        <a href="/players" class="back-link">
+          ← All players
+        </a>
+
+        <div class="profile-header">
+
+          <div class="profile-avatar">
+            <img
+              src={`/players/avatar/${player.player_id}.jpg`}
+              alt={player.player}
+              onerror={`this.onerror=null; this.src='/players/avatar/default.jpg';`}
+            />
+          </div>
+
+          <div class="profile-info">
+
+            <p class="profile-eyebrow">
+              {player.nickname || "PLAYER"}
+            </p>
+
+            <h1>{player.player}</h1>
+
+            <div class="profile-meta">
+              <span>{player.nationality}</span>
+              <span>·</span>
+              <span>{player.hometown}</span>
+            </div>
+
+            {
+              player.darts_used && (
+                <div class="profile-darts">
+                  <span class="darts-weight">{dartsWeight}</span>
+                  <span>{dartsName}</span>
+                </div>
+              )
+            }
+
+            {
+              player.walk_on_music && (
+                <div class="walk-on">
+                  <span class="walk-on-label">WALK-ON</span>
+                  <span>{player.walk_on_music}</span>
+
+                  <audio
+                    controls
+                    preload="none"
+                    src={`/players/walk_on/${player.player_id}.mp3`}
+                  />
+                </div>
+              )
+            }
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         CAREER OVERVIEW
+         ====================================================== -->
+
+    <section class="content container">
+
+      <div class="section-heading">
+        <p class="eyebrow">CAREER</p>
+        <h2>Overview</h2>
+      </div>
+
+      <div class="stat-grid">
+
+        <div class="stat-card">
+          <span class="stat-label">MATCHES</span>
+
+          <strong>
+            {stats.overview.matchesPlayed}
+          </strong>
+
+          <span class="stat-detail">
+            {stats.overview.matchesWon}W · {stats.overview.matchesLost}L
+          </span>
+        </div>
+
+
+        <div class="stat-card">
+          <span class="stat-label">WIN RATE</span>
+
+          <strong>
+            {formatPercent(stats.overview.winRate)}
+          </strong>
+
+          <span class="stat-detail">
+            match win rate
+          </span>
+        </div>
+
+
+        <div class="stat-card">
+          <span class="stat-label">LEGS</span>
+
+          <strong>
+            {stats.overview.legsPlayed}
+          </strong>
+
+          <span class="stat-detail">
+            {stats.overview.legsWon}W · {stats.overview.legsLost}L
+          </span>
+        </div>
+
+
+        <div class="stat-card">
+          <span class="stat-label">LEG WIN RATE</span>
+
+          <strong>
+            {formatPercent(stats.overview.legWinRate)}
+          </strong>
+
+          <span class="stat-detail">
+            leg win rate
+          </span>
+        </div>
+
+
+        <div class="stat-card">
+          <span class="stat-label">180s</span>
+
+          <div class="stat-values">
+
+            <div>
+              <strong>
+                {player.career_180s || 0}
+              </strong>
+
+              <span>Total</span>
+            </div>
+
+            <div>
+              <strong>
+                {stats.bonuses["180s"] || 0}
+              </strong>
+
+              <span>Tournament</span>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="stat-card">
+          <span class="stat-label">CHECKOUT</span>
+
+          <strong>
+            {formatValue(stats.bonuses.highestCheckout)}
+          </strong>
+
+          <span class="stat-detail">
+            highest checkout
+          </span>
+        </div>
+
+
+        <div class="stat-card">
+          <span class="stat-label">SEASONS</span>
+
+          <strong>
+            {stats.overview.seasonsPlayed}
+          </strong>
+
+          <span class="stat-detail">
+            seasons played
+          </span>
+        </div>
+
+
+        <div class="stat-card">
+          <span class="stat-label">ROUNDS</span>
+
+          <strong>
+            {stats.overview.roundsPlayed}
+          </strong>
+
+          <span class="stat-detail">
+            rounds played
+          </span>
+        </div>
+
+      </div>
+
+
+      <!-- ====================================================
+           FORM
+           ==================================================== -->
+
+      <div class="section-heading section-gap">
+        <p class="eyebrow">FORM</p>
+        <h2>Last 10 Matches</h2>
+      </div>
+
+      <div class="form-card">
+
+        <div class="form-results">
+          {
+            stats.form.last10.map((result: string) => (
+              <span
+                class:list={[
+                  "form-result",
+                  result === "W" ? "win" : "loss",
+                ]}
+              >
+                {result}
+              </span>
+            ))
+          }
+        </div>
+
+        <div class="form-summary">
+
+          <div>
+            <span>Win rate</span>
+
+            <strong>
+              {formatPercent(stats.form.last10WinRate)}
+            </strong>
+          </div>
+
+          <div>
+            <span>Current streak</span>
+
+            <strong>
+              {stats.form.streaks.current}
+              {stats.form.streaks.currentType === "W" ? "W" : "L"}
+            </strong>
+          </div>
+
+          <div>
+            <span>Longest win streak</span>
+
+            <strong>
+              {stats.form.streaks.longestWinning}
+            </strong>
+          </div>
+
+          <div>
+            <span>Longest loss streak</span>
+
+            <strong>
+              {stats.form.streaks.longestLosing}
+            </strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ====================================================
+           SEASONS
+           ==================================================== -->
+
+      <div class="section-heading section-gap">
+        <p class="eyebrow">PERFORMANCE</p>
+        <h2>Seasons</h2>
+      </div>
+
+      <div class="season-list">
+
+        {
+          Object.entries(stats.seasons)
+            .sort(([a], [b]) => Number(b) - Number(a))
+            .map(([season, data]: [string, any]) => (
+
+              <div class="season-card">
+
+                <div class="season-title">
+                  <strong>{season}</strong>
+
+                  <span>
+                    {data.roundsPlayed} round
+                    {data.roundsPlayed !== 1 ? "s" : ""}
+                  </span>
+                </div>
+
+                <div class="season-stat">
+                  <span>Matches</span>
+
+                  <strong>
+                    {data.matches.played}
+                  </strong>
+
+                  <small>
+                    {data.matches.won}W · {data.matches.lost}L
+                  </small>
+                </div>
+
+                <div class="season-stat">
+                  <span>Win Rate</span>
+
+                  <strong>
+                    {formatPercent(data.matches.winRate)}
+                  </strong>
+                </div>
+
+                <div class="season-stat">
+                  <span>Legs</span>
+
+                  <strong>
+                    {data.legs.played}
+                  </strong>
+
+                  <small>
+                    {data.legs.won}W · {data.legs.lost}L
+                  </small>
+                </div>
+
+                <div class="season-stat">
+                  <span>Leg Win Rate</span>
+
+                  <strong>
+                    {formatPercent(data.legs.winRate)}
+                  </strong>
+                </div>
+
+              </div>
+            ))
+        }
+
+      </div>
+
+
+      <!-- ====================================================
+           ROUND HISTORY
+           ==================================================== -->
+
+      <div class="section-heading section-gap section-heading-row">
+
+        <div>
+          <p class="eyebrow">TOURNAMENTS</p>
+          <h2>Round History</h2>
+        </div>
+
+        {
+          stats.rounds.all.length > 3 && (
+            <button
+              class="expandable-button"
+              data-expandable-button
+            >
+              Show all ↓
+            </button>
+          )
+        }
+
+      </div>
+
+      <div
+        class="expandable-section"
+        data-expandable
+      >
+
+        <div class="round-list" data-expandable-list>
+
+          {
+            stats.rounds.all
+              .slice()
+              .sort(
+                (a: any, b: any) =>
+                  new Date(`${b.season}-01-01`).getTime() -
+                  new Date(`${a.season}-01-01`).getTime()
+              )
+              .map((round: any) => (
+
+                <div class="round-card">
+
+                  <div class="round-name">
+                    <span>{round.season}</span>
+                    <strong>Round {round.round}</strong>
+                  </div>
+
+                  <div>
+                    <span>Matches</span>
+                    <strong>{round.matches}</strong>
+                  </div>
+
+                  <div>
+                    <span>Record</span>
+                    <strong>
+                      {round.wins}W · {round.losses}L
+                    </strong>
+                  </div>
+
+                  <div>
+                    <span>Win Rate</span>
+                    <strong>
+                      {formatPercent(round.winRate)}
+                    </strong>
+                  </div>
+
+                  <div>
+                    <span>Legs</span>
+                    <strong>
+                      {round.legsWon}W · {round.legsLost}L
+                    </strong>
+                  </div>
+
+                  <div>
+                    <span>Leg Rate</span>
+                    <strong>
+                      {formatPercent(round.legWinRate)}
+                    </strong>
+                  </div>
+
+                </div>
+
+              ))
+          }
+
+        </div>
+
+      </div>
+
+
+      <!-- ====================================================
+           HEAD TO HEAD
+           ==================================================== -->
+
+      <div class="section-heading section-gap section-heading-row">
+
+        <div>
+          <p class="eyebrow">MATCHUPS</p>
+          <h2>Head to Head</h2>
+        </div>
+
+        {
+          Object.keys(stats.headToHead).length > 5 && (
+            <button
+              class="expandable-button"
+              data-expandable-button
+            >
+              Show all ↓
+            </button>
+          )
+        }
+
+      </div>
+
+      <div
+        class="expandable-section"
+        data-expandable
+      >
+
+        <div class="h2h-list" data-expandable-list>
+
+          {
+            Object.entries(stats.headToHead)
+              .sort(
+                ([, a]: [string, any], [, b]: [string, any]) =>
+                  b.matches - a.matches
+              )
+              .map(([opponentId, h2h]: [string, any]) => (
+
+                <a
+                  class="h2h-card"
+                  href={`/players/${opponentId}`}
+                >
+
+                  <div class="h2h-player">
+
+                    <div class="h2h-avatar">
+                      <img
+                        src={`/players/avatar/${opponentId}.jpg`}
+                        alt={getPlayerName(opponentId)}
+                        onerror={`this.onerror=null; this.src='/players/avatar/default.jpg';`}
+                      />
+                    </div>
+
+                    <div>
+                      <strong>
+                        {getPlayerName(opponentId)}
+                      </strong>
+
+                      {
+                        getPlayerNickname(opponentId) && (
+                          <span>
+                            {getPlayerNickname(opponentId)}
+                          </span>
+                        )
+                      }
+                    </div>
+
+                  </div>
+
+                  <div class="h2h-stat">
+                    <strong>{h2h.matches}</strong>
+                    <span>matches</span>
+                  </div>
+
+                  <div class="h2h-stat">
+                    <strong>
+                      {h2h.wins}–{h2h.losses}
+                    </strong>
+                    <span>record</span>
+                  </div>
+
+                  <div class="h2h-stat">
+                    <strong>
+                      {formatPercent(h2h.winRate)}
+                    </strong>
+                    <span>win rate</span>
+                  </div>
+
+                  <span class="h2h-arrow">→</span>
+
+                </a>
+
+              ))
+          }
+
+        </div>
+
+      </div>
+
+
+      <!-- ====================================================
+           MATCH HISTORY
+           ==================================================== -->
+
+      <div class="section-heading section-gap section-heading-row">
+
+        <div>
+          <p class="eyebrow">MATCHES</p>
+          <h2>Match History</h2>
+        </div>
+
+        {
+          stats.matches.length > 5 && (
+            <button
+              class="expandable-button"
+              data-expandable-button
+            >
+              Show all ↓
+            </button>
+          )
+        }
+
+      </div>
+
+      <div
+        class="expandable-section"
+        data-expandable
+      >
+
+        <div class="match-list" data-expandable-list>
+
+          {
+            stats.matches
+              .slice()
+              .sort(
+                (a: any, b: any) =>
+                  new Date(b.date).getTime() -
+                  new Date(a.date).getTime()
+              )
+              .map((match: any) => (
+
+                <a
+                  class="match-card"
+                  href={`/players/${match.opponentId}`}
+                >
+
+                  <div class="match-date">
+                    <span>{match.date}</span>
+
+                    <small>
+                      {match.season} · Round {match.round}
+                    </small>
+                  </div>
+
+                  <div class="match-phase">
+                    {match.phase}
+                  </div>
+
+                  <div class="match-opponent">
+                    <span>vs</span>
+
+                    <strong>
+                      {getPlayerName(match.opponentId)}
+                    </strong>
+                  </div>
+
+                  <div class="match-score">
+                    <strong>{match.score}</strong>
+                    <span>–</span>
+                    <strong>{match.opponentScore}</strong>
+                  </div>
+
+                  <div
+                    class:list={[
+                      "match-result",
+                      match.result === "W" ? "win" : "loss",
+                    ]}
+                  >
+                    {match.result}
+                  </div>
+
+                </a>
+
+              ))
+          }
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+</Layout>
+
+
+<style>
+/* ============================================================
+   GENERAL
+   ============================================================ */
+
+.player-page {
+  min-height: calc(100vh - 76px);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+
+/* ============================================================
+   PROFILE HERO
+   ============================================================ */
+
+.profile-hero {
+  background: var(--dark);
+  color: white;
+  padding: 32px 0 64px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 40px;
+
+  color: #999;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  color: white;
+}
+
+.profile-header {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 280px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #222;
+  border-radius: var(--radius);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.profile-eyebrow {
+  margin: 0 0 8px;
+
+  color: #888;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.profile-info h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.profile-meta {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+
+  color: #aaa;
+  font-size: 15px;
+}
+
+.profile-darts {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  margin-top: 28px;
+
+  color: #ccc;
+  font-size: 14px;
+}
+
+.profile-darts .darts-weight {
+  color: white;
+  font-weight: 800;
+}
+
+.walk-on {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+
+  margin-top: 24px;
+
+  color: #999;
+  font-size: 13px;
+}
+
+.walk-on-label {
+  color: #666;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.walk-on audio {
+  width: min(400px, 100%);
+  height: 36px;
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.content {
+  padding-top: 56px;
+  padding-bottom: 100px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.section-gap {
+  margin-top: 64px;
+}
+
+
+/* ============================================================
+   CAREER STATS
+   ============================================================ */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.stat-card {
+  min-height: 145px;
+
+  padding: 20px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.stat-card strong {
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.stat-values {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.stat-values > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stat-values strong {
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.stat-values span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.stat-detail {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   FORM
+   ============================================================ */
+
+.form-card {
+  padding: 24px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.form-results {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.form-result {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.form-result.win {
+  background: #111;
+  color: white;
+}
+
+.form-result.loss {
+  background: #ededed;
+  color: #888;
+}
+
+.form-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 28px;
+  padding-top: 24px;
+
+  border-top: 1px solid var(--border);
+}
+
+.form-summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-summary span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.form-summary strong {
+  font-size: 18px;
+}
+
+
+/* ============================================================
+   SEASONS
+   ============================================================ */
+
+.season-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.season-card {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  align-items: center;
+  gap: 20px;
+
+  padding: 20px 24px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.season-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.season-title strong {
+  font-size: 22px;
+}
+
+.season-title span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.season-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.season-stat span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.season-stat strong {
+  font-size: 17px;
+}
+
+.season-stat small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   ROUND HISTORY
+   ============================================================ */
+
+.round-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.round-card {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(5, 1fr);
+  align-items: center;
+  gap: 20px;
+
+  padding: 18px 24px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.round-name {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.round-name span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.round-name strong {
+  font-size: 17px;
+}
+
+.round-card > div:not(.round-name) {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.round-card span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.round-card strong {
+  font-size: 15px;
+}
+
+
+/* ============================================================
+   HEAD TO HEAD
+   ============================================================ */
+
+.h2h-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.h2h-card {
+  display: grid;
+  grid-template-columns: 1fr 100px 100px 100px 30px;
+  align-items: center;
+  gap: 20px;
+
+  padding: 12px 18px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  color: var(--text);
+  text-decoration: none;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.h2h-card:hover {
+  border-color: #bbb;
+  transform: translateX(2px);
+}
+
+.h2h-player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.h2h-avatar {
+  width: 44px;
+  height: 44px;
+
+  overflow: hidden;
+  border-radius: 50%;
+  background: #eee;
+
+  flex-shrink: 0;
+}
+
+.h2h-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.h2h-player > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.h2h-player strong {
+  font-size: 14px;
+}
+
+.h2h-player span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.h2h-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.h2h-stat strong {
+  font-size: 15px;
+}
+
+.h2h-stat span {
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.h2h-arrow {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+
+/* ============================================================
+   MATCH HISTORY
+   ============================================================ */
+
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.match-card {
+  display: grid;
+  grid-template-columns: 150px 100px 1fr 100px 50px;
+  align-items: center;
+  gap: 20px;
+
+  padding: 18px 20px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  color: var(--text);
+  text-decoration: none;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.match-card:hover {
+  border-color: #bbb;
+  transform: translateX(2px);
+}
+
+.match-date {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.match-date span {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.match-date small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.match-phase {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.match-opponent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.match-opponent span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.match-opponent strong {
+  font-size: 14px;
+}
+
+.match-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 18px;
+}
+
+.match-score span {
+  color: var(--muted);
+}
+
+.match-result {
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.match-result.win {
+  color: #111;
+}
+
+.match-result.loss {
+  color: #aaa;
+}
+
+
+/* ============================================================
+   EXPANDABLE LISTS
+   ============================================================ */
+
+.expandable-section {
+  position: relative;
+}
+
+/* Round history: show 3 initially */
+.expandable-section:not(.expanded) .round-list > :nth-child(n + 4) {
+  display: none;
+}
+
+/* Head to head: show 5 initially */
+.expandable-section:not(.expanded) .h2h-list > :nth-child(n + 6) {
+  display: none;
+}
+
+/* Match history: show 5 initially */
+.expandable-section:not(.expanded) .match-list > :nth-child(n + 6) {
+  display: none;
+}
+
+
+/* Fade at the bottom when collapsed */
+.expandable-section:not(.expanded)::after {
+  content: "MORE BELOW  ···";
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 80px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding-bottom: 0px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(245, 245, 245, 0.65) 45%,
+    rgba(245, 245, 245, 0.95) 75%,
+    var(--background) 100%
+  );
+
+  color: #999;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+
+  pointer-events: none;
+}
+
+
+/* Button in section heading */
+.expandable-button {
+  flex-shrink: 0;
+
+  padding: 8px 12px;
+
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.expandable-button:hover {
+  color: var(--text);
+  background: var(--surface);
+  border-color: #bbb;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+  .profile-header {
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
+  }
+
+  .profile-avatar {
+    width: 220px;
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .season-card {
+    grid-template-columns: 1.2fr repeat(4, 1fr);
+  }
+
+  .round-card {
+    grid-template-columns: 1.2fr repeat(3, 1fr);
+  }
+
+  .round-card > div:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .profile-hero {
+    padding: 24px 0 48px;
+  }
+
+  .profile-header {
+    grid-template-columns: 150px 1fr;
+    gap: 24px;
+  }
+
+  .profile-avatar {
+    width: 150px;
+  }
+
+  .profile-info h1 {
+    font-size: 42px;
+  }
+
+  .content {
+    padding-top: 40px;
+  }
+
+  .form-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .season-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .round-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .h2h-card {
+    grid-template-columns: 1fr 80px 80px 30px;
+  }
+
+  .h2h-card .h2h-stat:nth-child(4) {
+    display: none;
+  }
+
+  .match-card {
+    grid-template-columns: 1fr auto auto;
+  }
+
+  .match-phase {
+    display: none;
+  }
+
+  .match-date {
+    grid-column: 1;
+  }
+
+  .match-opponent {
+    grid-column: 1;
+  }
+
+  .match-score {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .match-result {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+}
+
+
+@media (max-width: 550px) {
+
+  .profile-header {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-avatar {
+    width: 180px;
+  }
+
+  .profile-info h1 {
+    font-size: 40px;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-card {
+    min-height: 120px;
+    padding: 16px;
+  }
+
+  .stat-card strong,
+  .stat-values strong {
+    font-size: 26px;
+  }
+
+  .section-gap {
+    margin-top: 48px;
+  }
+
+  .section-heading-row {
+    align-items: flex-end;
+  }
+
+  .expandable-button {
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+
+  .season-card {
+    grid-template-columns: 1fr 1fr;
+    padding: 18px;
+  }
+
+  .season-title {
+    grid-column: 1 / -1;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .round-card {
+    grid-template-columns: 1fr 1fr;
+    padding: 18px;
+  }
+
+  .round-name {
+    grid-column: 1 / -1;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .h2h-card {
+    grid-template-columns: 1fr auto 30px;
+  }
+
+  .h2h-card .h2h-stat:nth-child(3),
+  .h2h-card .h2h-stat:nth-child(4) {
+    display: none;
+  }
+
+  .match-card {
+    padding: 16px;
+  }
+
+  .form-card {
+    padding: 18px;
+  }
+}
+</style>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-expandable]").forEach((section) => {
+      const list = section.querySelector("[data-expandable-list]");
+      const button = section
+        .previousElementSibling
+        ?.querySelector("[data-expandable-button]");
+
+      if (!list || !button) return;
+
+      button.addEventListener("click", () => {
+        const expanded = section.classList.toggle("expanded");
+
+        button.textContent = expanded
+          ? "Show less ↑"
+          : "Show all ↓";
+      });
+    });
+  });
+</script>
