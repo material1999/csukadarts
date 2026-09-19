@@ -1,16 +1,307 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="/favicon.png" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="generator" content={Astro.generator} />
-	<title>Csuka Utca Invitational Masters</title>
-</head>
-	<body>
-		<h1>Csuka Utca Invitational Masters</h1>
-	</body>
-</html>
+<Layout>
+  <div class="page">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">CSUKA UTCA INVITATIONAL MASTERS</p>
+
+        <h1>2026 Season</h1>
+
+        <p class="subtitle">
+          Current standings, results and tournament statistics.
+        </p>
+      </div>
+    </section>
+
+    <section class="content container">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">CURRENT SEASON</p>
+          <h2>Standings</h2>
+        </div>
+
+        <button class="season-selector">
+          2026
+          <span>⌄</span>
+        </button>
+      </div>
+
+      <div class="standings-card">
+        <div class="empty-state">
+          <div class="empty-icon">🎯</div>
+
+          <h3>Standings coming soon</h3>
+
+          <p>
+            Player standings will appear here once the tournament data is
+            connected.
+          </p>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Last Round -->
+        <div class="dashboard-card">
+          <p class="card-label">LAST ROUND</p>
+
+          <h3>Round 5</h3>
+
+          <p class="card-placeholder">
+            Latest round results will appear here.
+          </p>
+
+          <a href="/results?year=2026&round=5">
+            View round →
+          </a>
+        </div>
+
+        <!-- Season Statistics -->
+        <div class="dashboard-card">
+          <p class="card-label">SEASON STATISTICS</p>
+
+          <h3>2026 Statistics</h3>
+
+          <p class="card-placeholder">
+            Season statistics will appear here.
+          </p>
+
+          <a href="/stats?year=2026">
+            View statistics →
+          </a>
+        </div>
+
+        <!-- Results -->
+        <div class="dashboard-card">
+          <p class="card-label">RESULTS</p>
+
+          <h3>All Results</h3>
+
+          <p class="card-placeholder">
+            Browse results from every round and season.
+          </p>
+
+          <a href="/results">
+            View all results →
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .page {
+    min-height: calc(100vh - 76px);
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .hero {
+    background: var(--dark);
+    color: white;
+    padding: 80px 0 90px;
+  }
+
+  .hero .container {
+    width: 100%;
+  }
+
+  .hero .eyebrow {
+    color: #999;
+  }
+
+  .eyebrow {
+    margin: 0 0 10px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+
+    color: var(--muted);
+  }
+
+  h1 {
+    margin: 0;
+
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+
+  .subtitle {
+    max-width: 500px;
+    margin: 24px 0 0;
+
+    color: #aaa;
+    font-size: 16px;
+  }
+
+  .content {
+    padding-top: 56px;
+    padding-bottom: 80px;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin: 0;
+
+    font-size: 32px;
+    letter-spacing: -0.03em;
+  }
+
+  .season-selector {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 6px;
+
+    padding: 10px 14px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+  }
+
+  .season-selector span {
+    margin-left: 12px;
+    color: var(--muted);
+  }
+
+  .standings-card,
+  .dashboard-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .standings-card {
+    min-height: 300px;
+  }
+
+  .empty-state {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+    text-align: center;
+  }
+
+  .empty-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .empty-state h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+  }
+
+  .empty-state p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .dashboard-card {
+    min-height: 220px;
+    padding: 24px;
+  }
+
+  .card-label {
+    margin: 0 0 24px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+
+    color: #999;
+  }
+
+  .dashboard-card h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+  }
+
+  .card-placeholder {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .dashboard-card a {
+    display: inline-block;
+
+    margin-top: 24px;
+
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .dashboard-card a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 800px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .hero {
+      padding: 56px 0 64px;
+    }
+
+    .content {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .section-header {
+      align-items: start;
+      gap: 16px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    .season-selector {
+      flex-shrink: 0;
+    }
+  }
+</style>

@@ -1,0 +1,146 @@
+<header class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">
+      <img src="/favicon.png" alt="" class="logo-icon" />
+
+      <div class="logo-text">
+        CSUKA UTCA
+        <span>INVITATIONAL MASTERS</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="/" class="nav-link">Standings</a>
+      <a href="/results" class="nav-link">Results</a>
+      <a href="/stats" class="nav-link">Stats</a>
+      <a href="/players" class="nav-link">Players</a>
+      <a href="/head-to-head" class="nav-link">Head to Head</a>
+      <a href="/memories" class="nav-link">Memories</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    background: var(--dark);
+    color: white;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .navbar-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    min-height: 76px;
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+  }
+
+  .logo-text span {
+    display: block;
+    margin-top: 4px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    opacity: 0.65;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-link {
+    color: #bdbdbd;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: white;
+    background: var(--dark-hover);
+  }
+
+  @media (max-width: 900px) {
+    .navbar-inner {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      padding: 18px 20px;
+    }
+
+    .logo {
+      justify-content: center;
+    }
+
+    nav {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      padding: 8px 10px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .navbar-inner {
+      padding: 16px 12px;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .logo {
+      font-size: 16px;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      gap: 4px;
+    }
+
+    .nav-link {
+      text-align: center;
+      padding: 9px 4px;
+      font-size: 12px;
+    }
+  }
+</style>
