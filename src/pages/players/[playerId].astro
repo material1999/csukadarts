@@ -735,7 +735,7 @@ if (player.darts_used) {
       <div
         class:list={[
           "expandable-section",
-          stats.rounds.all.length >= 5 && "has-more",
+          Object.keys(stats.headToHead).length >= 5 && "has-more",
         ]}
         data-expandable
       >
@@ -855,7 +855,7 @@ if (player.darts_used) {
       <div
         class:list={[
           "expandable-section",
-          stats.rounds.all.length >= 5 && "has-more",
+          stats.matches.length >= 5 && "has-more",
         ]}
         data-expandable
       >
