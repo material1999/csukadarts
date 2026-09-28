@@ -1,7 +1,18 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/favicon.png";
+---
+
 <header class="navbar">
   <div class="navbar-inner">
     <a href="/" class="logo">
-      <img src="/favicon.png" alt="" class="logo-icon" />
+      <Image
+        src={logo}
+        alt=""
+        class="logo-icon"
+        loading="eager"
+        decoding="sync"
+      />
 
       <div class="logo-text">
         CSUKA UTCA
