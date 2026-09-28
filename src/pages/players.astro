@@ -1,11 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 import fs from "node:fs";
 import path from "node:path";
 
 const playerBioPath = path.join(
   process.cwd(),
-  "public",
+  "src",
+  "assets",
   "players",
   "player_bio.csv"
 );
@@ -39,16 +41,24 @@ const players = lines
     const familyNameB = partsB.slice(1).join(" ");
 
     const familyCompare = familyNameA.localeCompare(
-        familyNameB,
-        "hu"
+      familyNameB,
+      "hu"
     );
 
     if (familyCompare !== 0) {
-        return familyCompare;
+      return familyCompare;
     }
 
     return partsA[0].localeCompare(partsB[0], "hu");
-});
+  });
+
+const avatars = import.meta.glob(
+  "../assets/players/avatar/*.jpg",
+  {
+    eager: true,
+    import: "default",
+  }
+);
 ---
 
 <Layout title="Players | Csuka Utca Invitational Masters">
@@ -88,18 +98,31 @@ const players = lines
 
       <div class="players-grid">
         {
-          players.map((player) => (
+          players.map((player, index) => (
             <a
               class="player-card"
               href={`/players/${player.player_id}`}
             >
               <div class="player-avatar">
-                <img
-                    src={`/players/avatar/${player.player_id}.jpg`}
-                    alt={player.player}
-                    loading="lazy"
-                    onerror={`this.onerror=null; this.src='/players/avatar/default.jpg';`}
-                />
+                {
+                  avatars[`../assets/players/avatar/${player.player_id}.jpg`] ? (
+                    <Image
+                      src={
+                        avatars[
+                          `../assets/players/avatar/${player.player_id}.jpg`
+                        ]
+                      }
+                      alt={player.player}
+                      loading={index < 4 ? "eager" : "lazy"}
+                    />
+                  ) : (
+                    <Image
+                      src={avatars["../assets/players/avatar/default.jpg"]}
+                      alt={player.player}
+                      loading={index < 4 ? "eager" : "lazy"}
+                    />
+                  )
+                }
               </div>
 
               <div class="player-info">

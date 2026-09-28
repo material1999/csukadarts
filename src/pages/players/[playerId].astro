@@ -1,12 +1,27 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 import fs from "node:fs";
 import path from "node:path";
+
+const avatars = import.meta.glob(
+  "../../assets/players/avatar/*.jpg",
+  {
+    eager: true,
+    import: "default",
+  }
+);
+
+
+// ============================================================
+// Static paths
+// ============================================================
 
 export function getStaticPaths() {
   const playerBioPath = path.join(
     process.cwd(),
-    "public",
+    "src",
+    "assets",
     "players",
     "player_bio.csv"
   );
@@ -55,7 +70,8 @@ const { player } = Astro.props;
 
 const playerBioPath = path.join(
   process.cwd(),
-  "public",
+  "src",
+  "assets",
   "players",
   "player_bio.csv"
 );
@@ -152,6 +168,18 @@ if (player.darts_used) {
   dartsWeight = weight;
   dartsName = name.join(" ");
 }
+
+
+// ============================================================
+// Avatar helpers
+// ============================================================
+
+const getAvatar = (playerId: string) => {
+  return (
+    avatars[`../../assets/players/avatar/${playerId}.jpg`] ||
+    avatars["../../assets/players/avatar/default.jpg"]
+  );
+};
 ---
 
 <Layout title={`${player.player} | Csuka Utca Invitational Masters`}>
@@ -171,10 +199,10 @@ if (player.darts_used) {
         <div class="profile-header">
 
           <div class="profile-avatar">
-            <img
-              src={`/players/avatar/${player.player_id}.jpg`}
+            <Image
+              src={getAvatar(player.player_id)}
               alt={player.player}
-              onerror={`this.onerror=null; this.src='/players/avatar/default.jpg';`}
+              loading="eager"
             />
           </div>
 
@@ -300,7 +328,6 @@ if (player.darts_used) {
           <span class="stat-detail">
             career total · {stats.bonuses["180s"] || 0} at tournament
           </span>
-
         </div>
 
 
@@ -410,30 +437,35 @@ if (player.darts_used) {
 
       </div>
 
+
       <!-- ====================================================
-           Rivals / Whitewashes / Shutouts
+           RIVALS & RECORDS
            ==================================================== -->
 
-      <!-- Rivals & Special Stats -->
       <div class="section-heading section-gap">
         <p class="eyebrow">PROFILE</p>
         <h2>Rivals & Records</h2>
       </div>
 
       <div class="stat-grid">
+
         <div class="stat-card">
           <span class="stat-label">Dominating</span>
 
           {
             stats.rivals?.dominating ? (
-
+              <>
                 <strong>
                   {getPlayerName(stats.rivals.dominating.playerId)}
                 </strong>
+
                 <span>
                   {stats.rivals.dominating.matchesWon}{" "}
-                  {stats.rivals.dominating.matchesWon === 1 ? "win" : "wins"}
+                  {stats.rivals.dominating.matchesWon === 1
+                    ? "win"
+                    : "wins"}
                 </span>
+              </>
             ) : (
               <>
                 <strong>—</strong>
@@ -443,20 +475,24 @@ if (player.darts_used) {
           }
         </div>
 
+
         <div class="stat-card">
           <span class="stat-label">Archrival</span>
 
           {
             stats.rivals?.archenemy ? (
-
+              <>
                 <strong>
                   {getPlayerName(stats.rivals.archenemy.playerId)}
                 </strong>
+
                 <span>
                   {stats.rivals.archenemy.matchesLost}{" "}
-                  {stats.rivals.archenemy.matchesLost === 1 ? "loss" : "losses"}
+                  {stats.rivals.archenemy.matchesLost === 1
+                    ? "loss"
+                    : "losses"}
                 </span>
-
+              </>
             ) : (
               <>
                 <strong>—</strong>
@@ -466,17 +502,32 @@ if (player.darts_used) {
           }
         </div>
 
+
         <div class="stat-card">
           <span class="stat-label">Shutouts</span>
-          <strong>{stats.shutouts?.count ?? 0}</strong>
-          <span>{formatPercent(stats.shutouts?.percentage ?? 0)}</span>
+
+          <strong>
+            {stats.shutouts?.count ?? 0}
+          </strong>
+
+          <span>
+            {formatPercent(stats.shutouts?.percentage ?? 0)}
+          </span>
         </div>
+
 
         <div class="stat-card">
           <span class="stat-label">Whitewashes</span>
-          <strong>{stats.whitewashes?.count ?? 0}</strong>
-          <span>{formatPercent(stats.whitewashes?.percentage ?? 0)}</span>
+
+          <strong>
+            {stats.whitewashes?.count ?? 0}
+          </strong>
+
+          <span>
+            {formatPercent(stats.whitewashes?.percentage ?? 0)}
+          </span>
         </div>
+
       </div>
 
 
@@ -509,6 +560,7 @@ if (player.darts_used) {
 
                 <div class="season-stat">
                   <span>Standing</span>
+
                   <strong>
                     {data.standing ?? "—"}
                   </strong>
@@ -516,6 +568,7 @@ if (player.darts_used) {
 
                 <div class="season-stat">
                   <span>Points</span>
+
                   <strong>
                     {data.points ?? "—"}
                   </strong>
@@ -572,13 +625,13 @@ if (player.darts_used) {
            BONUSES
            ==================================================== -->
 
-
       <div class="section-heading section-gap">
         <p class="eyebrow">BONUSES</p>
         <h2>Tournament Bonuses</h2>
       </div>
 
       <div class="stat-grid">
+
         <div class="stat-card">
           <span class="stat-label">Bonus Points</span>
           <strong>{stats.bonuses?.total ?? 0}</strong>
@@ -590,14 +643,24 @@ if (player.darts_used) {
         </div>
 
         <div class="stat-card">
-          <span class="stat-label">Number of Highest Checkouts</span>
-          <strong>{(stats.bonuses?.events ?? 0) - (stats.bonuses?.["180s"] ?? 0)}</strong>
+          <span class="stat-label">
+            Number of Highest Checkouts
+          </span>
+
+          <strong>
+            {(stats.bonuses?.events ?? 0) -
+              (stats.bonuses?.["180s"] ?? 0)}
+          </strong>
         </div>
 
         <div class="stat-card">
           <span class="stat-label">Highest Checkout</span>
-          <strong>{stats.bonuses?.highestCheckout ?? "—"}</strong>
+
+          <strong>
+            {stats.bonuses?.highestCheckout ?? "—"}
+          </strong>
         </div>
+
       </div>
 
 
@@ -668,7 +731,11 @@ if (player.darts_used) {
 
                   <div>
                     <span>Matches</span>
-                    <strong>{round.matches}</strong>
+
+                    <strong>
+                      {round.matches}
+                    </strong>
+
                     <small>
                       {round.wins}W · {round.losses}L
                     </small>
@@ -676,6 +743,7 @@ if (player.darts_used) {
 
                   <div>
                     <span>Win Rate</span>
+
                     <strong>
                       {formatPercent(round.winRate)}
                     </strong>
@@ -683,9 +751,11 @@ if (player.darts_used) {
 
                   <div>
                     <span>Legs</span>
+
                     <strong>
                       {round.legsWon + round.legsLost}
                     </strong>
+
                     <small>
                       {round.legsWon}W · {round.legsLost}L
                     </small>
@@ -693,13 +763,13 @@ if (player.darts_used) {
 
                   <div>
                     <span>Leg Win Rate</span>
+
                     <strong>
                       {formatPercent(round.legWinRate)}
                     </strong>
                   </div>
 
                 </div>
-
               ))
           }
 
@@ -755,10 +825,10 @@ if (player.darts_used) {
                   <div class="h2h-player">
 
                     <div class="h2h-avatar">
-                      <img
-                        src={`/players/avatar/${opponentId}.jpg`}
+                      <Image
+                        src={getAvatar(opponentId)}
                         alt={getPlayerName(opponentId)}
-                        onerror={`this.onerror=null; this.src='/players/avatar/default.jpg';`}
+                        loading="lazy"
                       />
                     </div>
 
@@ -778,48 +848,57 @@ if (player.darts_used) {
 
                   </div>
 
+
                   <!-- Matches -->
                   <div class="h2h-stat">
                     <strong>{h2h.matches}</strong>
                     <span>matches</span>
                   </div>
 
+
                   <!-- Match record -->
                   <div class="h2h-stat">
                     <strong>
                       {h2h.wins}–{h2h.losses}
                     </strong>
+
                     <span>record</span>
                   </div>
+
 
                   <!-- Match win rate -->
                   <div class="h2h-stat">
                     <strong>
                       {formatPercent(h2h.winRate)}
                     </strong>
+
                     <span>win rate</span>
                   </div>
+
 
                   <!-- Leg record -->
                   <div class="h2h-stat">
                     <strong>
                       {h2h.legsWon}–{h2h.legsLost}
                     </strong>
+
                     <span>legs</span>
                   </div>
+
 
                   <!-- Leg win rate -->
                   <div class="h2h-stat">
                     <strong>
                       {formatPercent(h2h.legWinRate)}
                     </strong>
+
                     <span>leg win rate</span>
                   </div>
+
 
                   <span class="h2h-arrow">→</span>
 
                 </div>
-
               ))
           }
 
@@ -910,7 +989,6 @@ if (player.darts_used) {
                   </div>
 
                 </div>
-
               ))
           }
 
