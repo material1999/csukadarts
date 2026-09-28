@@ -1,5 +1,46 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import fs from "node:fs";
+import path from "node:path";
+
+const statsPath = path.join(
+  process.cwd(),
+  "public",
+  "results",
+  "generated",
+  "player_stats.json"
+);
+
+const statsData = JSON.parse(
+  fs.readFileSync(statsPath, "utf-8")
+);
+
+const seasons = [
+  ...new Set(
+    Object.values(statsData).flatMap((player: any) =>
+      Object.keys(player.seasons || {})
+    )
+  ),
+].sort((a, b) => Number(b) - Number(a));
+
+const currentSeason = seasons[0] || "2026";
+
+const currentSeasonRounds = Object.values(statsData).flatMap(
+  (player: any) =>
+    (player.rounds?.all || []).filter(
+      (round: any) =>
+        String(round.year || round.season) === String(currentSeason)
+    )
+);
+
+const lastRound =
+  currentSeasonRounds.length > 0
+    ? Math.max(
+        ...currentSeasonRounds.map((round: any) =>
+          Number(round.round)
+        )
+      )
+    : 0;
 ---
 
 <Layout>
@@ -8,7 +49,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="container">
         <p class="eyebrow">CSUKA UTCA INVITATIONAL MASTERS</p>
 
-        <h1>2026 Season</h1>
+        <h1>{currentSeason} Season</h1>
 
         <p class="subtitle">
           Current standings, results and tournament statistics.
@@ -26,11 +67,6 @@ import Layout from "../layouts/Layout.astro";
           <p class="eyebrow">CURRENT SEASON</p>
           <h2>Standings</h2>
         </div>
-
-        <button class="season-selector">
-          2026
-          <span>⌄</span>
-        </button>
       </div>
 
       <div class="standings-card">
@@ -44,7 +80,10 @@ import Layout from "../layouts/Layout.astro";
             connected.
           </p>
 
-          <a href="/standings" class="standings-button">
+          <a
+            href={`/standings?season=${currentSeason}`}
+            class="standings-button"
+          >
             View standings →
           </a>
         </div>
@@ -61,39 +100,37 @@ import Layout from "../layouts/Layout.astro";
         <div class="dashboard-card">
           <p class="card-label">LAST ROUND</p>
 
-          <h3>Round 5</h3>
+          <h3>Round {lastRound}</h3>
 
           <p class="card-placeholder">
             Latest round results will appear here.
           </p>
 
           <a
-            href="/results?year=2026&round=5"
+            href={`/results?year=${currentSeason}&round=${lastRound}`}
             class="dashboard-button"
           >
             View round →
           </a>
         </div>
 
-
         <!-- Season Statistics -->
         <div class="dashboard-card">
           <p class="card-label">SEASON STATISTICS</p>
 
-          <h3>2026 Statistics</h3>
+          <h3>{currentSeason} Statistics</h3>
 
           <p class="card-placeholder">
             Season statistics will appear here.
           </p>
 
           <a
-            href="/stats?year=2026"
+            href={`/stats?year=${currentSeason}`}
             class="dashboard-button"
           >
             View statistics →
           </a>
         </div>
-
 
         <!-- Results -->
         <div class="dashboard-card">
@@ -105,14 +142,10 @@ import Layout from "../layouts/Layout.astro";
             Browse results from every round and season.
           </p>
 
-          <a
-            href="/results"
-            class="dashboard-button"
-          >
+          <a href="/results" class="dashboard-button">
             View all results →
           </a>
         </div>
-
       </div>
     </section>
   </div>
