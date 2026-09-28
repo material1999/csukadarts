@@ -17,6 +17,10 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <section class="content container">
+      <!-- ======================================================
+           STANDINGS
+           ====================================================== -->
+
       <div class="section-header">
         <div>
           <p class="eyebrow">CURRENT SEASON</p>
@@ -39,10 +43,20 @@ import Layout from "../layouts/Layout.astro";
             Player standings will appear here once the tournament data is
             connected.
           </p>
+
+          <a href="/standings" class="standings-button">
+            View standings →
+          </a>
         </div>
       </div>
 
+
+      <!-- ======================================================
+           DASHBOARD
+           ====================================================== -->
+
       <div class="dashboard-grid">
+
         <!-- Last Round -->
         <div class="dashboard-card">
           <p class="card-label">LAST ROUND</p>
@@ -53,10 +67,14 @@ import Layout from "../layouts/Layout.astro";
             Latest round results will appear here.
           </p>
 
-          <a href="/results?year=2026&round=5">
+          <a
+            href="/results?year=2026&round=5"
+            class="dashboard-button"
+          >
             View round →
           </a>
         </div>
+
 
         <!-- Season Statistics -->
         <div class="dashboard-card">
@@ -68,10 +86,14 @@ import Layout from "../layouts/Layout.astro";
             Season statistics will appear here.
           </p>
 
-          <a href="/stats?year=2026">
+          <a
+            href="/stats?year=2026"
+            class="dashboard-button"
+          >
             View statistics →
           </a>
         </div>
+
 
         <!-- Results -->
         <div class="dashboard-card">
@@ -83,16 +105,24 @@ import Layout from "../layouts/Layout.astro";
             Browse results from every round and season.
           </p>
 
-          <a href="/results">
+          <a
+            href="/results"
+            class="dashboard-button"
+          >
             View all results →
           </a>
         </div>
+
       </div>
     </section>
   </div>
 </Layout>
 
 <style>
+  /* ============================================================
+     GENERAL
+     ============================================================ */
+
   .page {
     min-height: calc(100vh - 76px);
   }
@@ -103,6 +133,11 @@ import Layout from "../layouts/Layout.astro";
     padding-left: 32px;
     padding-right: 32px;
   }
+
+
+  /* ============================================================
+     HERO
+     ============================================================ */
 
   .hero {
     background: var(--dark);
@@ -144,10 +179,20 @@ import Layout from "../layouts/Layout.astro";
     font-size: 16px;
   }
 
+
+  /* ============================================================
+     CONTENT
+     ============================================================ */
+
   .content {
     padding-top: 56px;
     padding-bottom: 80px;
   }
+
+
+  /* ============================================================
+     SECTION HEADER
+     ============================================================ */
 
   .section-header {
     display: flex;
@@ -182,15 +227,17 @@ import Layout from "../layouts/Layout.astro";
     color: var(--muted);
   }
 
-  .standings-card,
-  .dashboard-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-  }
+
+  /* ============================================================
+     STANDINGS
+     ============================================================ */
 
   .standings-card {
     min-height: 300px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
   }
 
   .empty-state {
@@ -222,6 +269,46 @@ import Layout from "../layouts/Layout.astro";
     font-size: 14px;
   }
 
+
+  /* ============================================================
+     BUTTONS
+     ============================================================ */
+
+  .standings-button,
+  .dashboard-button {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 10px 16px;
+
+    background: var(--dark);
+    color: white;
+
+    border: 1px solid var(--dark);
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .standings-button:hover,
+  .dashboard-button:hover {
+    background: #333;
+    border-color: #333;
+    transform: translateY(-1px);
+  }
+
+
+  /* ============================================================
+     DASHBOARD CARDS
+     ============================================================ */
+
   .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -233,6 +320,13 @@ import Layout from "../layouts/Layout.astro";
   .dashboard-card {
     min-height: 220px;
     padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
   }
 
   .card-label {
@@ -247,28 +341,26 @@ import Layout from "../layouts/Layout.astro";
 
   .dashboard-card h3 {
     margin: 0 0 10px;
+
     font-size: 24px;
   }
 
   .card-placeholder {
+    margin: 0;
+
     color: var(--muted);
     font-size: 14px;
   }
 
-  .dashboard-card a {
-    display: inline-block;
-
-    margin-top: 24px;
-
-    color: var(--text);
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
+  .dashboard-card .dashboard-button {
+    align-self: flex-start;
+    margin-top: auto;
   }
 
-  .dashboard-card a:hover {
-    text-decoration: underline;
-  }
+
+  /* ============================================================
+     RESPONSIVE
+     ============================================================ */
 
   @media (max-width: 800px) {
     .container {
@@ -289,6 +381,7 @@ import Layout from "../layouts/Layout.astro";
       grid-template-columns: 1fr;
     }
   }
+
 
   @media (max-width: 500px) {
     .section-header {
