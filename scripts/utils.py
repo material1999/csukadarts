@@ -670,3 +670,289 @@ def calculate_round_info(season, round, matches, bonus_points):
         "180s_by": one_eighties_by,
         "podium": podium
     }
+
+
+def calculate_season_standings(
+    season,
+    matches,
+    bonus_points,
+    until_round=None,
+):
+
+    # -------------------------
+    # Get rounds in season
+    # -------------------------
+    rounds = (
+        matches[matches["season"] == season]["round"]
+        .drop_duplicates()
+        .sort_values()
+    )
+
+    if until_round is not None:
+        rounds = rounds[
+            rounds <= until_round
+        ]
+
+    # -------------------------
+    # Calculate round results
+    # -------------------------
+    round_results = []
+
+    for round in rounds:
+
+        result = calculate_round_results(
+            season,
+            round,
+            matches,
+            bonus_points
+        )
+
+        round_results.append(result)
+
+    # -------------------------
+    # Aggregate results
+    # -------------------------
+    standings = pd.concat(
+        round_results,
+        ignore_index=True
+    )
+
+    standings["nights_won"] = (
+        standings["#"] == 1
+    )
+
+    standings["finals"] = (
+        standings["#"] <= 2
+    )
+
+    standings["semi_finals"] = (
+        standings["#"] <= 4
+    )
+
+    standings = (
+        standings
+        .groupby("player_id", as_index=False)
+        .agg({
+            "matches_played": "sum",
+            "matches_won": "sum",
+            "matches_lost": "sum",
+            "legs_played": "sum",
+            "legs_won": "sum",
+            "legs_lost": "sum",
+            "points": "sum",
+            "bonus_points": "sum",
+            "total_points": "sum",
+            "nights_won": "sum",
+            "finals": "sum",
+            "semi_finals": "sum",
+        })
+    )
+
+    # -------------------------
+    # Leg difference
+    # -------------------------
+    standings["leg_difference"] = (
+        standings["legs_won"] -
+        standings["legs_lost"]
+    )
+
+    # -------------------------
+    # Sort standings
+    # -------------------------
+    standings = standings.sort_values(
+        [
+            "total_points",
+            "points",
+            "leg_difference",
+            "legs_won",
+        ],
+        ascending=[False, False, False, False]
+    ).reset_index(drop=True)
+
+    # -------------------------
+    # Assign position
+    # -------------------------
+    standings["#"] = range(
+        1,
+        len(standings) + 1
+    )
+
+    # -------------------------
+    # Final columns
+    # -------------------------
+    standings = standings[
+        [
+            "#",
+            "player_id",
+            "nights_won",
+            "finals",
+            "semi_finals",
+            "matches_played",
+            "matches_won",
+            "matches_lost",
+            "legs_played",
+            "legs_won",
+            "legs_lost",
+            "leg_difference",
+            "points",
+            "bonus_points",
+            "total_points",
+        ]
+    ]
+
+    return standings
+
+
+def calculate_season_info(
+    season,
+    matches,
+    bonus_points,
+):
+
+    # -------------------------
+    # Season matches
+    # -------------------------
+    season_matches = matches[
+        matches["season"] == season
+    ].copy()
+
+    # -------------------------
+    # Dates
+    # -------------------------
+    dates = (
+        season_matches["date"]
+        .drop_duplicates()
+        .sort_values()
+        .dt.strftime("%Y-%m-%d")
+        .tolist()
+    )
+
+    # -------------------------
+    # Number of rounds
+    # -------------------------
+    rounds = season_matches["round"].nunique()
+
+    # -------------------------
+    # Number of players
+    # -------------------------
+    players = sorted(
+        set(season_matches["player1_id"]) |
+        set(season_matches["player2_id"])
+    )
+
+    number_of_players = len(players)
+
+    # -------------------------
+    # Matches played
+    # -------------------------
+    matches_played = len(season_matches)
+
+    # -------------------------
+    # Legs played
+    # -------------------------
+    legs_played = (
+        season_matches["player1_score"] +
+        season_matches["player2_score"]
+    ).sum()
+
+    # -------------------------
+    # Season bonus
+    # -------------------------
+    season_bonus = bonus_points[
+        bonus_points["season"] == season
+    ].copy()
+
+    # -------------------------
+    # Highest checkout
+    # -------------------------
+    checkout_values = season_bonus[
+        season_bonus["bonus"] < 180
+    ]
+
+    if len(checkout_values) > 0:
+
+        highest_checkout = checkout_values["bonus"].max()
+
+        highest_checkout_by = (
+            checkout_values[
+                checkout_values["bonus"] == highest_checkout
+            ]["player_id"]
+            .unique()
+            .tolist()
+        )
+
+    else:
+
+        highest_checkout = None
+        highest_checkout_by = []
+
+    # -------------------------
+    # 180s
+    # -------------------------
+    one_eighties = season_bonus[
+        season_bonus["bonus"] == 180
+    ]
+
+    total_180s = len(one_eighties)
+
+    one_eighties_by = (
+        one_eighties
+        .groupby("player_id")
+        .size()
+        .sort_values(ascending=False)
+        .to_dict()
+    )
+
+    # -------------------------
+    # Standings history
+    # -------------------------
+    history = []
+
+    season_rounds = (
+        season_matches["round"]
+        .drop_duplicates()
+        .sort_values()
+    )
+
+    for round in season_rounds:
+
+        standings = calculate_season_standings(
+            season,
+            matches,
+            bonus_points,
+            until_round=int(round),
+        )
+
+        history.extend(
+            {
+                "round": int(round),
+                "player_id": row["player_id"],
+                "position": int(row["#"]),
+                "total_points": int(row["total_points"]),
+            }
+            for _, row in standings.iterrows()
+        )
+
+    # -------------------------
+    # Return
+    # -------------------------
+    return {
+        "dates": dates,
+        "rounds": int(rounds),
+        "players": int(number_of_players),
+        "player_ids": players,
+        "matches_played": int(matches_played),
+        "legs_played": int(legs_played),
+        "highest_checkout": (
+            int(highest_checkout)
+            if highest_checkout is not None
+            else None
+        ),
+        "highest_checkout_by": highest_checkout_by,
+        "180s": int(total_180s),
+        "180s_by": {
+            player_id: int(count)
+            for player_id, count in one_eighties_by.items()
+        },
+        "history": history,
+    }

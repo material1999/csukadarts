@@ -1,0 +1,2695 @@
+{
+  "2024": {
+    "info": {
+      "dates": [
+        "2024-01-21",
+        "2024-02-03",
+        "2024-03-24",
+        "2024-05-12",
+        "2024-06-01",
+        "2024-06-30",
+        "2024-08-20",
+        "2024-09-21",
+        "2024-10-23",
+        "2024-11-10",
+        "2024-12-01"
+      ],
+      "rounds": 11,
+      "players": 11,
+      "player_ids": [
+        "akos_szvetnik",
+        "armin_szucs",
+        "balint_bakos",
+        "berci_pusztai",
+        "dani_gyulai_nagy",
+        "dani_pusztai",
+        "laci_ferenczi",
+        "mark_sipos",
+        "mate_vass",
+        "tomi_csank",
+        "zsombor_gulacsi"
+      ],
+      "matches_played": 356,
+      "legs_played": 945,
+      "highest_checkout": 116,
+      "highest_checkout_by": [
+        "balint_bakos"
+      ],
+      "180s": 1,
+      "180s_by": {
+        "balint_bakos": 1
+      },
+      "history": [
+        {
+          "round": 1,
+          "player_id": "dani_gyulai_nagy",
+          "position": 1,
+          "total_points": 11
+        },
+        {
+          "round": 1,
+          "player_id": "berci_pusztai",
+          "position": 2,
+          "total_points": 6
+        },
+        {
+          "round": 1,
+          "player_id": "laci_ferenczi",
+          "position": 3,
+          "total_points": 4
+        },
+        {
+          "round": 1,
+          "player_id": "mate_vass",
+          "position": 4,
+          "total_points": 4
+        },
+        {
+          "round": 1,
+          "player_id": "akos_szvetnik",
+          "position": 5,
+          "total_points": 2
+        },
+        {
+          "round": 1,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 1
+        },
+        {
+          "round": 1,
+          "player_id": "armin_szucs",
+          "position": 7,
+          "total_points": 0
+        },
+        {
+          "round": 1,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 17
+        },
+        {
+          "round": 2,
+          "player_id": "dani_gyulai_nagy",
+          "position": 2,
+          "total_points": 15
+        },
+        {
+          "round": 2,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 10
+        },
+        {
+          "round": 2,
+          "player_id": "balint_bakos",
+          "position": 4,
+          "total_points": 5
+        },
+        {
+          "round": 2,
+          "player_id": "laci_ferenczi",
+          "position": 5,
+          "total_points": 4
+        },
+        {
+          "round": 2,
+          "player_id": "akos_szvetnik",
+          "position": 6,
+          "total_points": 4
+        },
+        {
+          "round": 2,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 1
+        },
+        {
+          "round": 2,
+          "player_id": "armin_szucs",
+          "position": 8,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "mark_sipos",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "dani_pusztai",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 27
+        },
+        {
+          "round": 3,
+          "player_id": "dani_gyulai_nagy",
+          "position": 2,
+          "total_points": 17
+        },
+        {
+          "round": 3,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 14
+        },
+        {
+          "round": 3,
+          "player_id": "laci_ferenczi",
+          "position": 4,
+          "total_points": 10
+        },
+        {
+          "round": 3,
+          "player_id": "akos_szvetnik",
+          "position": 5,
+          "total_points": 9
+        },
+        {
+          "round": 3,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 6
+        },
+        {
+          "round": 3,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 1
+        },
+        {
+          "round": 3,
+          "player_id": "armin_szucs",
+          "position": 8,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "mark_sipos",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "dani_pusztai",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 4,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 33
+        },
+        {
+          "round": 4,
+          "player_id": "mate_vass",
+          "position": 2,
+          "total_points": 24
+        },
+        {
+          "round": 4,
+          "player_id": "dani_gyulai_nagy",
+          "position": 3,
+          "total_points": 21
+        },
+        {
+          "round": 4,
+          "player_id": "laci_ferenczi",
+          "position": 4,
+          "total_points": 14
+        },
+        {
+          "round": 4,
+          "player_id": "akos_szvetnik",
+          "position": 5,
+          "total_points": 9
+        },
+        {
+          "round": 4,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 9
+        },
+        {
+          "round": 4,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 2
+        },
+        {
+          "round": 4,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 2
+        },
+        {
+          "round": 4,
+          "player_id": "armin_szucs",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 4,
+          "player_id": "mark_sipos",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 40
+        },
+        {
+          "round": 5,
+          "player_id": "dani_gyulai_nagy",
+          "position": 2,
+          "total_points": 31
+        },
+        {
+          "round": 5,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 28
+        },
+        {
+          "round": 5,
+          "player_id": "laci_ferenczi",
+          "position": 4,
+          "total_points": 14
+        },
+        {
+          "round": 5,
+          "player_id": "balint_bakos",
+          "position": 5,
+          "total_points": 13
+        },
+        {
+          "round": 5,
+          "player_id": "akos_szvetnik",
+          "position": 6,
+          "total_points": 10
+        },
+        {
+          "round": 5,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 4
+        },
+        {
+          "round": 5,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 2
+        },
+        {
+          "round": 5,
+          "player_id": "mark_sipos",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "armin_szucs",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 6,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 50
+        },
+        {
+          "round": 6,
+          "player_id": "dani_gyulai_nagy",
+          "position": 2,
+          "total_points": 37
+        },
+        {
+          "round": 6,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 32
+        },
+        {
+          "round": 6,
+          "player_id": "laci_ferenczi",
+          "position": 4,
+          "total_points": 16
+        },
+        {
+          "round": 6,
+          "player_id": "balint_bakos",
+          "position": 5,
+          "total_points": 15
+        },
+        {
+          "round": 6,
+          "player_id": "akos_szvetnik",
+          "position": 6,
+          "total_points": 14
+        },
+        {
+          "round": 6,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 4
+        },
+        {
+          "round": 6,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 2
+        },
+        {
+          "round": 6,
+          "player_id": "zsombor_gulacsi",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 6,
+          "player_id": "mark_sipos",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 6,
+          "player_id": "armin_szucs",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 7,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 54
+        },
+        {
+          "round": 7,
+          "player_id": "dani_gyulai_nagy",
+          "position": 2,
+          "total_points": 43
+        },
+        {
+          "round": 7,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 33
+        },
+        {
+          "round": 7,
+          "player_id": "akos_szvetnik",
+          "position": 4,
+          "total_points": 24
+        },
+        {
+          "round": 7,
+          "player_id": "laci_ferenczi",
+          "position": 5,
+          "total_points": 20
+        },
+        {
+          "round": 7,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 17
+        },
+        {
+          "round": 7,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 5
+        },
+        {
+          "round": 7,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 2
+        },
+        {
+          "round": 7,
+          "player_id": "zsombor_gulacsi",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 7,
+          "player_id": "mark_sipos",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 7,
+          "player_id": "armin_szucs",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 8,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 58
+        },
+        {
+          "round": 8,
+          "player_id": "dani_gyulai_nagy",
+          "position": 2,
+          "total_points": 47
+        },
+        {
+          "round": 8,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 43
+        },
+        {
+          "round": 8,
+          "player_id": "akos_szvetnik",
+          "position": 4,
+          "total_points": 31
+        },
+        {
+          "round": 8,
+          "player_id": "laci_ferenczi",
+          "position": 5,
+          "total_points": 20
+        },
+        {
+          "round": 8,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 18
+        },
+        {
+          "round": 8,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 7
+        },
+        {
+          "round": 8,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 2
+        },
+        {
+          "round": 8,
+          "player_id": "zsombor_gulacsi",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 8,
+          "player_id": "mark_sipos",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 8,
+          "player_id": "armin_szucs",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 9,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 62
+        },
+        {
+          "round": 9,
+          "player_id": "dani_gyulai_nagy",
+          "position": 2,
+          "total_points": 57
+        },
+        {
+          "round": 9,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 50
+        },
+        {
+          "round": 9,
+          "player_id": "akos_szvetnik",
+          "position": 4,
+          "total_points": 31
+        },
+        {
+          "round": 9,
+          "player_id": "laci_ferenczi",
+          "position": 5,
+          "total_points": 22
+        },
+        {
+          "round": 9,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 22
+        },
+        {
+          "round": 9,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 8
+        },
+        {
+          "round": 9,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 2
+        },
+        {
+          "round": 9,
+          "player_id": "zsombor_gulacsi",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 9,
+          "player_id": "mark_sipos",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 9,
+          "player_id": "armin_szucs",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 10,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 72
+        },
+        {
+          "round": 10,
+          "player_id": "dani_gyulai_nagy",
+          "position": 2,
+          "total_points": 58
+        },
+        {
+          "round": 10,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 52
+        },
+        {
+          "round": 10,
+          "player_id": "akos_szvetnik",
+          "position": 4,
+          "total_points": 35
+        },
+        {
+          "round": 10,
+          "player_id": "laci_ferenczi",
+          "position": 5,
+          "total_points": 28
+        },
+        {
+          "round": 10,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 23
+        },
+        {
+          "round": 10,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 8
+        },
+        {
+          "round": 10,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 6
+        },
+        {
+          "round": 10,
+          "player_id": "zsombor_gulacsi",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 10,
+          "player_id": "mark_sipos",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 10,
+          "player_id": "armin_szucs",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 11,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 82
+        },
+        {
+          "round": 11,
+          "player_id": "dani_gyulai_nagy",
+          "position": 2,
+          "total_points": 63
+        },
+        {
+          "round": 11,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 54
+        },
+        {
+          "round": 11,
+          "player_id": "akos_szvetnik",
+          "position": 4,
+          "total_points": 39
+        },
+        {
+          "round": 11,
+          "player_id": "laci_ferenczi",
+          "position": 5,
+          "total_points": 34
+        },
+        {
+          "round": 11,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 24
+        },
+        {
+          "round": 11,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 8
+        },
+        {
+          "round": 11,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 6
+        },
+        {
+          "round": 11,
+          "player_id": "zsombor_gulacsi",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 11,
+          "player_id": "armin_szucs",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 11,
+          "player_id": "mark_sipos",
+          "position": 11,
+          "total_points": 0
+        }
+      ]
+    },
+    "standings": [
+      {
+        "#": 1,
+        "player_id": "berci_pusztai",
+        "nights_won": 5,
+        "finals": 8,
+        "semi_finals": 11,
+        "matches_played": 97,
+        "matches_won": 74,
+        "matches_lost": 23,
+        "legs_played": 279,
+        "legs_won": 187,
+        "legs_lost": 92,
+        "leg_difference": 95,
+        "points": 80,
+        "bonus_points": 2,
+        "total_points": 82
+      },
+      {
+        "#": 2,
+        "player_id": "dani_gyulai_nagy",
+        "nights_won": 3,
+        "finals": 5,
+        "semi_finals": 9,
+        "matches_played": 93,
+        "matches_won": 57,
+        "matches_lost": 36,
+        "legs_played": 260,
+        "legs_won": 146,
+        "legs_lost": 114,
+        "leg_difference": 32,
+        "points": 61,
+        "bonus_points": 2,
+        "total_points": 63
+      },
+      {
+        "#": 3,
+        "player_id": "mate_vass",
+        "nights_won": 2,
+        "finals": 4,
+        "semi_finals": 8,
+        "matches_played": 92,
+        "matches_won": 56,
+        "matches_lost": 36,
+        "legs_played": 247,
+        "legs_won": 143,
+        "legs_lost": 104,
+        "leg_difference": 39,
+        "points": 52,
+        "bonus_points": 2,
+        "total_points": 54
+      },
+      {
+        "#": 4,
+        "player_id": "akos_szvetnik",
+        "nights_won": 1,
+        "finals": 2,
+        "semi_finals": 6,
+        "matches_played": 87,
+        "matches_won": 40,
+        "matches_lost": 47,
+        "legs_played": 234,
+        "legs_won": 109,
+        "legs_lost": 125,
+        "leg_difference": -16,
+        "points": 37,
+        "bonus_points": 2,
+        "total_points": 39
+      },
+      {
+        "#": 5,
+        "player_id": "laci_ferenczi",
+        "nights_won": 0,
+        "finals": 3,
+        "semi_finals": 6,
+        "matches_played": 88,
+        "matches_won": 45,
+        "matches_lost": 43,
+        "legs_played": 239,
+        "legs_won": 122,
+        "legs_lost": 117,
+        "leg_difference": 5,
+        "points": 34,
+        "bonus_points": 0,
+        "total_points": 34
+      },
+      {
+        "#": 6,
+        "player_id": "balint_bakos",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 3,
+        "matches_played": 82,
+        "matches_won": 37,
+        "matches_lost": 45,
+        "legs_played": 210,
+        "legs_won": 100,
+        "legs_lost": 110,
+        "leg_difference": -10,
+        "points": 19,
+        "bonus_points": 5,
+        "total_points": 24
+      },
+      {
+        "#": 7,
+        "player_id": "tomi_csank",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 65,
+        "matches_won": 23,
+        "matches_lost": 42,
+        "legs_played": 160,
+        "legs_won": 62,
+        "legs_lost": 98,
+        "leg_difference": -36,
+        "points": 8,
+        "bonus_points": 0,
+        "total_points": 8
+      },
+      {
+        "#": 8,
+        "player_id": "dani_pusztai",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 1,
+        "matches_played": 53,
+        "matches_won": 16,
+        "matches_lost": 37,
+        "legs_played": 131,
+        "legs_won": 45,
+        "legs_lost": 86,
+        "leg_difference": -41,
+        "points": 6,
+        "bonus_points": 0,
+        "total_points": 6
+      },
+      {
+        "#": 9,
+        "player_id": "zsombor_gulacsi",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 7,
+        "matches_won": 1,
+        "matches_lost": 6,
+        "legs_played": 17,
+        "legs_won": 4,
+        "legs_lost": 13,
+        "leg_difference": -9,
+        "points": 0,
+        "bonus_points": 0,
+        "total_points": 0
+      },
+      {
+        "#": 10,
+        "player_id": "armin_szucs",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 23,
+        "matches_won": 4,
+        "matches_lost": 19,
+        "legs_played": 57,
+        "legs_won": 16,
+        "legs_lost": 41,
+        "leg_difference": -25,
+        "points": 0,
+        "bonus_points": 0,
+        "total_points": 0
+      },
+      {
+        "#": 11,
+        "player_id": "mark_sipos",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 25,
+        "matches_won": 3,
+        "matches_lost": 22,
+        "legs_played": 56,
+        "legs_won": 11,
+        "legs_lost": 45,
+        "leg_difference": -34,
+        "points": 0,
+        "bonus_points": 0,
+        "total_points": 0
+      }
+    ]
+  },
+  "2025": {
+    "info": {
+      "dates": [
+        "2025-01-26",
+        "2025-02-09",
+        "2025-03-08",
+        "2025-04-18",
+        "2025-05-01",
+        "2025-08-03",
+        "2025-08-30",
+        "2025-10-05",
+        "2025-12-05",
+        "2025-12-29"
+      ],
+      "rounds": 10,
+      "players": 14,
+      "player_ids": [
+        "akos_szvetnik",
+        "armin_szucs",
+        "balazs_papai",
+        "balint_bakos",
+        "berci_pusztai",
+        "dani_boldizsar",
+        "dani_gyulai_nagy",
+        "dani_pusztai",
+        "feri_gyulai_nagy",
+        "geri_vass",
+        "laci_ferenczi",
+        "mark_sipos",
+        "mate_vass",
+        "tomi_csank"
+      ],
+      "matches_played": 536,
+      "legs_played": 1380,
+      "highest_checkout": 143,
+      "highest_checkout_by": [
+        "mate_vass"
+      ],
+      "180s": 5,
+      "180s_by": {
+        "laci_ferenczi": 3,
+        "armin_szucs": 1,
+        "balint_bakos": 1
+      },
+      "history": [
+        {
+          "round": 1,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 10
+        },
+        {
+          "round": 1,
+          "player_id": "mate_vass",
+          "position": 2,
+          "total_points": 6
+        },
+        {
+          "round": 1,
+          "player_id": "akos_szvetnik",
+          "position": 3,
+          "total_points": 4
+        },
+        {
+          "round": 1,
+          "player_id": "laci_ferenczi",
+          "position": 4,
+          "total_points": 4
+        },
+        {
+          "round": 1,
+          "player_id": "balint_bakos",
+          "position": 5,
+          "total_points": 3
+        },
+        {
+          "round": 1,
+          "player_id": "dani_pusztai",
+          "position": 6,
+          "total_points": 2
+        },
+        {
+          "round": 1,
+          "player_id": "geri_vass",
+          "position": 7,
+          "total_points": 1
+        },
+        {
+          "round": 1,
+          "player_id": "armin_szucs",
+          "position": 8,
+          "total_points": 0
+        },
+        {
+          "round": 1,
+          "player_id": "mark_sipos",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 1,
+          "player_id": "dani_gyulai_nagy",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 1,
+          "player_id": "balazs_papai",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 1,
+          "player_id": "tomi_csank",
+          "position": 12,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "berci_pusztai",
+          "position": 1,
+          "total_points": 16
+        },
+        {
+          "round": 2,
+          "player_id": "laci_ferenczi",
+          "position": 2,
+          "total_points": 14
+        },
+        {
+          "round": 2,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 10
+        },
+        {
+          "round": 2,
+          "player_id": "akos_szvetnik",
+          "position": 4,
+          "total_points": 8
+        },
+        {
+          "round": 2,
+          "player_id": "dani_pusztai",
+          "position": 5,
+          "total_points": 3
+        },
+        {
+          "round": 2,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 3
+        },
+        {
+          "round": 2,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 2
+        },
+        {
+          "round": 2,
+          "player_id": "balazs_papai",
+          "position": 8,
+          "total_points": 1
+        },
+        {
+          "round": 2,
+          "player_id": "geri_vass",
+          "position": 9,
+          "total_points": 1
+        },
+        {
+          "round": 2,
+          "player_id": "dani_gyulai_nagy",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "armin_szucs",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "mark_sipos",
+          "position": 12,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 26
+        },
+        {
+          "round": 3,
+          "player_id": "berci_pusztai",
+          "position": 2,
+          "total_points": 22
+        },
+        {
+          "round": 3,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 11
+        },
+        {
+          "round": 3,
+          "player_id": "akos_szvetnik",
+          "position": 4,
+          "total_points": 10
+        },
+        {
+          "round": 3,
+          "player_id": "tomi_csank",
+          "position": 5,
+          "total_points": 7
+        },
+        {
+          "round": 3,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 7
+        },
+        {
+          "round": 3,
+          "player_id": "dani_pusztai",
+          "position": 7,
+          "total_points": 3
+        },
+        {
+          "round": 3,
+          "player_id": "balazs_papai",
+          "position": 8,
+          "total_points": 1
+        },
+        {
+          "round": 3,
+          "player_id": "geri_vass",
+          "position": 9,
+          "total_points": 1
+        },
+        {
+          "round": 3,
+          "player_id": "armin_szucs",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "dani_gyulai_nagy",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "mark_sipos",
+          "position": 12,
+          "total_points": 0
+        },
+        {
+          "round": 4,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 36
+        },
+        {
+          "round": 4,
+          "player_id": "berci_pusztai",
+          "position": 2,
+          "total_points": 29
+        },
+        {
+          "round": 4,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 15
+        },
+        {
+          "round": 4,
+          "player_id": "tomi_csank",
+          "position": 4,
+          "total_points": 11
+        },
+        {
+          "round": 4,
+          "player_id": "akos_szvetnik",
+          "position": 5,
+          "total_points": 10
+        },
+        {
+          "round": 4,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 8
+        },
+        {
+          "round": 4,
+          "player_id": "dani_pusztai",
+          "position": 7,
+          "total_points": 5
+        },
+        {
+          "round": 4,
+          "player_id": "balazs_papai",
+          "position": 8,
+          "total_points": 1
+        },
+        {
+          "round": 4,
+          "player_id": "geri_vass",
+          "position": 9,
+          "total_points": 1
+        },
+        {
+          "round": 4,
+          "player_id": "armin_szucs",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 4,
+          "player_id": "dani_gyulai_nagy",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 4,
+          "player_id": "mark_sipos",
+          "position": 12,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 46
+        },
+        {
+          "round": 5,
+          "player_id": "berci_pusztai",
+          "position": 2,
+          "total_points": 35
+        },
+        {
+          "round": 5,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 19
+        },
+        {
+          "round": 5,
+          "player_id": "akos_szvetnik",
+          "position": 4,
+          "total_points": 14
+        },
+        {
+          "round": 5,
+          "player_id": "tomi_csank",
+          "position": 5,
+          "total_points": 13
+        },
+        {
+          "round": 5,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 9
+        },
+        {
+          "round": 5,
+          "player_id": "dani_pusztai",
+          "position": 7,
+          "total_points": 6
+        },
+        {
+          "round": 5,
+          "player_id": "balazs_papai",
+          "position": 8,
+          "total_points": 1
+        },
+        {
+          "round": 5,
+          "player_id": "geri_vass",
+          "position": 9,
+          "total_points": 1
+        },
+        {
+          "round": 5,
+          "player_id": "feri_gyulai_nagy",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "armin_szucs",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "dani_gyulai_nagy",
+          "position": 12,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "mark_sipos",
+          "position": 13,
+          "total_points": 0
+        },
+        {
+          "round": 6,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 52
+        },
+        {
+          "round": 6,
+          "player_id": "berci_pusztai",
+          "position": 2,
+          "total_points": 39
+        },
+        {
+          "round": 6,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 30
+        },
+        {
+          "round": 6,
+          "player_id": "akos_szvetnik",
+          "position": 4,
+          "total_points": 14
+        },
+        {
+          "round": 6,
+          "player_id": "tomi_csank",
+          "position": 5,
+          "total_points": 13
+        },
+        {
+          "round": 6,
+          "player_id": "balint_bakos",
+          "position": 6,
+          "total_points": 9
+        },
+        {
+          "round": 6,
+          "player_id": "dani_boldizsar",
+          "position": 7,
+          "total_points": 6
+        },
+        {
+          "round": 6,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 6
+        },
+        {
+          "round": 6,
+          "player_id": "feri_gyulai_nagy",
+          "position": 9,
+          "total_points": 2
+        },
+        {
+          "round": 6,
+          "player_id": "dani_gyulai_nagy",
+          "position": 10,
+          "total_points": 1
+        },
+        {
+          "round": 6,
+          "player_id": "balazs_papai",
+          "position": 11,
+          "total_points": 1
+        },
+        {
+          "round": 6,
+          "player_id": "geri_vass",
+          "position": 12,
+          "total_points": 1
+        },
+        {
+          "round": 6,
+          "player_id": "armin_szucs",
+          "position": 13,
+          "total_points": 0
+        },
+        {
+          "round": 6,
+          "player_id": "mark_sipos",
+          "position": 14,
+          "total_points": 0
+        },
+        {
+          "round": 7,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 56
+        },
+        {
+          "round": 7,
+          "player_id": "berci_pusztai",
+          "position": 2,
+          "total_points": 39
+        },
+        {
+          "round": 7,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 31
+        },
+        {
+          "round": 7,
+          "player_id": "tomi_csank",
+          "position": 4,
+          "total_points": 20
+        },
+        {
+          "round": 7,
+          "player_id": "balint_bakos",
+          "position": 5,
+          "total_points": 19
+        },
+        {
+          "round": 7,
+          "player_id": "akos_szvetnik",
+          "position": 6,
+          "total_points": 14
+        },
+        {
+          "round": 7,
+          "player_id": "dani_boldizsar",
+          "position": 7,
+          "total_points": 10
+        },
+        {
+          "round": 7,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 6
+        },
+        {
+          "round": 7,
+          "player_id": "dani_gyulai_nagy",
+          "position": 9,
+          "total_points": 3
+        },
+        {
+          "round": 7,
+          "player_id": "feri_gyulai_nagy",
+          "position": 10,
+          "total_points": 2
+        },
+        {
+          "round": 7,
+          "player_id": "balazs_papai",
+          "position": 11,
+          "total_points": 1
+        },
+        {
+          "round": 7,
+          "player_id": "geri_vass",
+          "position": 12,
+          "total_points": 1
+        },
+        {
+          "round": 7,
+          "player_id": "armin_szucs",
+          "position": 13,
+          "total_points": 0
+        },
+        {
+          "round": 7,
+          "player_id": "mark_sipos",
+          "position": 14,
+          "total_points": 0
+        },
+        {
+          "round": 8,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 66
+        },
+        {
+          "round": 8,
+          "player_id": "berci_pusztai",
+          "position": 2,
+          "total_points": 45
+        },
+        {
+          "round": 8,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 35
+        },
+        {
+          "round": 8,
+          "player_id": "tomi_csank",
+          "position": 4,
+          "total_points": 21
+        },
+        {
+          "round": 8,
+          "player_id": "balint_bakos",
+          "position": 5,
+          "total_points": 19
+        },
+        {
+          "round": 8,
+          "player_id": "akos_szvetnik",
+          "position": 6,
+          "total_points": 14
+        },
+        {
+          "round": 8,
+          "player_id": "dani_boldizsar",
+          "position": 7,
+          "total_points": 10
+        },
+        {
+          "round": 8,
+          "player_id": "dani_pusztai",
+          "position": 8,
+          "total_points": 9
+        },
+        {
+          "round": 8,
+          "player_id": "dani_gyulai_nagy",
+          "position": 9,
+          "total_points": 7
+        },
+        {
+          "round": 8,
+          "player_id": "feri_gyulai_nagy",
+          "position": 10,
+          "total_points": 2
+        },
+        {
+          "round": 8,
+          "player_id": "armin_szucs",
+          "position": 11,
+          "total_points": 2
+        },
+        {
+          "round": 8,
+          "player_id": "balazs_papai",
+          "position": 12,
+          "total_points": 1
+        },
+        {
+          "round": 8,
+          "player_id": "geri_vass",
+          "position": 13,
+          "total_points": 1
+        },
+        {
+          "round": 8,
+          "player_id": "mark_sipos",
+          "position": 14,
+          "total_points": 0
+        },
+        {
+          "round": 9,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 76
+        },
+        {
+          "round": 9,
+          "player_id": "berci_pusztai",
+          "position": 2,
+          "total_points": 49
+        },
+        {
+          "round": 9,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 40
+        },
+        {
+          "round": 9,
+          "player_id": "tomi_csank",
+          "position": 4,
+          "total_points": 23
+        },
+        {
+          "round": 9,
+          "player_id": "balint_bakos",
+          "position": 5,
+          "total_points": 20
+        },
+        {
+          "round": 9,
+          "player_id": "akos_szvetnik",
+          "position": 6,
+          "total_points": 14
+        },
+        {
+          "round": 9,
+          "player_id": "dani_gyulai_nagy",
+          "position": 7,
+          "total_points": 13
+        },
+        {
+          "round": 9,
+          "player_id": "dani_boldizsar",
+          "position": 8,
+          "total_points": 10
+        },
+        {
+          "round": 9,
+          "player_id": "dani_pusztai",
+          "position": 9,
+          "total_points": 9
+        },
+        {
+          "round": 9,
+          "player_id": "feri_gyulai_nagy",
+          "position": 10,
+          "total_points": 2
+        },
+        {
+          "round": 9,
+          "player_id": "armin_szucs",
+          "position": 11,
+          "total_points": 2
+        },
+        {
+          "round": 9,
+          "player_id": "geri_vass",
+          "position": 12,
+          "total_points": 1
+        },
+        {
+          "round": 9,
+          "player_id": "balazs_papai",
+          "position": 13,
+          "total_points": 1
+        },
+        {
+          "round": 9,
+          "player_id": "mark_sipos",
+          "position": 14,
+          "total_points": 0
+        },
+        {
+          "round": 10,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 89
+        },
+        {
+          "round": 10,
+          "player_id": "berci_pusztai",
+          "position": 2,
+          "total_points": 53
+        },
+        {
+          "round": 10,
+          "player_id": "mate_vass",
+          "position": 3,
+          "total_points": 46
+        },
+        {
+          "round": 10,
+          "player_id": "tomi_csank",
+          "position": 4,
+          "total_points": 27
+        },
+        {
+          "round": 10,
+          "player_id": "balint_bakos",
+          "position": 5,
+          "total_points": 20
+        },
+        {
+          "round": 10,
+          "player_id": "dani_gyulai_nagy",
+          "position": 6,
+          "total_points": 15
+        },
+        {
+          "round": 10,
+          "player_id": "akos_szvetnik",
+          "position": 7,
+          "total_points": 14
+        },
+        {
+          "round": 10,
+          "player_id": "dani_boldizsar",
+          "position": 8,
+          "total_points": 10
+        },
+        {
+          "round": 10,
+          "player_id": "dani_pusztai",
+          "position": 9,
+          "total_points": 9
+        },
+        {
+          "round": 10,
+          "player_id": "feri_gyulai_nagy",
+          "position": 10,
+          "total_points": 3
+        },
+        {
+          "round": 10,
+          "player_id": "armin_szucs",
+          "position": 11,
+          "total_points": 2
+        },
+        {
+          "round": 10,
+          "player_id": "geri_vass",
+          "position": 12,
+          "total_points": 1
+        },
+        {
+          "round": 10,
+          "player_id": "balazs_papai",
+          "position": 13,
+          "total_points": 1
+        },
+        {
+          "round": 10,
+          "player_id": "mark_sipos",
+          "position": 14,
+          "total_points": 0
+        }
+      ]
+    },
+    "standings": [
+      {
+        "#": 1,
+        "player_id": "laci_ferenczi",
+        "nights_won": 7,
+        "finals": 7,
+        "semi_finals": 10,
+        "matches_played": 112,
+        "matches_won": 89,
+        "matches_lost": 23,
+        "legs_played": 312,
+        "legs_won": 212,
+        "legs_lost": 100,
+        "leg_difference": 112,
+        "points": 82,
+        "bonus_points": 7,
+        "total_points": 89
+      },
+      {
+        "#": 2,
+        "player_id": "berci_pusztai",
+        "nights_won": 1,
+        "finals": 6,
+        "semi_finals": 9,
+        "matches_played": 110,
+        "matches_won": 72,
+        "matches_lost": 38,
+        "legs_played": 307,
+        "legs_won": 185,
+        "legs_lost": 122,
+        "leg_difference": 63,
+        "points": 52,
+        "bonus_points": 1,
+        "total_points": 53
+      },
+      {
+        "#": 3,
+        "player_id": "mate_vass",
+        "nights_won": 1,
+        "finals": 3,
+        "semi_finals": 8,
+        "matches_played": 106,
+        "matches_won": 69,
+        "matches_lost": 37,
+        "legs_played": 293,
+        "legs_won": 174,
+        "legs_lost": 119,
+        "leg_difference": 55,
+        "points": 44,
+        "bonus_points": 2,
+        "total_points": 46
+      },
+      {
+        "#": 4,
+        "player_id": "tomi_csank",
+        "nights_won": 0,
+        "finals": 1,
+        "semi_finals": 4,
+        "matches_played": 100,
+        "matches_won": 52,
+        "matches_lost": 48,
+        "legs_played": 251,
+        "legs_won": 129,
+        "legs_lost": 122,
+        "leg_difference": 7,
+        "points": 25,
+        "bonus_points": 2,
+        "total_points": 27
+      },
+      {
+        "#": 5,
+        "player_id": "balint_bakos",
+        "nights_won": 1,
+        "finals": 1,
+        "semi_finals": 2,
+        "matches_played": 98,
+        "matches_won": 48,
+        "matches_lost": 50,
+        "legs_played": 246,
+        "legs_won": 122,
+        "legs_lost": 124,
+        "leg_difference": -2,
+        "points": 17,
+        "bonus_points": 3,
+        "total_points": 20
+      },
+      {
+        "#": 6,
+        "player_id": "dani_gyulai_nagy",
+        "nights_won": 0,
+        "finals": 1,
+        "semi_finals": 2,
+        "matches_played": 98,
+        "matches_won": 44,
+        "matches_lost": 54,
+        "legs_played": 252,
+        "legs_won": 117,
+        "legs_lost": 135,
+        "leg_difference": -18,
+        "points": 15,
+        "bonus_points": 0,
+        "total_points": 15
+      },
+      {
+        "#": 7,
+        "player_id": "akos_szvetnik",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 3,
+        "matches_played": 98,
+        "matches_won": 48,
+        "matches_lost": 50,
+        "legs_played": 244,
+        "legs_won": 119,
+        "legs_lost": 125,
+        "leg_difference": -6,
+        "points": 14,
+        "bonus_points": 0,
+        "total_points": 14
+      },
+      {
+        "#": 8,
+        "player_id": "dani_boldizsar",
+        "nights_won": 0,
+        "finals": 1,
+        "semi_finals": 2,
+        "matches_played": 22,
+        "matches_won": 14,
+        "matches_lost": 8,
+        "legs_played": 63,
+        "legs_won": 36,
+        "legs_lost": 27,
+        "leg_difference": 9,
+        "points": 10,
+        "bonus_points": 0,
+        "total_points": 10
+      },
+      {
+        "#": 9,
+        "player_id": "dani_pusztai",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 87,
+        "matches_won": 37,
+        "matches_lost": 50,
+        "legs_played": 208,
+        "legs_won": 91,
+        "legs_lost": 117,
+        "leg_difference": -26,
+        "points": 8,
+        "bonus_points": 1,
+        "total_points": 9
+      },
+      {
+        "#": 10,
+        "player_id": "feri_gyulai_nagy",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 37,
+        "matches_won": 12,
+        "matches_lost": 25,
+        "legs_played": 93,
+        "legs_won": 37,
+        "legs_lost": 56,
+        "leg_difference": -19,
+        "points": 3,
+        "bonus_points": 0,
+        "total_points": 3
+      },
+      {
+        "#": 11,
+        "player_id": "armin_szucs",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 71,
+        "matches_won": 22,
+        "matches_lost": 49,
+        "legs_played": 171,
+        "legs_won": 62,
+        "legs_lost": 109,
+        "leg_difference": -47,
+        "points": 0,
+        "bonus_points": 2,
+        "total_points": 2
+      },
+      {
+        "#": 12,
+        "player_id": "geri_vass",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 32,
+        "matches_won": 7,
+        "matches_lost": 25,
+        "legs_played": 77,
+        "legs_won": 23,
+        "legs_lost": 54,
+        "leg_difference": -31,
+        "points": 0,
+        "bonus_points": 1,
+        "total_points": 1
+      },
+      {
+        "#": 13,
+        "player_id": "balazs_papai",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 40,
+        "matches_won": 9,
+        "matches_lost": 31,
+        "legs_played": 103,
+        "legs_won": 35,
+        "legs_lost": 68,
+        "leg_difference": -33,
+        "points": 0,
+        "bonus_points": 1,
+        "total_points": 1
+      },
+      {
+        "#": 14,
+        "player_id": "mark_sipos",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 61,
+        "matches_won": 13,
+        "matches_lost": 48,
+        "legs_played": 140,
+        "legs_won": 38,
+        "legs_lost": 102,
+        "leg_difference": -64,
+        "points": 0,
+        "bonus_points": 0,
+        "total_points": 0
+      }
+    ]
+  },
+  "2026": {
+    "info": {
+      "dates": [
+        "2026-02-07",
+        "2026-03-22",
+        "2026-04-12",
+        "2026-05-02",
+        "2026-07-05"
+      ],
+      "rounds": 5,
+      "players": 15,
+      "player_ids": [
+        "akos_szvetnik",
+        "armin_szucs",
+        "balazs_papai",
+        "balint_bakos",
+        "berci_pusztai",
+        "dani_boldizsar",
+        "dani_gyulai_nagy",
+        "dani_pusztai",
+        "feri_gyulai_nagy",
+        "laci_ferenczi",
+        "mark_sipos",
+        "mate_vass",
+        "tomi_csank",
+        "tomi_szollosy",
+        "zsombor_gulacsi"
+      ],
+      "matches_played": 263,
+      "legs_played": 677,
+      "highest_checkout": 131,
+      "highest_checkout_by": [
+        "dani_gyulai_nagy"
+      ],
+      "180s": 2,
+      "180s_by": {
+        "mate_vass": 1,
+        "tomi_csank": 1
+      },
+      "history": [
+        {
+          "round": 1,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 10
+        },
+        {
+          "round": 1,
+          "player_id": "mate_vass",
+          "position": 2,
+          "total_points": 6
+        },
+        {
+          "round": 1,
+          "player_id": "berci_pusztai",
+          "position": 3,
+          "total_points": 4
+        },
+        {
+          "round": 1,
+          "player_id": "dani_boldizsar",
+          "position": 4,
+          "total_points": 4
+        },
+        {
+          "round": 1,
+          "player_id": "akos_szvetnik",
+          "position": 5,
+          "total_points": 2
+        },
+        {
+          "round": 1,
+          "player_id": "dani_gyulai_nagy",
+          "position": 6,
+          "total_points": 1
+        },
+        {
+          "round": 1,
+          "player_id": "tomi_csank",
+          "position": 7,
+          "total_points": 1
+        },
+        {
+          "round": 1,
+          "player_id": "balint_bakos",
+          "position": 8,
+          "total_points": 0
+        },
+        {
+          "round": 1,
+          "player_id": "dani_pusztai",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 1,
+          "player_id": "tomi_szollosy",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 1,
+          "player_id": "mark_sipos",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 20
+        },
+        {
+          "round": 2,
+          "player_id": "mate_vass",
+          "position": 2,
+          "total_points": 14
+        },
+        {
+          "round": 2,
+          "player_id": "tomi_csank",
+          "position": 3,
+          "total_points": 7
+        },
+        {
+          "round": 2,
+          "player_id": "feri_gyulai_nagy",
+          "position": 4,
+          "total_points": 4
+        },
+        {
+          "round": 2,
+          "player_id": "berci_pusztai",
+          "position": 5,
+          "total_points": 4
+        },
+        {
+          "round": 2,
+          "player_id": "dani_boldizsar",
+          "position": 6,
+          "total_points": 4
+        },
+        {
+          "round": 2,
+          "player_id": "dani_gyulai_nagy",
+          "position": 7,
+          "total_points": 4
+        },
+        {
+          "round": 2,
+          "player_id": "akos_szvetnik",
+          "position": 8,
+          "total_points": 3
+        },
+        {
+          "round": 2,
+          "player_id": "dani_pusztai",
+          "position": 9,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "armin_szucs",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "balint_bakos",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "tomi_szollosy",
+          "position": 12,
+          "total_points": 0
+        },
+        {
+          "round": 2,
+          "player_id": "mark_sipos",
+          "position": 13,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 30
+        },
+        {
+          "round": 3,
+          "player_id": "mate_vass",
+          "position": 2,
+          "total_points": 18
+        },
+        {
+          "round": 3,
+          "player_id": "feri_gyulai_nagy",
+          "position": 3,
+          "total_points": 10
+        },
+        {
+          "round": 3,
+          "player_id": "tomi_csank",
+          "position": 4,
+          "total_points": 10
+        },
+        {
+          "round": 3,
+          "player_id": "berci_pusztai",
+          "position": 5,
+          "total_points": 8
+        },
+        {
+          "round": 3,
+          "player_id": "dani_boldizsar",
+          "position": 6,
+          "total_points": 4
+        },
+        {
+          "round": 3,
+          "player_id": "dani_gyulai_nagy",
+          "position": 7,
+          "total_points": 4
+        },
+        {
+          "round": 3,
+          "player_id": "akos_szvetnik",
+          "position": 8,
+          "total_points": 3
+        },
+        {
+          "round": 3,
+          "player_id": "armin_szucs",
+          "position": 9,
+          "total_points": 1
+        },
+        {
+          "round": 3,
+          "player_id": "dani_pusztai",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "balazs_papai",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "tomi_szollosy",
+          "position": 12,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "balint_bakos",
+          "position": 13,
+          "total_points": 0
+        },
+        {
+          "round": 3,
+          "player_id": "mark_sipos",
+          "position": 14,
+          "total_points": 0
+        },
+        {
+          "round": 4,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 41
+        },
+        {
+          "round": 4,
+          "player_id": "mate_vass",
+          "position": 2,
+          "total_points": 22
+        },
+        {
+          "round": 4,
+          "player_id": "tomi_csank",
+          "position": 3,
+          "total_points": 16
+        },
+        {
+          "round": 4,
+          "player_id": "feri_gyulai_nagy",
+          "position": 4,
+          "total_points": 10
+        },
+        {
+          "round": 4,
+          "player_id": "berci_pusztai",
+          "position": 5,
+          "total_points": 8
+        },
+        {
+          "round": 4,
+          "player_id": "dani_boldizsar",
+          "position": 6,
+          "total_points": 8
+        },
+        {
+          "round": 4,
+          "player_id": "akos_szvetnik",
+          "position": 7,
+          "total_points": 5
+        },
+        {
+          "round": 4,
+          "player_id": "dani_gyulai_nagy",
+          "position": 8,
+          "total_points": 5
+        },
+        {
+          "round": 4,
+          "player_id": "armin_szucs",
+          "position": 9,
+          "total_points": 1
+        },
+        {
+          "round": 4,
+          "player_id": "dani_pusztai",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 4,
+          "player_id": "balazs_papai",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 4,
+          "player_id": "tomi_szollosy",
+          "position": 12,
+          "total_points": 0
+        },
+        {
+          "round": 4,
+          "player_id": "mark_sipos",
+          "position": 13,
+          "total_points": 0
+        },
+        {
+          "round": 4,
+          "player_id": "balint_bakos",
+          "position": 14,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "laci_ferenczi",
+          "position": 1,
+          "total_points": 47
+        },
+        {
+          "round": 5,
+          "player_id": "mate_vass",
+          "position": 2,
+          "total_points": 27
+        },
+        {
+          "round": 5,
+          "player_id": "tomi_csank",
+          "position": 3,
+          "total_points": 26
+        },
+        {
+          "round": 5,
+          "player_id": "feri_gyulai_nagy",
+          "position": 4,
+          "total_points": 12
+        },
+        {
+          "round": 5,
+          "player_id": "dani_boldizsar",
+          "position": 5,
+          "total_points": 9
+        },
+        {
+          "round": 5,
+          "player_id": "dani_gyulai_nagy",
+          "position": 6,
+          "total_points": 9
+        },
+        {
+          "round": 5,
+          "player_id": "berci_pusztai",
+          "position": 7,
+          "total_points": 8
+        },
+        {
+          "round": 5,
+          "player_id": "akos_szvetnik",
+          "position": 8,
+          "total_points": 5
+        },
+        {
+          "round": 5,
+          "player_id": "armin_szucs",
+          "position": 9,
+          "total_points": 1
+        },
+        {
+          "round": 5,
+          "player_id": "dani_pusztai",
+          "position": 10,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "tomi_szollosy",
+          "position": 11,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "zsombor_gulacsi",
+          "position": 12,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "balint_bakos",
+          "position": 13,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "mark_sipos",
+          "position": 14,
+          "total_points": 0
+        },
+        {
+          "round": 5,
+          "player_id": "balazs_papai",
+          "position": 15,
+          "total_points": 0
+        }
+      ]
+    },
+    "standings": [
+      {
+        "#": 1,
+        "player_id": "laci_ferenczi",
+        "nights_won": 4,
+        "finals": 5,
+        "semi_finals": 5,
+        "matches_played": 57,
+        "matches_won": 45,
+        "matches_lost": 12,
+        "legs_played": 162,
+        "legs_won": 110,
+        "legs_lost": 52,
+        "leg_difference": 58,
+        "points": 46,
+        "bonus_points": 1,
+        "total_points": 47
+      },
+      {
+        "#": 2,
+        "player_id": "mate_vass",
+        "nights_won": 0,
+        "finals": 2,
+        "semi_finals": 5,
+        "matches_played": 54,
+        "matches_won": 36,
+        "matches_lost": 18,
+        "legs_played": 142,
+        "legs_won": 88,
+        "legs_lost": 54,
+        "leg_difference": 34,
+        "points": 24,
+        "bonus_points": 3,
+        "total_points": 27
+      },
+      {
+        "#": 3,
+        "player_id": "tomi_csank",
+        "nights_won": 1,
+        "finals": 2,
+        "semi_finals": 3,
+        "matches_played": 52,
+        "matches_won": 32,
+        "matches_lost": 20,
+        "legs_played": 142,
+        "legs_won": 79,
+        "legs_lost": 63,
+        "leg_difference": 16,
+        "points": 22,
+        "bonus_points": 4,
+        "total_points": 26
+      },
+      {
+        "#": 4,
+        "player_id": "feri_gyulai_nagy",
+        "nights_won": 0,
+        "finals": 1,
+        "semi_finals": 2,
+        "matches_played": 32,
+        "matches_won": 21,
+        "matches_lost": 11,
+        "legs_played": 88,
+        "legs_won": 51,
+        "legs_lost": 37,
+        "leg_difference": 14,
+        "points": 12,
+        "bonus_points": 0,
+        "total_points": 12
+      },
+      {
+        "#": 5,
+        "player_id": "dani_boldizsar",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 2,
+        "matches_played": 31,
+        "matches_won": 17,
+        "matches_lost": 14,
+        "legs_played": 80,
+        "legs_won": 46,
+        "legs_lost": 34,
+        "leg_difference": 12,
+        "points": 9,
+        "bonus_points": 0,
+        "total_points": 9
+      },
+      {
+        "#": 6,
+        "player_id": "dani_gyulai_nagy",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 1,
+        "matches_played": 48,
+        "matches_won": 23,
+        "matches_lost": 25,
+        "legs_played": 118,
+        "legs_won": 56,
+        "legs_lost": 62,
+        "leg_difference": -6,
+        "points": 8,
+        "bonus_points": 1,
+        "total_points": 9
+      },
+      {
+        "#": 7,
+        "player_id": "berci_pusztai",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 2,
+        "matches_played": 49,
+        "matches_won": 23,
+        "matches_lost": 26,
+        "legs_played": 126,
+        "legs_won": 64,
+        "legs_lost": 62,
+        "leg_difference": 2,
+        "points": 8,
+        "bonus_points": 0,
+        "total_points": 8
+      },
+      {
+        "#": 8,
+        "player_id": "akos_szvetnik",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 47,
+        "matches_won": 23,
+        "matches_lost": 24,
+        "legs_played": 122,
+        "legs_won": 61,
+        "legs_lost": 61,
+        "leg_difference": 0,
+        "points": 5,
+        "bonus_points": 0,
+        "total_points": 5
+      },
+      {
+        "#": 9,
+        "player_id": "armin_szucs",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 18,
+        "matches_won": 8,
+        "matches_lost": 10,
+        "legs_played": 44,
+        "legs_won": 20,
+        "legs_lost": 24,
+        "leg_difference": -4,
+        "points": 1,
+        "bonus_points": 0,
+        "total_points": 1
+      },
+      {
+        "#": 10,
+        "player_id": "dani_pusztai",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 39,
+        "matches_won": 17,
+        "matches_lost": 22,
+        "legs_played": 98,
+        "legs_won": 42,
+        "legs_lost": 56,
+        "leg_difference": -14,
+        "points": 0,
+        "bonus_points": 0,
+        "total_points": 0
+      },
+      {
+        "#": 11,
+        "player_id": "tomi_szollosy",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 10,
+        "matches_won": 1,
+        "matches_lost": 9,
+        "legs_played": 22,
+        "legs_won": 4,
+        "legs_lost": 18,
+        "leg_difference": -14,
+        "points": 0,
+        "bonus_points": 0,
+        "total_points": 0
+      },
+      {
+        "#": 12,
+        "player_id": "zsombor_gulacsi",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 11,
+        "matches_won": 1,
+        "matches_lost": 10,
+        "legs_played": 25,
+        "legs_won": 4,
+        "legs_lost": 21,
+        "leg_difference": -17,
+        "points": 0,
+        "bonus_points": 0,
+        "total_points": 0
+      },
+      {
+        "#": 13,
+        "player_id": "balint_bakos",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 36,
+        "matches_won": 11,
+        "matches_lost": 25,
+        "legs_played": 88,
+        "legs_won": 31,
+        "legs_lost": 57,
+        "leg_difference": -26,
+        "points": 0,
+        "bonus_points": 0,
+        "total_points": 0
+      },
+      {
+        "#": 14,
+        "player_id": "mark_sipos",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 21,
+        "matches_won": 3,
+        "matches_lost": 18,
+        "legs_played": 49,
+        "legs_won": 11,
+        "legs_lost": 38,
+        "leg_difference": -27,
+        "points": 0,
+        "bonus_points": 0,
+        "total_points": 0
+      },
+      {
+        "#": 15,
+        "player_id": "balazs_papai",
+        "nights_won": 0,
+        "finals": 0,
+        "semi_finals": 0,
+        "matches_played": 21,
+        "matches_won": 2,
+        "matches_lost": 19,
+        "legs_played": 48,
+        "legs_won": 10,
+        "legs_lost": 38,
+        "leg_difference": -28,
+        "points": 0,
+        "bonus_points": 0,
+        "total_points": 0
+      }
+    ]
+  }
+}
