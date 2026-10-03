@@ -81,3 +81,5 @@ with open(
         indent=2,
         ensure_ascii=False,
     )
+
+print("Standings generated successfully.")

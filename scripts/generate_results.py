@@ -108,3 +108,5 @@ with open(
         indent=2,
         ensure_ascii=False,
     )
+
+print("Results generated successfully.")
