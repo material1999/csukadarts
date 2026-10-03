@@ -8,10 +8,7 @@ import json
 from utils import (
     MATCHES_FILE,
     BONUS_FILE,
-    OUTPUT_FILES
-)
-
-from utils import (
+    OUTPUT_FILES,
     prepare_data,
     calculate_round_group,
     calculate_round_results,
