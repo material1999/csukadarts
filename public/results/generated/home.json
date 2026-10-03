@@ -1,0 +1,81 @@
+{
+  "season": 2026,
+  "last_round": 5,
+  "standings": [
+    {
+      "#": 1,
+      "player_id": "laci_ferenczi",
+      "total_points": 47
+    },
+    {
+      "#": 2,
+      "player_id": "mate_vass",
+      "total_points": 27
+    },
+    {
+      "#": 3,
+      "player_id": "tomi_csank",
+      "total_points": 26
+    },
+    {
+      "#": 4,
+      "player_id": "feri_gyulai_nagy",
+      "total_points": 12
+    },
+    {
+      "#": 5,
+      "player_id": "dani_boldizsar",
+      "total_points": 9
+    },
+    {
+      "#": 6,
+      "player_id": "dani_gyulai_nagy",
+      "total_points": 9
+    },
+    {
+      "#": 7,
+      "player_id": "berci_pusztai",
+      "total_points": 8
+    },
+    {
+      "#": 8,
+      "player_id": "akos_szvetnik",
+      "total_points": 5
+    },
+    {
+      "#": 9,
+      "player_id": "armin_szucs",
+      "total_points": 1
+    },
+    {
+      "#": 10,
+      "player_id": "dani_pusztai",
+      "total_points": 0
+    },
+    {
+      "#": 11,
+      "player_id": "tomi_szollosy",
+      "total_points": 0
+    },
+    {
+      "#": 12,
+      "player_id": "zsombor_gulacsi",
+      "total_points": 0
+    },
+    {
+      "#": 13,
+      "player_id": "balint_bakos",
+      "total_points": 0
+    },
+    {
+      "#": 14,
+      "player_id": "mark_sipos",
+      "total_points": 0
+    },
+    {
+      "#": 15,
+      "player_id": "balazs_papai",
+      "total_points": 0
+    }
+  ]
+}
