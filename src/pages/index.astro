@@ -49,24 +49,57 @@ const standings = homeData.standings;
       </div>
 
       <div class="standings-card">
-        <div class="empty-state">
-          <div class="empty-icon">🎯</div>
-
-          <h3>Standings coming soon</h3>
-
-          <p>
-            Player standings will appear here once the tournament data is
-            connected.
-          </p>
-
-          <a
-            href={`/standings?season=${currentSeason}`}
-            class="standings-button"
-          >
-            View standings →
-          </a>
+        <div class="standings-header">
+          <span>#</span>
+          <span>Player</span>
+          <span>Nights Won</span>
+          <span>Matches Won</span>
+          <span>Leg Difference</span>
+          <span>Legs Won</span>
+          <span>Points</span>
         </div>
+
+        {
+          standings.map((player: any) => (
+            <div class="standing-row">
+              <span class="position">
+                {player["#"]}
+              </span>
+
+              <span class="player">
+                {player.player_id}
+              </span>
+
+              <span class="other">
+                {player.nights_won}
+              </span>
+
+              <span class="other">
+                {player.matches_won}
+              </span>
+
+              <span class="other">
+                {player.leg_difference}
+              </span>
+
+              <span class="other">
+                {player.legs_won}
+              </span>
+
+              <span class="points">
+                {player.total_points}
+              </span>
+            </div>
+          ))
+        }
       </div>
+
+      <a
+        href={`/standings?season=${currentSeason}`}
+        class="standings-button"
+      >
+        View full standings →
+      </a>
 
 
       <!-- ======================================================
@@ -245,40 +278,97 @@ const standings = homeData.standings;
      ============================================================ */
 
   .standings-card {
-    min-height: 300px;
-
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
+    overflow: hidden;
   }
 
-  .empty-state {
-    min-height: 300px;
-
-    display: flex;
-    flex-direction: column;
+  .standings-header,
+  .standing-row {
+    display: grid;
+    grid-template-columns: 40px 2fr repeat(4, 1fr) 180px;
     align-items: center;
-    justify-content: center;
+    padding: 14px 20px;
+  }
 
-    padding: 40px;
+  .standings-header {
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .standings-header span:last-child,
+  .points {
+    text-align: right;
+  }
+
+  .standings-header span:nth-child(n + 3):nth-child(-n + 6),
+  .standing-row span:nth-child(n + 3):nth-child(-n + 6) {
     text-align: center;
   }
 
-  .empty-icon {
-    font-size: 32px;
-    margin-bottom: 12px;
+  .standings-header span:nth-child(1),
+  .standing-row span:nth-child(1),
+  .standings-header span:nth-child(2),
+  .standing-row span:nth-child(2) {
+    text-align: left;
   }
 
-  .empty-state h3 {
-    margin: 0 0 8px;
-    font-size: 18px;
+  .standings-header span:last-child,
+  .standing-row span:last-child {
+    text-align: right;
   }
 
-  .empty-state p {
-    margin: 0;
+  .standing-row {
+    border-bottom: 1px solid var(--border);
+  }
 
+  .standing-row:last-child {
+    border-bottom: none;
+  }
+
+  .position {
     color: var(--muted);
     font-size: 14px;
+    font-weight: 700;
+  }
+
+  .player {
+    font-weight: 600;
+  }
+
+  .points {
+    font-weight: 800;
+  }
+
+  .other {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .standings-button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 16px;
+
+    background: var(--dark);
+    color: white;
+
+    border: 1px solid var(--dark);
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .standings-button:hover {
+    background: #333;
+    border-color: #333;
   }
 
 

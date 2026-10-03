@@ -76,7 +76,7 @@ standings = calculate_season_standings(
     current_season,
     matches,
     bonus_points,
-)
+).head(5)
 
 standings = standings[
     [
