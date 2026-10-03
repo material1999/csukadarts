@@ -1,16 +1,17 @@
+# -------------------------
+# Imports
+# -------------------------
+
 import pandas as pd
 import json
 from pathlib import Path
 
-
-# ============================================================
-# Configuration
-# ============================================================
-
-MATCHES_FILE = "public/results/matches.csv"
-BONUS_FILE = "public/results/bonus_points.csv"
-OUTPUT_FILE = "public/results/generated/player_stats.json"
-
+from utils import (
+    MATCHES_FILE,
+    BONUS_FILE,
+    OUTPUT_FILES,
+    prepare_data,
+)
 
 # ============================================================
 # Load data
@@ -26,29 +27,14 @@ bonus_points = pd.read_csv(
     sep=";"
 )
 
+# -------------------------
+# Prepare data
+# -------------------------
 
-# ============================================================
-# Normalize data
-# ============================================================
-
-matches["year"] = matches["year"].astype(int)
-matches["month"] = matches["month"].astype(int)
-matches["day"] = matches["day"].astype(int)
-matches["round"] = matches["round"].astype(int)
-
-matches["player1_score"] = matches["player1_score"].astype(int)
-matches["player2_score"] = matches["player2_score"].astype(int)
-
-matches["date"] = pd.to_datetime(
-    matches[["year", "month", "day"]]
+matches, bonus_points = prepare_data(
+    matches,
+    bonus_points,
 )
-
-matches["phase"] = matches["phase"].astype(str)
-
-bonus_points["season"] = bonus_points["season"].astype(int)
-bonus_points["round"] = bonus_points["round"].astype(int)
-bonus_points["bonus"] = bonus_points["bonus"].astype(int)
-
 
 # ============================================================
 # Helper functions
@@ -1039,39 +1025,20 @@ for player_id in sorted(player_ids):
     }
 
 
-# ============================================================
-# Save JSON
-# ============================================================
-
-output_path = Path(
-    OUTPUT_FILE
-)
-
-output_path.parent.mkdir(
-    parents=True,
-    exist_ok=True
-)
-
+# -------------------------
+# Save results
+# -------------------------
 
 with open(
-    output_path,
+    OUTPUT_FILES["players"],
     "w",
     encoding="utf-8"
 ) as f:
-
     json.dump(
         player_stats,
         f,
+        indent=2,
         ensure_ascii=False,
-        indent=2
     )
 
-
-print(
-    f"Generated statistics for "
-    f"{len(player_stats)} players."
-)
-
-print(
-    f"Saved to: {OUTPUT_FILE}"
-)
+print("Players generated successfully.")
