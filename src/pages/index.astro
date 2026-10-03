@@ -3,44 +3,23 @@ import Layout from "../layouts/Layout.astro";
 import fs from "node:fs";
 import path from "node:path";
 
-const statsPath = path.join(
+const homePath = path.join(
   process.cwd(),
   "public",
   "results",
   "generated",
-  "player_stats.json"
+  "home.json"
 );
 
-const statsData = JSON.parse(
-  fs.readFileSync(statsPath, "utf-8")
+const homeData = JSON.parse(
+  fs.readFileSync(homePath, "utf-8")
 );
 
-const seasons = [
-  ...new Set(
-    Object.values(statsData).flatMap((player: any) =>
-      Object.keys(player.seasons || {})
-    )
-  ),
-].sort((a, b) => Number(b) - Number(a));
-
-const currentSeason = seasons[0] || "2026";
-
-const currentSeasonRounds = Object.values(statsData).flatMap(
-  (player: any) =>
-    (player.rounds?.all || []).filter(
-      (round: any) =>
-        String(round.year || round.season) === String(currentSeason)
-    )
-);
-
-const lastRound =
-  currentSeasonRounds.length > 0
-    ? Math.max(
-        ...currentSeasonRounds.map((round: any) =>
-          Number(round.round)
-        )
-      )
-    : 0;
+const currentSeason = homeData.season;
+const lastRound = homeData.last_round;
+const lastRoundWinner = homeData.last_round_winner;
+const lastRoundRunnerUp = homeData.last_round_runner_up;
+const standings = homeData.standings;
 ---
 
 <Layout>
@@ -100,10 +79,10 @@ const lastRound =
         <div class="dashboard-card">
           <p class="card-label">LAST ROUND</p>
 
-          <h3>Round {lastRound}</h3>
+          <h3>{currentSeason} - Round {lastRound}</h3>
 
           <p class="card-placeholder">
-            Latest round results will appear here.
+            {lastRoundWinner} won against {lastRoundRunnerUp}.
           </p>
 
           <a
@@ -121,7 +100,7 @@ const lastRound =
           <h3>{currentSeason} Statistics</h3>
 
           <p class="card-placeholder">
-            Season statistics will appear here.
+            {standings[0].player_id} is leading with {standings[0].total_points} points.
           </p>
 
           <a

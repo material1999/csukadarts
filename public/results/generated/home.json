@@ -1,80 +1,142 @@
 {
   "season": 2026,
   "last_round": 5,
+  "last_round_winner": "tomi_csank",
+  "last_round_runner_up": "laci_ferenczi",
   "standings": [
     {
       "#": 1,
       "player_id": "laci_ferenczi",
+      "nights_won": 4,
+      "matches_won": 45,
+      "leg_difference": 58,
+      "legs_won": 110,
       "total_points": 47
     },
     {
       "#": 2,
       "player_id": "mate_vass",
+      "nights_won": 0,
+      "matches_won": 36,
+      "leg_difference": 34,
+      "legs_won": 88,
       "total_points": 27
     },
     {
       "#": 3,
       "player_id": "tomi_csank",
+      "nights_won": 1,
+      "matches_won": 32,
+      "leg_difference": 16,
+      "legs_won": 79,
       "total_points": 26
     },
     {
       "#": 4,
       "player_id": "feri_gyulai_nagy",
+      "nights_won": 0,
+      "matches_won": 21,
+      "leg_difference": 14,
+      "legs_won": 51,
       "total_points": 12
     },
     {
       "#": 5,
       "player_id": "dani_boldizsar",
+      "nights_won": 0,
+      "matches_won": 17,
+      "leg_difference": 12,
+      "legs_won": 46,
       "total_points": 9
     },
     {
       "#": 6,
       "player_id": "dani_gyulai_nagy",
+      "nights_won": 0,
+      "matches_won": 23,
+      "leg_difference": -6,
+      "legs_won": 56,
       "total_points": 9
     },
     {
       "#": 7,
       "player_id": "berci_pusztai",
+      "nights_won": 0,
+      "matches_won": 23,
+      "leg_difference": 2,
+      "legs_won": 64,
       "total_points": 8
     },
     {
       "#": 8,
       "player_id": "akos_szvetnik",
+      "nights_won": 0,
+      "matches_won": 23,
+      "leg_difference": 0,
+      "legs_won": 61,
       "total_points": 5
     },
     {
       "#": 9,
       "player_id": "armin_szucs",
+      "nights_won": 0,
+      "matches_won": 8,
+      "leg_difference": -4,
+      "legs_won": 20,
       "total_points": 1
     },
     {
       "#": 10,
       "player_id": "dani_pusztai",
+      "nights_won": 0,
+      "matches_won": 17,
+      "leg_difference": -14,
+      "legs_won": 42,
       "total_points": 0
     },
     {
       "#": 11,
       "player_id": "tomi_szollosy",
+      "nights_won": 0,
+      "matches_won": 1,
+      "leg_difference": -14,
+      "legs_won": 4,
       "total_points": 0
     },
     {
       "#": 12,
       "player_id": "zsombor_gulacsi",
+      "nights_won": 0,
+      "matches_won": 1,
+      "leg_difference": -17,
+      "legs_won": 4,
       "total_points": 0
     },
     {
       "#": 13,
       "player_id": "balint_bakos",
+      "nights_won": 0,
+      "matches_won": 11,
+      "leg_difference": -26,
+      "legs_won": 31,
       "total_points": 0
     },
     {
       "#": 14,
       "player_id": "mark_sipos",
+      "nights_won": 0,
+      "matches_won": 3,
+      "leg_difference": -27,
+      "legs_won": 11,
       "total_points": 0
     },
     {
       "#": 15,
       "player_id": "balazs_papai",
+      "nights_won": 0,
+      "matches_won": 2,
+      "leg_difference": -28,
+      "legs_won": 10,
       "total_points": 0
     }
   ]

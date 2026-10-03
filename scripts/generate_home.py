@@ -10,6 +10,7 @@ from utils import (
     BONUS_FILE,
     OUTPUT_FILES,
     prepare_data,
+    calculate_round_results,
     calculate_season_standings,
 )
 
@@ -53,6 +54,20 @@ last_round = (
     .max()
 )
 
+last_round_winner = calculate_round_results(
+    current_season,
+    last_round,
+    matches,
+    bonus_points,
+)["player_id"].values[0]
+
+last_round_runner_up = calculate_round_results(
+    current_season,
+    last_round,
+    matches,
+    bonus_points,
+)["player_id"].values[1]
+
 # -------------------------
 # Current standings
 # -------------------------
@@ -67,6 +82,10 @@ standings = standings[
     [
         "#",
         "player_id",
+        "nights_won",
+        "matches_won",
+        "leg_difference",
+        "legs_won",
         "total_points",
     ]
 ]
@@ -78,6 +97,8 @@ standings = standings[
 home = {
     "season": int(current_season),
     "last_round": int(last_round),
+    "last_round_winner": str(last_round_winner),
+    "last_round_runner_up": str(last_round_runner_up),
     "standings": standings.to_dict(
         orient="records"
     ),
