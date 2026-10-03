@@ -55,17 +55,33 @@ for season, round in (
     .itertuples(index=False)
 ):
 
-    season = str(season)
-    round = str(round)
+    season_key = str(season)
+    round_key = str(round)
 
-    results_df.setdefault(season, {})
+    results_df.setdefault(season_key, {})
 
-    results_df[season][round] = {
+    round_matches = matches[
+        (matches["season"] == season) &
+        (matches["round"] == round)
+    ][
+        [
+            "phase",
+            "player1_id",
+            "player1_score",
+            "player2_id",
+            "player2_score",
+        ]
+    ]
+
+    results_df[season_key][round_key] = {
         "info": calculate_round_info(
             int(season),
             int(round),
             matches,
             bonus_points
+        ),
+        "matches": round_matches.to_dict(
+            orient="records"
         ),
         "group": calculate_round_group(
             int(season),

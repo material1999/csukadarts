@@ -582,10 +582,9 @@ def calculate_round_info(season, round, matches, bonus_points):
     # -------------------------
     # Number of players
     # -------------------------
-    players = set(
-        round_matches["player1_id"]
-    ) | set(
-        round_matches["player2_id"]
+    players = sorted(
+        set(round_matches["player1_id"]) |
+        set(round_matches["player2_id"])
     )
 
     number_of_players = len(players)
@@ -661,7 +660,8 @@ def calculate_round_info(season, round, matches, bonus_points):
     # -------------------------
     return {
         "date": str(date.date()),
-        "players": int(number_of_players),
+        "number_of_players": int(number_of_players),
+        "players": players,
         "matches_played": int(matches_played),
         "legs_played": int(legs_played),
         "highest_checkout": int(highest_checkout),
