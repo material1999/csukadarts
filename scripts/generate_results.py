@@ -19,7 +19,6 @@ from utils import (
 # Load data
 # -------------------------
 
-
 matches = pd.read_csv(
     MATCHES_FILE,
     sep=";"
