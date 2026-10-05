@@ -15201,6 +15201,727 @@
           "total_points": 0
         }
       ]
+    },
+    "6": {
+      "info": {
+        "date": "2026-10-04",
+        "number_of_players": 11,
+        "players": [
+          "akos_szvetnik",
+          "balazs_papai",
+          "balint_bakos",
+          "berci_pusztai",
+          "dani_gyulai_nagy",
+          "dani_pusztai",
+          "feri_gyulai_nagy",
+          "laci_ferenczi",
+          "mark_sipos",
+          "mate_vass",
+          "tomi_csank"
+        ],
+        "matches_played": 58,
+        "legs_played": 144,
+        "highest_checkout": 88,
+        "highest_checkout_by": [
+          "tomi_csank"
+        ],
+        "180s": 1,
+        "180s_by": {
+          "mate_vass": 1
+        },
+        "podium": {
+          "winner": "feri_gyulai_nagy",
+          "second": "mate_vass",
+          "third": "tomi_csank"
+        }
+      },
+      "matches": [
+        {
+          "phase": "group",
+          "player1_id": "laci_ferenczi",
+          "player1_score": 2,
+          "player2_id": "balazs_papai",
+          "player2_score": 1
+        },
+        {
+          "phase": "group",
+          "player1_id": "balint_bakos",
+          "player1_score": 0,
+          "player2_id": "tomi_csank",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "akos_szvetnik",
+          "player1_score": 2,
+          "player2_id": "berci_pusztai",
+          "player2_score": 1
+        },
+        {
+          "phase": "group",
+          "player1_id": "dani_pusztai",
+          "player1_score": 0,
+          "player2_id": "mate_vass",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "dani_gyulai_nagy",
+          "player1_score": 2,
+          "player2_id": "mark_sipos",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "feri_gyulai_nagy",
+          "player1_score": 2,
+          "player2_id": "laci_ferenczi",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "balazs_papai",
+          "player1_score": 0,
+          "player2_id": "akos_szvetnik",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "mate_vass",
+          "player1_score": 2,
+          "player2_id": "balint_bakos",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "berci_pusztai",
+          "player1_score": 1,
+          "player2_id": "dani_gyulai_nagy",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "mark_sipos",
+          "player1_score": 2,
+          "player2_id": "dani_pusztai",
+          "player2_score": 1
+        },
+        {
+          "phase": "group",
+          "player1_id": "tomi_csank",
+          "player1_score": 0,
+          "player2_id": "feri_gyulai_nagy",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "akos_szvetnik",
+          "player1_score": 1,
+          "player2_id": "laci_ferenczi",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "dani_gyulai_nagy",
+          "player1_score": 1,
+          "player2_id": "balazs_papai",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "balint_bakos",
+          "player1_score": 0,
+          "player2_id": "mark_sipos",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "dani_pusztai",
+          "player1_score": 0,
+          "player2_id": "berci_pusztai",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "feri_gyulai_nagy",
+          "player1_score": 2,
+          "player2_id": "akos_szvetnik",
+          "player2_score": 1
+        },
+        {
+          "phase": "group",
+          "player1_id": "tomi_csank",
+          "player1_score": 0,
+          "player2_id": "mate_vass",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "laci_ferenczi",
+          "player1_score": 2,
+          "player2_id": "dani_gyulai_nagy",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "balazs_papai",
+          "player1_score": 0,
+          "player2_id": "dani_pusztai",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "berci_pusztai",
+          "player1_score": 0,
+          "player2_id": "balint_bakos",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "mate_vass",
+          "player1_score": 2,
+          "player2_id": "feri_gyulai_nagy",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "dani_gyulai_nagy",
+          "player1_score": 0,
+          "player2_id": "akos_szvetnik",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "mark_sipos",
+          "player1_score": 0,
+          "player2_id": "tomi_csank",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "dani_pusztai",
+          "player1_score": 0,
+          "player2_id": "laci_ferenczi",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "balint_bakos",
+          "player1_score": 2,
+          "player2_id": "balazs_papai",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "feri_gyulai_nagy",
+          "player1_score": 2,
+          "player2_id": "dani_gyulai_nagy",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "mate_vass",
+          "player1_score": 2,
+          "player2_id": "mark_sipos",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "akos_szvetnik",
+          "player1_score": 1,
+          "player2_id": "dani_pusztai",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "tomi_csank",
+          "player1_score": 2,
+          "player2_id": "berci_pusztai",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "laci_ferenczi",
+          "player1_score": 2,
+          "player2_id": "balint_bakos",
+          "player2_score": 1
+        },
+        {
+          "phase": "group",
+          "player1_id": "mark_sipos",
+          "player1_score": 0,
+          "player2_id": "feri_gyulai_nagy",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "dani_pusztai",
+          "player1_score": 0,
+          "player2_id": "dani_gyulai_nagy",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "berci_pusztai",
+          "player1_score": 1,
+          "player2_id": "mate_vass",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "balint_bakos",
+          "player1_score": 1,
+          "player2_id": "akos_szvetnik",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "balazs_papai",
+          "player1_score": 0,
+          "player2_id": "tomi_csank",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "feri_gyulai_nagy",
+          "player1_score": 2,
+          "player2_id": "dani_pusztai",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "mark_sipos",
+          "player1_score": 0,
+          "player2_id": "berci_pusztai",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "dani_gyulai_nagy",
+          "player1_score": 2,
+          "player2_id": "balint_bakos",
+          "player2_score": 1
+        },
+        {
+          "phase": "group",
+          "player1_id": "mate_vass",
+          "player1_score": 2,
+          "player2_id": "balazs_papai",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "tomi_csank",
+          "player1_score": 2,
+          "player2_id": "laci_ferenczi",
+          "player2_score": 1
+        },
+        {
+          "phase": "group",
+          "player1_id": "berci_pusztai",
+          "player1_score": 2,
+          "player2_id": "feri_gyulai_nagy",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "balint_bakos",
+          "player1_score": 1,
+          "player2_id": "dani_pusztai",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "balazs_papai",
+          "player1_score": 2,
+          "player2_id": "mark_sipos",
+          "player2_score": 1
+        },
+        {
+          "phase": "group",
+          "player1_id": "laci_ferenczi",
+          "player1_score": 0,
+          "player2_id": "mate_vass",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "akos_szvetnik",
+          "player1_score": 2,
+          "player2_id": "tomi_csank",
+          "player2_score": 1
+        },
+        {
+          "phase": "group",
+          "player1_id": "feri_gyulai_nagy",
+          "player1_score": 2,
+          "player2_id": "balint_bakos",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "berci_pusztai",
+          "player1_score": 2,
+          "player2_id": "balazs_papai",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "mark_sipos",
+          "player1_score": 0,
+          "player2_id": "laci_ferenczi",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "tomi_csank",
+          "player1_score": 2,
+          "player2_id": "dani_gyulai_nagy",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "mate_vass",
+          "player1_score": 1,
+          "player2_id": "akos_szvetnik",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "balazs_papai",
+          "player1_score": 1,
+          "player2_id": "feri_gyulai_nagy",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "laci_ferenczi",
+          "player1_score": 0,
+          "player2_id": "berci_pusztai",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "dani_pusztai",
+          "player1_score": 0,
+          "player2_id": "tomi_csank",
+          "player2_score": 2
+        },
+        {
+          "phase": "group",
+          "player1_id": "akos_szvetnik",
+          "player1_score": 2,
+          "player2_id": "mark_sipos",
+          "player2_score": 0
+        },
+        {
+          "phase": "group",
+          "player1_id": "dani_gyulai_nagy",
+          "player1_score": 1,
+          "player2_id": "mate_vass",
+          "player2_score": 2
+        },
+        {
+          "phase": "semi",
+          "player1_id": "mate_vass",
+          "player1_score": 3,
+          "player2_id": "akos_szvetnik",
+          "player2_score": 2
+        },
+        {
+          "phase": "semi",
+          "player1_id": "feri_gyulai_nagy",
+          "player1_score": 3,
+          "player2_id": "tomi_csank",
+          "player2_score": 1
+        },
+        {
+          "phase": "final",
+          "player1_id": "mate_vass",
+          "player1_score": 2,
+          "player2_id": "feri_gyulai_nagy",
+          "player2_score": 4
+        }
+      ],
+      "group": [
+        {
+          "#": 1,
+          "player_id": "mate_vass",
+          "matches_played": 10,
+          "matches_won": 9,
+          "matches_lost": 1,
+          "legs_played": 23,
+          "legs_won": 19,
+          "legs_lost": 4,
+          "leg_difference": 15
+        },
+        {
+          "#": 2,
+          "player_id": "feri_gyulai_nagy",
+          "matches_played": 10,
+          "matches_won": 8,
+          "matches_lost": 2,
+          "legs_played": 22,
+          "legs_won": 16,
+          "legs_lost": 6,
+          "leg_difference": 10
+        },
+        {
+          "#": 3,
+          "player_id": "tomi_csank",
+          "matches_played": 10,
+          "matches_won": 7,
+          "matches_lost": 3,
+          "legs_played": 22,
+          "legs_won": 15,
+          "legs_lost": 7,
+          "leg_difference": 8
+        },
+        {
+          "#": 4,
+          "player_id": "akos_szvetnik",
+          "matches_played": 10,
+          "matches_won": 7,
+          "matches_lost": 3,
+          "legs_played": 27,
+          "legs_won": 17,
+          "legs_lost": 10,
+          "leg_difference": 7
+        },
+        {
+          "#": 5,
+          "player_id": "laci_ferenczi",
+          "matches_played": 10,
+          "matches_won": 6,
+          "matches_lost": 4,
+          "legs_played": 24,
+          "legs_won": 13,
+          "legs_lost": 11,
+          "leg_difference": 2
+        },
+        {
+          "#": 6,
+          "player_id": "berci_pusztai",
+          "matches_played": 10,
+          "matches_won": 5,
+          "matches_lost": 5,
+          "legs_played": 23,
+          "legs_won": 13,
+          "legs_lost": 10,
+          "leg_difference": 3
+        },
+        {
+          "#": 7,
+          "player_id": "dani_gyulai_nagy",
+          "matches_played": 10,
+          "matches_won": 4,
+          "matches_lost": 6,
+          "legs_played": 24,
+          "legs_won": 10,
+          "legs_lost": 14,
+          "leg_difference": -4
+        },
+        {
+          "#": 8,
+          "player_id": "dani_pusztai",
+          "matches_played": 10,
+          "matches_won": 3,
+          "matches_lost": 7,
+          "legs_played": 23,
+          "legs_won": 7,
+          "legs_lost": 16,
+          "leg_difference": -9
+        },
+        {
+          "#": 9,
+          "player_id": "balint_bakos",
+          "matches_played": 10,
+          "matches_won": 2,
+          "matches_lost": 8,
+          "legs_played": 24,
+          "legs_won": 8,
+          "legs_lost": 16,
+          "leg_difference": -8
+        },
+        {
+          "#": 10,
+          "player_id": "balazs_papai",
+          "matches_played": 10,
+          "matches_won": 2,
+          "matches_lost": 8,
+          "legs_played": 24,
+          "legs_won": 6,
+          "legs_lost": 18,
+          "leg_difference": -12
+        },
+        {
+          "#": 11,
+          "player_id": "mark_sipos",
+          "matches_played": 10,
+          "matches_won": 2,
+          "matches_lost": 8,
+          "legs_played": 22,
+          "legs_won": 5,
+          "legs_lost": 17,
+          "leg_difference": -12
+        }
+      ],
+      "results": [
+        {
+          "#": 1,
+          "player_id": "feri_gyulai_nagy",
+          "matches_played": 12,
+          "matches_won": 10,
+          "matches_lost": 2,
+          "legs_played": 32,
+          "legs_won": 23,
+          "legs_lost": 9,
+          "leg_difference": 14,
+          "points": 10,
+          "bonus_points": 0,
+          "total_points": 10
+        },
+        {
+          "#": 2,
+          "player_id": "mate_vass",
+          "matches_played": 12,
+          "matches_won": 10,
+          "matches_lost": 2,
+          "legs_played": 34,
+          "legs_won": 24,
+          "legs_lost": 10,
+          "leg_difference": 14,
+          "points": 6,
+          "bonus_points": 2,
+          "total_points": 8
+        },
+        {
+          "#": 3,
+          "player_id": "tomi_csank",
+          "matches_played": 11,
+          "matches_won": 7,
+          "matches_lost": 4,
+          "legs_played": 26,
+          "legs_won": 16,
+          "legs_lost": 10,
+          "leg_difference": 6,
+          "points": 4,
+          "bonus_points": 1,
+          "total_points": 5
+        },
+        {
+          "#": 4,
+          "player_id": "akos_szvetnik",
+          "matches_played": 11,
+          "matches_won": 7,
+          "matches_lost": 4,
+          "legs_played": 32,
+          "legs_won": 19,
+          "legs_lost": 13,
+          "leg_difference": 6,
+          "points": 4,
+          "bonus_points": 0,
+          "total_points": 4
+        },
+        {
+          "#": 5,
+          "player_id": "laci_ferenczi",
+          "matches_played": 10,
+          "matches_won": 6,
+          "matches_lost": 4,
+          "legs_played": 24,
+          "legs_won": 13,
+          "legs_lost": 11,
+          "leg_difference": 2,
+          "points": 2,
+          "bonus_points": 0,
+          "total_points": 2
+        },
+        {
+          "#": 6,
+          "player_id": "berci_pusztai",
+          "matches_played": 10,
+          "matches_won": 5,
+          "matches_lost": 5,
+          "legs_played": 23,
+          "legs_won": 13,
+          "legs_lost": 10,
+          "leg_difference": 3,
+          "points": 1,
+          "bonus_points": 0,
+          "total_points": 1
+        },
+        {
+          "#": 7,
+          "player_id": "dani_gyulai_nagy",
+          "matches_played": 10,
+          "matches_won": 4,
+          "matches_lost": 6,
+          "legs_played": 24,
+          "legs_won": 10,
+          "legs_lost": 14,
+          "leg_difference": -4,
+          "points": 0,
+          "bonus_points": 0,
+          "total_points": 0
+        },
+        {
+          "#": 8,
+          "player_id": "dani_pusztai",
+          "matches_played": 10,
+          "matches_won": 3,
+          "matches_lost": 7,
+          "legs_played": 23,
+          "legs_won": 7,
+          "legs_lost": 16,
+          "leg_difference": -9,
+          "points": 0,
+          "bonus_points": 0,
+          "total_points": 0
+        },
+        {
+          "#": 9,
+          "player_id": "balint_bakos",
+          "matches_played": 10,
+          "matches_won": 2,
+          "matches_lost": 8,
+          "legs_played": 24,
+          "legs_won": 8,
+          "legs_lost": 16,
+          "leg_difference": -8,
+          "points": 0,
+          "bonus_points": 0,
+          "total_points": 0
+        },
+        {
+          "#": 10,
+          "player_id": "balazs_papai",
+          "matches_played": 10,
+          "matches_won": 2,
+          "matches_lost": 8,
+          "legs_played": 24,
+          "legs_won": 6,
+          "legs_lost": 18,
+          "leg_difference": -12,
+          "points": 0,
+          "bonus_points": 0,
+          "total_points": 0
+        },
+        {
+          "#": 11,
+          "player_id": "mark_sipos",
+          "matches_played": 10,
+          "matches_won": 2,
+          "matches_lost": 8,
+          "legs_played": 22,
+          "legs_won": 5,
+          "legs_lost": 17,
+          "leg_difference": -12,
+          "points": 0,
+          "bonus_points": 0,
+          "total_points": 0
+        }
+      ]
     }
   }
 }

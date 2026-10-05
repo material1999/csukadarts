@@ -264,7 +264,7 @@ player_ids.update(
 # Generate statistics
 # ============================================================
 
-player_stats = {}
+players = {}
 
 
 for player_id in sorted(player_ids):
@@ -381,7 +381,7 @@ for player_id in sorted(player_ids):
     seasons = {}
 
     for season, season_matches in (
-        player_matches.groupby("year")
+        player_matches.groupby("season")
     ):
 
         season_results = [
@@ -461,7 +461,7 @@ for player_id in sorted(player_ids):
     round_results = []
 
     grouped_rounds = player_matches.groupby(
-        ["year", "round"]
+        ["season", "round"]
     )
 
     for (
@@ -786,7 +786,7 @@ for player_id in sorted(player_ids):
                 "%Y-%m-%d"
             ),
 
-            "season": int(row.year),
+            "season": int(row.season),
 
             "round": int(row.round),
 
@@ -812,7 +812,7 @@ for player_id in sorted(player_ids):
     # Build final player object
     # --------------------------------------------------------
 
-    player_stats[player_id] = {
+    players[player_id] = {
 
         "playerId": player_id,
 
@@ -845,13 +845,13 @@ for player_id in sorted(player_ids):
             ),
 
             "seasonsPlayed": int(
-                player_matches["year"]
+                player_matches["season"]
                 .nunique()
             ),
 
             "roundsPlayed": int(
                 player_matches[
-                    ["year", "round"]
+                    ["season", "round"]
                 ]
                 .drop_duplicates()
                 .shape[0]
@@ -1035,7 +1035,7 @@ with open(
     encoding="utf-8"
 ) as f:
     json.dump(
-        player_stats,
+        players,
         f,
         indent=2,
         ensure_ascii=False,

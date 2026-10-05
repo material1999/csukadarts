@@ -1,44 +1,44 @@
 {
   "season": 2026,
-  "last_round": 5,
-  "last_round_winner": "tomi_csank",
-  "last_round_runner_up": "laci_ferenczi",
+  "last_round": 6,
+  "last_round_winner": "feri_gyulai_nagy",
+  "last_round_runner_up": "mate_vass",
   "standings": [
     {
       "#": 1,
       "player_id": "laci_ferenczi",
       "nights_won": 4,
-      "matches_won": 45,
-      "leg_difference": 58,
-      "legs_won": 110,
-      "total_points": 47
+      "matches_won": 51,
+      "leg_difference": 60,
+      "legs_won": 123,
+      "total_points": 49
     },
     {
       "#": 2,
       "player_id": "mate_vass",
       "nights_won": 0,
-      "matches_won": 36,
-      "leg_difference": 34,
-      "legs_won": 88,
-      "total_points": 27
+      "matches_won": 46,
+      "leg_difference": 48,
+      "legs_won": 112,
+      "total_points": 35
     },
     {
       "#": 3,
       "player_id": "tomi_csank",
       "nights_won": 1,
-      "matches_won": 32,
-      "leg_difference": 16,
-      "legs_won": 79,
-      "total_points": 26
+      "matches_won": 39,
+      "leg_difference": 22,
+      "legs_won": 95,
+      "total_points": 31
     },
     {
       "#": 4,
       "player_id": "feri_gyulai_nagy",
-      "nights_won": 0,
-      "matches_won": 21,
-      "leg_difference": 14,
-      "legs_won": 51,
-      "total_points": 12
+      "nights_won": 1,
+      "matches_won": 31,
+      "leg_difference": 28,
+      "legs_won": 74,
+      "total_points": 22
     },
     {
       "#": 5,
